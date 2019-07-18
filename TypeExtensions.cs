@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -7,6 +8,28 @@ namespace Platform.Reflection
 {
     public static class TypeExtensions
     {
+        static private readonly HashSet<Type> CanBeNumericTypes;
+        static private readonly HashSet<Type> IsNumericTypes;
+        static private readonly HashSet<Type> IsSignedTypes;
+        static private readonly HashSet<Type> IsFloatPointTypes;
+
+        static TypeExtensions()
+        {
+            CanBeNumericTypes = new HashSet<Type>() { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
+            IsNumericTypes = new HashSet<Type>() { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+            IsSignedTypes = new HashSet<Type>() { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
+            IsFloatPointTypes = new HashSet<Type>() { typeof(decimal), typeof(double), typeof(float) };
+
+            CanBeNumericTypes.UnionWith(IsNumericTypes);
+
+            CanBeNumericTypes.UnionWith(IsSignedTypes);
+            IsNumericTypes.UnionWith(IsSignedTypes);
+
+            CanBeNumericTypes.UnionWith(IsFloatPointTypes);
+            IsNumericTypes.UnionWith(IsFloatPointTypes);
+            IsSignedTypes.UnionWith(IsFloatPointTypes);
+        }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static FieldInfo GetFirstField(this Type type) => type.GetFields()[0];
 
@@ -76,31 +99,12 @@ namespace Platform.Reflection
             return null;
         }
 
-        public static void GetNumericAttributes(this Type type, out bool canBeNumeric, out bool isNumeric, out bool isSigned, out bool isFloatPoint)
-        {
-            canBeNumeric = false;
-            isNumeric = false;
-            isSigned = false;
-            isFloatPoint = false;
-            if (type == typeof(decimal) ||
-                type == typeof(double) ||
-                type == typeof(float))
-                canBeNumeric = isNumeric = isSigned = isFloatPoint = true;
-            else if (type == typeof(sbyte) ||
-                type == typeof(short) ||
-                type == typeof(int) ||
-                type == typeof(long))
-                canBeNumeric = isNumeric = isSigned = true;
-            else if (type == typeof(byte) ||
-                type == typeof(ushort) ||
-                type == typeof(uint) ||
-                type == typeof(ulong))
-                canBeNumeric = isNumeric = true;
-            else if (type == typeof(bool) ||
-                type == typeof(char) ||
-                type == typeof(DateTime) ||
-                type == typeof(TimeSpan))
-                canBeNumeric = true;
-        }
+        public static bool CanBeNumeric(this Type type) => CanBeNumericTypes.Contains(type);
+
+        public static bool IsNumeric(this Type type) => IsNumericTypes.Contains(type);
+
+        public static bool IsSigned(this Type type) => IsSignedTypes.Contains(type);
+
+        public static bool IsFloatPoint(this Type type) => IsFloatPointTypes.Contains(type);
     }
 }

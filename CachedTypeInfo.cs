@@ -39,9 +39,12 @@ namespace Platform.Reflection
 
             try
             {
-                UnderlyingType.GetNumericAttributes(out bool canBeNumeric, out bool isNumeric, out bool isSigned, out bool isFloatPoint);
+                var canBeNumeric = UnderlyingType.CanBeNumeric();
+                var isNumeric = UnderlyingType.IsNumeric();
+                var isSigned = UnderlyingType.IsSigned();
+                var isFloatPoint = UnderlyingType.IsFloatPoint();
 
-                int bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
+                var bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
 
                 GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
 
