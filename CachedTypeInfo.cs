@@ -39,55 +39,13 @@ namespace Platform.Reflection
 
             try
             {
-                bool canBeNumeric = false, isNumeric = false, isSigned = false, isFloatPoint = false;
-
-                if (UnderlyingType == typeof(decimal) ||
-                    UnderlyingType == typeof(double) ||
-                    UnderlyingType == typeof(float))
-                    canBeNumeric = isNumeric = isSigned = isFloatPoint = true;
-                else if (UnderlyingType == typeof(sbyte) ||
-                    UnderlyingType == typeof(short) ||
-                    UnderlyingType == typeof(int) ||
-                    UnderlyingType == typeof(long))
-                    canBeNumeric = isNumeric = isSigned = true;
-                else if (UnderlyingType == typeof(byte) ||
-                    UnderlyingType == typeof(ushort) ||
-                    UnderlyingType == typeof(uint) ||
-                    UnderlyingType == typeof(ulong))
-                    canBeNumeric = isNumeric = true;
-                else if (UnderlyingType == typeof(bool) ||
-                    UnderlyingType == typeof(char) ||
-                    UnderlyingType == typeof(DateTime) ||
-                    UnderlyingType == typeof(TimeSpan))
-                    canBeNumeric = true;
+                UnderlyingType.GetNumericAttributes(out bool canBeNumeric, out bool isNumeric, out bool isSigned, out bool isFloatPoint);
 
                 int bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
 
-                T minValue, maxValue;
+                GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
 
-                if (UnderlyingType == typeof(bool))
-                {
-                    minValue = (T)(object)false;
-                    maxValue = (T)(object)true;
-                }
-                else
-                {
-                    minValue = UnderlyingType.GetStaticFieldValue<T>("MinValue");
-                    maxValue = UnderlyingType.GetStaticFieldValue<T>("MaxValue");
-                }
-
-                Type signedVersion, unsignedVersion;
-
-                if (isSigned)
-                {
-                    signedVersion = UnderlyingType;
-                    unsignedVersion = UnderlyingType.GetUnsignedVersionOrNull();
-                }
-                else
-                {
-                    signedVersion = UnderlyingType.GetSignedVersionOrNull();
-                    unsignedVersion = UnderlyingType;
-                }
+                GetSignedAndUnsignedVersions(UnderlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
 
                 IsSupported = true;
                 CanBeNumeric = canBeNumeric;
@@ -102,6 +60,34 @@ namespace Platform.Reflection
             }
             catch (Exception)
             {
+            }
+        }
+
+        private static void GetMinAndMaxValues(Type type, out T minValue, out T maxValue)
+        {
+            if (type == typeof(bool))
+            {
+                minValue = (T)(object)false;
+                maxValue = (T)(object)true;
+            }
+            else
+            {
+                minValue = type.GetStaticFieldValue<T>("MinValue");
+                maxValue = type.GetStaticFieldValue<T>("MaxValue");
+            }
+        }
+
+        private static void GetSignedAndUnsignedVersions(Type type, bool isSigned, out Type signedVersion, out Type unsignedVersion)
+        {
+            if (isSigned)
+            {
+                signedVersion = type;
+                unsignedVersion = type.GetUnsignedVersionOrNull();
+            }
+            else
+            {
+                signedVersion = type.GetSignedVersionOrNull();
+                unsignedVersion = type;
             }
         }
     }

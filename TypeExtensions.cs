@@ -19,10 +19,8 @@ namespace Platform.Reflection
             var methods = from m in type.GetMethods()
                           where m.Name == name
                                 && m.IsGenericMethodDefinition
-
                           let typeParams = m.GetGenericArguments()
                           let normalParams = m.GetParameters().Select(x => x.ParameterType)
-
                           where typeParams.SequenceEqual(genericParameterTypes)
                              && normalParams.SequenceEqual(argumentTypes)
                           select m;
@@ -76,6 +74,33 @@ namespace Platform.Reflection
             if (unsignedType == typeof(ulong))
                 return typeof(long);
             return null;
+        }
+
+        public static void GetNumericAttributes(this Type type, out bool canBeNumeric, out bool isNumeric, out bool isSigned, out bool isFloatPoint)
+        {
+            canBeNumeric = false;
+            isNumeric = false;
+            isSigned = false;
+            isFloatPoint = false;
+            if (type == typeof(decimal) ||
+                type == typeof(double) ||
+                type == typeof(float))
+                canBeNumeric = isNumeric = isSigned = isFloatPoint = true;
+            else if (type == typeof(sbyte) ||
+                type == typeof(short) ||
+                type == typeof(int) ||
+                type == typeof(long))
+                canBeNumeric = isNumeric = isSigned = true;
+            else if (type == typeof(byte) ||
+                type == typeof(ushort) ||
+                type == typeof(uint) ||
+                type == typeof(ulong))
+                canBeNumeric = isNumeric = true;
+            else if (type == typeof(bool) ||
+                type == typeof(char) ||
+                type == typeof(DateTime) ||
+                type == typeof(TimeSpan))
+                canBeNumeric = true;
         }
     }
 }
