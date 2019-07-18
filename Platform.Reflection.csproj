@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>LinksPlatform's Platform.Reflection Class Library</Description>
+    <Copyright>Konstantin Diachenko</Copyright>
+    <AssemblyTitle>Platform.Reflection</AssemblyTitle>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <Authors>Konstantin Diachenko</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Platform.Reflection</AssemblyName>
+    <PackageId>Platform.Reflection</PackageId>
+    <PackageTags>LinksPlatform;Reflection;Extensions;Arrays;Lists;Concurrent;Segments;SegmentWalkers;Stacks;Strings</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/d65e8dd6e1b647405bc3d33687172e79b70e3435/doc/Avatar-rainbow.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/linksplatform/Reflection</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/linksplatform/Reflection/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/linksplatform/Reflection</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Platform.Collections" Version="0.0.1" />
+  </ItemGroup>
+
+</Project>
