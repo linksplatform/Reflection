@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Reflection;
+using Platform.Exceptions;
 using Platform.Collections.Lists;
 
 namespace Platform.Reflection
@@ -14,7 +15,7 @@ namespace Platform.Reflection
         /// </remarks>
         public static Type[] GetLoadableTypes(this Assembly assembly)
         {
-            if (assembly == null) throw new ArgumentNullException(nameof(assembly));
+            Ensure.Always.ArgumentNotNull(assembly, nameof(assembly));
             try
             {
                 return assembly.GetTypes();

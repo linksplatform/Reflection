@@ -9,7 +9,9 @@ namespace Platform.Reflection
         {
             var type = @object.GetType();
             if (type == typeof(ExpandoObject))
+            {
                 return ((IDictionary<string, object>)@object).ContainsKey(propertyName);
+            }
             return type.GetProperty(propertyName) != null;
         }
     }

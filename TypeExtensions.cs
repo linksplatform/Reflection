@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Platform.Collections;
 
 namespace Platform.Reflection
 {
@@ -12,19 +13,32 @@ namespace Platform.Reflection
         static private readonly HashSet<Type> IsNumericTypes;
         static private readonly HashSet<Type> IsSignedTypes;
         static private readonly HashSet<Type> IsFloatPointTypes;
+        static private readonly Dictionary<Type, Type> UnsignedVersionsOfSignedTypes;
+        static private readonly Dictionary<Type, Type> SignedVersionsOfUnsignedTypes;
 
         static TypeExtensions()
         {
-            CanBeNumericTypes = new HashSet<Type>() { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
-            IsNumericTypes = new HashSet<Type>() { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
-            IsSignedTypes = new HashSet<Type>() { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
-            IsFloatPointTypes = new HashSet<Type>() { typeof(decimal), typeof(double), typeof(float) };
-
+            CanBeNumericTypes = new HashSet<Type> { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
+            IsNumericTypes = new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+            IsSignedTypes = new HashSet<Type> { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
+            IsFloatPointTypes = new HashSet<Type> { typeof(decimal), typeof(double), typeof(float) };
+            UnsignedVersionsOfSignedTypes = new Dictionary<Type, Type>
+            {
+                { typeof(sbyte), typeof(byte) },
+                { typeof(short), typeof(ushort) },
+                { typeof(int), typeof(uint) },
+                { typeof(long), typeof(ulong) },
+            };
+            SignedVersionsOfUnsignedTypes = new Dictionary<Type, Type>
+            {
+                { typeof(byte), typeof(sbyte)},
+                { typeof(ushort), typeof(short) },
+                { typeof(uint), typeof(int) },
+                { typeof(ulong), typeof(long) },
+            };
             CanBeNumericTypes.UnionWith(IsNumericTypes);
-
             CanBeNumericTypes.UnionWith(IsSignedTypes);
             IsNumericTypes.UnionWith(IsSignedTypes);
-
             CanBeNumericTypes.UnionWith(IsFloatPointTypes);
             IsNumericTypes.UnionWith(IsFloatPointTypes);
             IsSignedTypes.UnionWith(IsFloatPointTypes);
@@ -41,13 +55,12 @@ namespace Platform.Reflection
         {
             var methods = from m in type.GetMethods()
                           where m.Name == name
-                                && m.IsGenericMethodDefinition
+                             && m.IsGenericMethodDefinition
                           let typeParams = m.GetGenericArguments()
                           let normalParams = m.GetParameters().Select(x => x.ParameterType)
                           where typeParams.SequenceEqual(genericParameterTypes)
                              && normalParams.SequenceEqual(argumentTypes)
                           select m;
-
             var method = methods.Single();
             return method;
         }
@@ -73,31 +86,9 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsNullable(this Type type) => type.IsGeneric(typeof(Nullable<>));
 
-        public static Type GetUnsignedVersionOrNull(this Type signedType)
-        {
-            if (signedType == typeof(sbyte))
-                return typeof(byte);
-            if (signedType == typeof(short))
-                return typeof(ushort);
-            if (signedType == typeof(int))
-                return typeof(uint);
-            if (signedType == typeof(long))
-                return typeof(ulong);
-            return null;
-        }
+        public static Type GetUnsignedVersionOrNull(this Type signedType) => UnsignedVersionsOfSignedTypes.GetOrDefault(signedType);
 
-        public static Type GetSignedVersionOrNull(this Type unsignedType)
-        {
-            if (unsignedType == typeof(byte))
-                return typeof(sbyte);
-            if (unsignedType == typeof(ushort))
-                return typeof(short);
-            if (unsignedType == typeof(uint))
-                return typeof(int);
-            if (unsignedType == typeof(ulong))
-                return typeof(long);
-            return null;
-        }
+        public static Type GetSignedVersionOrNull(this Type unsignedType) => SignedVersionsOfUnsignedTypes.GetOrDefault(unsignedType);
 
         public static bool CanBeNumeric(this Type type) => CanBeNumericTypes.Contains(type);
 

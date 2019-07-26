@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using Platform.Exceptions;
 
 // ReSharper disable AssignmentInConditionalExpression
-
 // ReSharper disable BuiltInTypeReferenceStyle
 // ReSharper disable StaticFieldInGenericType
 
@@ -13,43 +13,31 @@ namespace Platform.Reflection
         public static readonly bool IsSupported;
         public static readonly Type Type;
         public static readonly Type UnderlyingType;
-
         public static readonly Type SignedVersion;
         public static readonly Type UnsignedVersion;
-
         public static readonly bool IsFloatPoint;
         public static readonly bool IsNumeric;
         public static readonly bool IsSigned;
         public static readonly bool CanBeNumeric;
-
         public static readonly bool IsNullable;
-
         public static readonly int BitsLength;
         public static readonly T MinValue;
         public static readonly T MaxValue;
 
         static CachedTypeInfo()
         {
-            Type = typeof(T);
-
-            if (IsNullable = Type.IsNullable()) //-V3055
-                UnderlyingType = Nullable.GetUnderlyingType(Type);
-            else
-                UnderlyingType = Type;
-
             try
             {
+                Type = typeof(T);
+                IsNullable = Type.IsNullable();
+                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
                 var canBeNumeric = UnderlyingType.CanBeNumeric();
                 var isNumeric = UnderlyingType.IsNumeric();
                 var isSigned = UnderlyingType.IsSigned();
                 var isFloatPoint = UnderlyingType.IsFloatPoint();
-
                 var bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
-
                 GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
-
                 GetSignedAndUnsignedVersions(UnderlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
-
                 IsSupported = true;
                 CanBeNumeric = canBeNumeric;
                 IsNumeric = isNumeric;
@@ -61,8 +49,9 @@ namespace Platform.Reflection
                 SignedVersion = signedVersion;
                 UnsignedVersion = unsignedVersion;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
+                exception.Ignore();
             }
         }
 
