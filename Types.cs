@@ -14,7 +14,7 @@ namespace Platform.Reflection
             var types = GetType().GetGenericArguments();
             var result = new List<Type>();
             AppendTypes(result, types);
-            return new ReadOnlyCollection<Type>(result);;
+            return new ReadOnlyCollection<Type>(result);
         }
 
         private void AppendTypes(List<Type> container, IList<Type> types)
