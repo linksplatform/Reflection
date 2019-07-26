@@ -17,7 +17,7 @@ namespace Platform.Reflection
             return new ReadOnlyCollection<Type>(result);
         }
 
-        private void AppendTypes(List<Type> container, IList<Type> types)
+        private static void AppendTypes(List<Type> container, IList<Type> types)
         {
             for (var i = 0; i < types.Count; i++)
             {
