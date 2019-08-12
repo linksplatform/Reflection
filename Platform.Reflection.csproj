@@ -28,7 +28,7 @@ Refactoring.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Collections" Version="0.0.3" />
+    <PackageReference Include="Platform.Collections" Version="0.0.4" />
   </ItemGroup>
 
 </Project>
