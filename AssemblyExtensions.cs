@@ -10,7 +10,7 @@ namespace Platform.Reflection
 {
     public static class AssemblyExtensions
     {
-        private static readonly ConcurrentDictionary<Assembly, Type[]> _loadableAssemblyTypesCache = new ConcurrentDictionary<Assembly, Type[]>();
+        private static readonly ConcurrentDictionary<Assembly, Type[]> _loadableTypesCache = new ConcurrentDictionary<Assembly, Type[]>();
 
         /// <remarks>
         /// Source: http://haacked.com/archive/2012/07/23/get-all-types-in-an-assembly.aspx/
@@ -28,6 +28,6 @@ namespace Platform.Reflection
             }
         }
 
-        public static Type[] GetCachedLoadableTypes(this Assembly assembly) => _loadableAssemblyTypesCache.GetOrAdd(assembly, GetLoadableTypes);
+        public static Type[] GetCachedLoadableTypes(this Assembly assembly) => _loadableTypesCache.GetOrAdd(assembly, GetLoadableTypes);
     }
 }

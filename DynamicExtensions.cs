@@ -10,9 +10,9 @@ namespace Platform.Reflection
         public static bool HasProperty(this object @object, string propertyName)
         {
             var type = @object.GetType();
-            if (type == typeof(ExpandoObject))
+            if (type is IDictionary<string, object> dictionary)
             {
-                return ((IDictionary<string, object>)@object).ContainsKey(propertyName);
+                return dictionary.ContainsKey(propertyName);
             }
             return type.GetProperty(propertyName) != null;
         }
