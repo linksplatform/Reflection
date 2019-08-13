@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionPrefix>0.0.4</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -21,10 +21,14 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Platform.Collections updated to 0.0.3 version.
-All exceptions are ignored correcly now.
-Types classes use IList&lt;T&gt; (read-only) instead of T[] in public field.
-Refactoring.</PackageReleaseNotes>
+    <PackageReleaseNotes>Platform.Collections dependency updated from 0.0.3 to 0.0.4.
+For all Types classes with type parameters there are now to properties Collection and Array instead of List.
+GetStaticPropertyValue method added to TypeExtensions.
+EnsureExtensions added.
+PropetyInfoExtensions added.
+XML documentation file generation turned on.
+Travis CI connected.
+Refactoring, issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
