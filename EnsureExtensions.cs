@@ -9,7 +9,6 @@ using Platform.Exceptions.ExtensionRoots;
 
 namespace Platform.Reflection
 {
-
     public static class EnsureExtensions
     {
         #region Always
