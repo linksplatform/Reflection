@@ -1,0 +1,1096 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Platform.Reflection
+  name: Platform.Reflection
+  href: api/Platform.Reflection.html
+  commentId: N:Platform.Reflection
+  fullName: Platform.Reflection
+  nameWithType: Platform.Reflection
+- uid: Platform.Reflection.AssemblyExtensions
+  name: AssemblyExtensions
+  href: api/Platform.Reflection.AssemblyExtensions.html
+  commentId: T:Platform.Reflection.AssemblyExtensions
+  fullName: Platform.Reflection.AssemblyExtensions
+  nameWithType: AssemblyExtensions
+- uid: Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes(System.Reflection.Assembly)
+  name: GetCachedLoadableTypes(Assembly)
+  href: api/Platform.Reflection.AssemblyExtensions.html#Platform_Reflection_AssemblyExtensions_GetCachedLoadableTypes_System_Reflection_Assembly_
+  commentId: M:Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes(System.Reflection.Assembly)
+  fullName: Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.GetCachedLoadableTypes(Assembly)
+- uid: Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes*
+  name: GetCachedLoadableTypes
+  href: api/Platform.Reflection.AssemblyExtensions.html#Platform_Reflection_AssemblyExtensions_GetCachedLoadableTypes_
+  commentId: Overload:Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes
+  isSpec: "True"
+  fullName: Platform.Reflection.AssemblyExtensions.GetCachedLoadableTypes
+  nameWithType: AssemblyExtensions.GetCachedLoadableTypes
+- uid: Platform.Reflection.AssemblyExtensions.GetLoadableTypes(System.Reflection.Assembly)
+  name: GetLoadableTypes(Assembly)
+  href: api/Platform.Reflection.AssemblyExtensions.html#Platform_Reflection_AssemblyExtensions_GetLoadableTypes_System_Reflection_Assembly_
+  commentId: M:Platform.Reflection.AssemblyExtensions.GetLoadableTypes(System.Reflection.Assembly)
+  fullName: Platform.Reflection.AssemblyExtensions.GetLoadableTypes(System.Reflection.Assembly)
+  nameWithType: AssemblyExtensions.GetLoadableTypes(Assembly)
+- uid: Platform.Reflection.AssemblyExtensions.GetLoadableTypes*
+  name: GetLoadableTypes
+  href: api/Platform.Reflection.AssemblyExtensions.html#Platform_Reflection_AssemblyExtensions_GetLoadableTypes_
+  commentId: Overload:Platform.Reflection.AssemblyExtensions.GetLoadableTypes
+  isSpec: "True"
+  fullName: Platform.Reflection.AssemblyExtensions.GetLoadableTypes
+  nameWithType: AssemblyExtensions.GetLoadableTypes
+- uid: Platform.Reflection.CachedTypeInfo`1
+  name: CachedTypeInfo<T>
+  href: api/Platform.Reflection.CachedTypeInfo-1.html
+  commentId: T:Platform.Reflection.CachedTypeInfo`1
+  name.vb: CachedTypeInfo(Of T)
+  fullName: Platform.Reflection.CachedTypeInfo<T>
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T)
+  nameWithType: CachedTypeInfo<T>
+  nameWithType.vb: CachedTypeInfo(Of T)
+- uid: Platform.Reflection.CachedTypeInfo`1.BitsLength
+  name: BitsLength
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_BitsLength
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.BitsLength
+  fullName: Platform.Reflection.CachedTypeInfo<T>.BitsLength
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).BitsLength
+  nameWithType: CachedTypeInfo<T>.BitsLength
+  nameWithType.vb: CachedTypeInfo(Of T).BitsLength
+- uid: Platform.Reflection.CachedTypeInfo`1.CanBeNumeric
+  name: CanBeNumeric
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_CanBeNumeric
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.CanBeNumeric
+  fullName: Platform.Reflection.CachedTypeInfo<T>.CanBeNumeric
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).CanBeNumeric
+  nameWithType: CachedTypeInfo<T>.CanBeNumeric
+  nameWithType.vb: CachedTypeInfo(Of T).CanBeNumeric
+- uid: Platform.Reflection.CachedTypeInfo`1.IsFloatPoint
+  name: IsFloatPoint
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_IsFloatPoint
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.IsFloatPoint
+  fullName: Platform.Reflection.CachedTypeInfo<T>.IsFloatPoint
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).IsFloatPoint
+  nameWithType: CachedTypeInfo<T>.IsFloatPoint
+  nameWithType.vb: CachedTypeInfo(Of T).IsFloatPoint
+- uid: Platform.Reflection.CachedTypeInfo`1.IsNullable
+  name: IsNullable
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_IsNullable
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.IsNullable
+  fullName: Platform.Reflection.CachedTypeInfo<T>.IsNullable
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).IsNullable
+  nameWithType: CachedTypeInfo<T>.IsNullable
+  nameWithType.vb: CachedTypeInfo(Of T).IsNullable
+- uid: Platform.Reflection.CachedTypeInfo`1.IsNumeric
+  name: IsNumeric
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_IsNumeric
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.IsNumeric
+  fullName: Platform.Reflection.CachedTypeInfo<T>.IsNumeric
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).IsNumeric
+  nameWithType: CachedTypeInfo<T>.IsNumeric
+  nameWithType.vb: CachedTypeInfo(Of T).IsNumeric
+- uid: Platform.Reflection.CachedTypeInfo`1.IsSigned
+  name: IsSigned
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_IsSigned
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.IsSigned
+  fullName: Platform.Reflection.CachedTypeInfo<T>.IsSigned
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).IsSigned
+  nameWithType: CachedTypeInfo<T>.IsSigned
+  nameWithType.vb: CachedTypeInfo(Of T).IsSigned
+- uid: Platform.Reflection.CachedTypeInfo`1.IsSupported
+  name: IsSupported
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_IsSupported
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.IsSupported
+  fullName: Platform.Reflection.CachedTypeInfo<T>.IsSupported
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).IsSupported
+  nameWithType: CachedTypeInfo<T>.IsSupported
+  nameWithType.vb: CachedTypeInfo(Of T).IsSupported
+- uid: Platform.Reflection.CachedTypeInfo`1.MaxValue
+  name: MaxValue
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_MaxValue
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.MaxValue
+  fullName: Platform.Reflection.CachedTypeInfo<T>.MaxValue
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).MaxValue
+  nameWithType: CachedTypeInfo<T>.MaxValue
+  nameWithType.vb: CachedTypeInfo(Of T).MaxValue
+- uid: Platform.Reflection.CachedTypeInfo`1.MinValue
+  name: MinValue
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_MinValue
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.MinValue
+  fullName: Platform.Reflection.CachedTypeInfo<T>.MinValue
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).MinValue
+  nameWithType: CachedTypeInfo<T>.MinValue
+  nameWithType.vb: CachedTypeInfo(Of T).MinValue
+- uid: Platform.Reflection.CachedTypeInfo`1.SignedVersion
+  name: SignedVersion
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_SignedVersion
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.SignedVersion
+  fullName: Platform.Reflection.CachedTypeInfo<T>.SignedVersion
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).SignedVersion
+  nameWithType: CachedTypeInfo<T>.SignedVersion
+  nameWithType.vb: CachedTypeInfo(Of T).SignedVersion
+- uid: Platform.Reflection.CachedTypeInfo`1.Type
+  name: Type
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_Type
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.Type
+  fullName: Platform.Reflection.CachedTypeInfo<T>.Type
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).Type
+  nameWithType: CachedTypeInfo<T>.Type
+  nameWithType.vb: CachedTypeInfo(Of T).Type
+- uid: Platform.Reflection.CachedTypeInfo`1.UnderlyingType
+  name: UnderlyingType
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_UnderlyingType
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.UnderlyingType
+  fullName: Platform.Reflection.CachedTypeInfo<T>.UnderlyingType
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).UnderlyingType
+  nameWithType: CachedTypeInfo<T>.UnderlyingType
+  nameWithType.vb: CachedTypeInfo(Of T).UnderlyingType
+- uid: Platform.Reflection.CachedTypeInfo`1.UnsignedVersion
+  name: UnsignedVersion
+  href: api/Platform.Reflection.CachedTypeInfo-1.html#Platform_Reflection_CachedTypeInfo_1_UnsignedVersion
+  commentId: F:Platform.Reflection.CachedTypeInfo`1.UnsignedVersion
+  fullName: Platform.Reflection.CachedTypeInfo<T>.UnsignedVersion
+  fullName.vb: Platform.Reflection.CachedTypeInfo(Of T).UnsignedVersion
+  nameWithType: CachedTypeInfo<T>.UnsignedVersion
+  nameWithType.vb: CachedTypeInfo(Of T).UnsignedVersion
+- uid: Platform.Reflection.DynamicExtensions
+  name: DynamicExtensions
+  href: api/Platform.Reflection.DynamicExtensions.html
+  commentId: T:Platform.Reflection.DynamicExtensions
+  fullName: Platform.Reflection.DynamicExtensions
+  nameWithType: DynamicExtensions
+- uid: Platform.Reflection.DynamicExtensions.HasProperty(System.Object,System.String)
+  name: HasProperty(Object, String)
+  href: api/Platform.Reflection.DynamicExtensions.html#Platform_Reflection_DynamicExtensions_HasProperty_System_Object_System_String_
+  commentId: M:Platform.Reflection.DynamicExtensions.HasProperty(System.Object,System.String)
+  fullName: Platform.Reflection.DynamicExtensions.HasProperty(System.Object, System.String)
+  nameWithType: DynamicExtensions.HasProperty(Object, String)
+- uid: Platform.Reflection.DynamicExtensions.HasProperty*
+  name: HasProperty
+  href: api/Platform.Reflection.DynamicExtensions.html#Platform_Reflection_DynamicExtensions_HasProperty_
+  commentId: Overload:Platform.Reflection.DynamicExtensions.HasProperty
+  isSpec: "True"
+  fullName: Platform.Reflection.DynamicExtensions.HasProperty
+  nameWithType: DynamicExtensions.HasProperty
+- uid: Platform.Reflection.EnsureExtensions
+  name: EnsureExtensions
+  href: api/Platform.Reflection.EnsureExtensions.html
+  commentId: T:Platform.Reflection.EnsureExtensions
+  fullName: Platform.Reflection.EnsureExtensions
+  nameWithType: EnsureExtensions
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric*
+  name: CanBeNumeric
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric_
+  commentId: Overload:Platform.Reflection.EnsureExtensions.CanBeNumeric
+  isSpec: "True"
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric
+  nameWithType: EnsureExtensions.CanBeNumeric
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name: CanBeNumeric<T>(EnsureAlwaysExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name.vb: CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureAlwaysExtensionRoot)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name: CanBeNumeric<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name.vb: CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name: CanBeNumeric<T>(EnsureAlwaysExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name.vb: CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureAlwaysExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureAlwaysExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name: CanBeNumeric<T>(EnsureOnDebugExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name.vb: CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureOnDebugExtensionRoot)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name: CanBeNumeric<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name.vb: CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name: CanBeNumeric<T>(EnsureOnDebugExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_CanBeNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.CanBeNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name.vb: CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.CanBeNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.CanBeNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.CanBeNumeric<T>(EnsureOnDebugExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.CanBeNumeric(Of T)(EnsureOnDebugExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric*
+  name: IsNumeric
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric_
+  commentId: Overload:Platform.Reflection.EnsureExtensions.IsNumeric
+  isSpec: "True"
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric
+  nameWithType: EnsureExtensions.IsNumeric
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name: IsNumeric<T>(EnsureAlwaysExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name.vb: IsNumeric(Of T)(EnsureAlwaysExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureAlwaysExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureAlwaysExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name: IsNumeric<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name.vb: IsNumeric(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name: IsNumeric<T>(EnsureAlwaysExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name.vb: IsNumeric(Of T)(EnsureAlwaysExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureAlwaysExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureAlwaysExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name: IsNumeric<T>(EnsureOnDebugExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name.vb: IsNumeric(Of T)(EnsureOnDebugExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureOnDebugExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureOnDebugExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name: IsNumeric<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name.vb: IsNumeric(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name: IsNumeric<T>(EnsureOnDebugExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsNumeric__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsNumeric``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name.vb: IsNumeric(Of T)(EnsureOnDebugExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsNumeric<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsNumeric(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsNumeric<T>(EnsureOnDebugExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsNumeric(Of T)(EnsureOnDebugExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsSigned*
+  name: IsSigned
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned_
+  commentId: Overload:Platform.Reflection.EnsureExtensions.IsSigned
+  isSpec: "True"
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned
+  nameWithType: EnsureExtensions.IsSigned
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name: IsSigned<T>(EnsureAlwaysExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name.vb: IsSigned(Of T)(EnsureAlwaysExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureAlwaysExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureAlwaysExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name: IsSigned<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name.vb: IsSigned(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name: IsSigned<T>(EnsureAlwaysExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name.vb: IsSigned(Of T)(EnsureAlwaysExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureAlwaysExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureAlwaysExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name: IsSigned<T>(EnsureOnDebugExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name.vb: IsSigned(Of T)(EnsureOnDebugExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureOnDebugExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureOnDebugExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name: IsSigned<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name.vb: IsSigned(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name: IsSigned<T>(EnsureOnDebugExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSigned__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSigned``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name.vb: IsSigned(Of T)(EnsureOnDebugExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsSigned<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSigned(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsSigned<T>(EnsureOnDebugExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsSigned(Of T)(EnsureOnDebugExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger*
+  name: IsSignedInteger
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger_
+  commentId: Overload:Platform.Reflection.EnsureExtensions.IsSignedInteger
+  isSpec: "True"
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger
+  nameWithType: EnsureExtensions.IsSignedInteger
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name: IsSignedInteger<T>(EnsureAlwaysExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name.vb: IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureAlwaysExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name: IsSignedInteger<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name.vb: IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name: IsSignedInteger<T>(EnsureAlwaysExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name.vb: IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureAlwaysExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureAlwaysExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name: IsSignedInteger<T>(EnsureOnDebugExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name.vb: IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureOnDebugExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name: IsSignedInteger<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name.vb: IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name: IsSignedInteger<T>(EnsureOnDebugExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsSignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsSignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name.vb: IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsSignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsSignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsSignedInteger<T>(EnsureOnDebugExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsSignedInteger(Of T)(EnsureOnDebugExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger*
+  name: IsUnsignedInteger
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger_
+  commentId: Overload:Platform.Reflection.EnsureExtensions.IsUnsignedInteger
+  isSpec: "True"
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger
+  nameWithType: EnsureExtensions.IsUnsignedInteger
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name: IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  name.vb: IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot)
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name: IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.Func{System.String})
+  name.vb: IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name: IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,System.String)
+  name.vb: IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureAlwaysExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureAlwaysExtensionRoot, String)
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name: IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  name.vb: IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot)
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot)
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot)
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name: IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_Func_System_String__
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.Func{System.String})
+  name.vb: IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func<System.String>)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.Func(Of System.String))
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot, Func<String>)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot, Func(Of String))
+- uid: Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name: IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot, String)
+  href: api/Platform.Reflection.EnsureExtensions.html#Platform_Reflection_EnsureExtensions_IsUnsignedInteger__1_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_System_String_
+  commentId: M:Platform.Reflection.EnsureExtensions.IsUnsignedInteger``1(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,System.String)
+  name.vb: IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot, String)
+  fullName: Platform.Reflection.EnsureExtensions.IsUnsignedInteger<T>(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  fullName.vb: Platform.Reflection.EnsureExtensions.IsUnsignedInteger(Of T)(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, System.String)
+  nameWithType: EnsureExtensions.IsUnsignedInteger<T>(EnsureOnDebugExtensionRoot, String)
+  nameWithType.vb: EnsureExtensions.IsUnsignedInteger(Of T)(EnsureOnDebugExtensionRoot, String)
+- uid: Platform.Reflection.FieldInfoExtensions
+  name: FieldInfoExtensions
+  href: api/Platform.Reflection.FieldInfoExtensions.html
+  commentId: T:Platform.Reflection.FieldInfoExtensions
+  fullName: Platform.Reflection.FieldInfoExtensions
+  nameWithType: FieldInfoExtensions
+- uid: Platform.Reflection.FieldInfoExtensions.GetStaticValue*
+  name: GetStaticValue
+  href: api/Platform.Reflection.FieldInfoExtensions.html#Platform_Reflection_FieldInfoExtensions_GetStaticValue_
+  commentId: Overload:Platform.Reflection.FieldInfoExtensions.GetStaticValue
+  isSpec: "True"
+  fullName: Platform.Reflection.FieldInfoExtensions.GetStaticValue
+  nameWithType: FieldInfoExtensions.GetStaticValue
+- uid: Platform.Reflection.FieldInfoExtensions.GetStaticValue``1(System.Reflection.FieldInfo)
+  name: GetStaticValue<T>(FieldInfo)
+  href: api/Platform.Reflection.FieldInfoExtensions.html#Platform_Reflection_FieldInfoExtensions_GetStaticValue__1_System_Reflection_FieldInfo_
+  commentId: M:Platform.Reflection.FieldInfoExtensions.GetStaticValue``1(System.Reflection.FieldInfo)
+  name.vb: GetStaticValue(Of T)(FieldInfo)
+  fullName: Platform.Reflection.FieldInfoExtensions.GetStaticValue<T>(System.Reflection.FieldInfo)
+  fullName.vb: Platform.Reflection.FieldInfoExtensions.GetStaticValue(Of T)(System.Reflection.FieldInfo)
+  nameWithType: FieldInfoExtensions.GetStaticValue<T>(FieldInfo)
+  nameWithType.vb: FieldInfoExtensions.GetStaticValue(Of T)(FieldInfo)
+- uid: Platform.Reflection.MethodInfoExtensions
+  name: MethodInfoExtensions
+  href: api/Platform.Reflection.MethodInfoExtensions.html
+  commentId: T:Platform.Reflection.MethodInfoExtensions
+  fullName: Platform.Reflection.MethodInfoExtensions
+  nameWithType: MethodInfoExtensions
+- uid: Platform.Reflection.MethodInfoExtensions.GetILBytes(System.Reflection.MethodInfo)
+  name: GetILBytes(MethodInfo)
+  href: api/Platform.Reflection.MethodInfoExtensions.html#Platform_Reflection_MethodInfoExtensions_GetILBytes_System_Reflection_MethodInfo_
+  commentId: M:Platform.Reflection.MethodInfoExtensions.GetILBytes(System.Reflection.MethodInfo)
+  fullName: Platform.Reflection.MethodInfoExtensions.GetILBytes(System.Reflection.MethodInfo)
+  nameWithType: MethodInfoExtensions.GetILBytes(MethodInfo)
+- uid: Platform.Reflection.MethodInfoExtensions.GetILBytes*
+  name: GetILBytes
+  href: api/Platform.Reflection.MethodInfoExtensions.html#Platform_Reflection_MethodInfoExtensions_GetILBytes_
+  commentId: Overload:Platform.Reflection.MethodInfoExtensions.GetILBytes
+  isSpec: "True"
+  fullName: Platform.Reflection.MethodInfoExtensions.GetILBytes
+  nameWithType: MethodInfoExtensions.GetILBytes
+- uid: Platform.Reflection.PropertyInfoExtensions
+  name: PropertyInfoExtensions
+  href: api/Platform.Reflection.PropertyInfoExtensions.html
+  commentId: T:Platform.Reflection.PropertyInfoExtensions
+  fullName: Platform.Reflection.PropertyInfoExtensions
+  nameWithType: PropertyInfoExtensions
+- uid: Platform.Reflection.PropertyInfoExtensions.GetStaticValue*
+  name: GetStaticValue
+  href: api/Platform.Reflection.PropertyInfoExtensions.html#Platform_Reflection_PropertyInfoExtensions_GetStaticValue_
+  commentId: Overload:Platform.Reflection.PropertyInfoExtensions.GetStaticValue
+  isSpec: "True"
+  fullName: Platform.Reflection.PropertyInfoExtensions.GetStaticValue
+  nameWithType: PropertyInfoExtensions.GetStaticValue
+- uid: Platform.Reflection.PropertyInfoExtensions.GetStaticValue``1(System.Reflection.PropertyInfo)
+  name: GetStaticValue<T>(PropertyInfo)
+  href: api/Platform.Reflection.PropertyInfoExtensions.html#Platform_Reflection_PropertyInfoExtensions_GetStaticValue__1_System_Reflection_PropertyInfo_
+  commentId: M:Platform.Reflection.PropertyInfoExtensions.GetStaticValue``1(System.Reflection.PropertyInfo)
+  name.vb: GetStaticValue(Of T)(PropertyInfo)
+  fullName: Platform.Reflection.PropertyInfoExtensions.GetStaticValue<T>(System.Reflection.PropertyInfo)
+  fullName.vb: Platform.Reflection.PropertyInfoExtensions.GetStaticValue(Of T)(System.Reflection.PropertyInfo)
+  nameWithType: PropertyInfoExtensions.GetStaticValue<T>(PropertyInfo)
+  nameWithType.vb: PropertyInfoExtensions.GetStaticValue(Of T)(PropertyInfo)
+- uid: Platform.Reflection.TypeExtensions
+  name: TypeExtensions
+  href: api/Platform.Reflection.TypeExtensions.html
+  commentId: T:Platform.Reflection.TypeExtensions
+  fullName: Platform.Reflection.TypeExtensions
+  nameWithType: TypeExtensions
+- uid: Platform.Reflection.TypeExtensions.CanBeNumeric(System.Type)
+  name: CanBeNumeric(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_CanBeNumeric_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.CanBeNumeric(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.CanBeNumeric(System.Type)
+  nameWithType: TypeExtensions.CanBeNumeric(Type)
+- uid: Platform.Reflection.TypeExtensions.CanBeNumeric*
+  name: CanBeNumeric
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_CanBeNumeric_
+  commentId: Overload:Platform.Reflection.TypeExtensions.CanBeNumeric
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.CanBeNumeric
+  nameWithType: TypeExtensions.CanBeNumeric
+- uid: Platform.Reflection.TypeExtensions.GetAssembly(System.Type)
+  name: GetAssembly(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetAssembly_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetAssembly(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetAssembly(System.Type)
+  nameWithType: TypeExtensions.GetAssembly(Type)
+- uid: Platform.Reflection.TypeExtensions.GetAssembly*
+  name: GetAssembly
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetAssembly_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetAssembly
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetAssembly
+  nameWithType: TypeExtensions.GetAssembly
+- uid: Platform.Reflection.TypeExtensions.GetBaseType(System.Type)
+  name: GetBaseType(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetBaseType_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetBaseType(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetBaseType(System.Type)
+  nameWithType: TypeExtensions.GetBaseType(Type)
+- uid: Platform.Reflection.TypeExtensions.GetBaseType*
+  name: GetBaseType
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetBaseType_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetBaseType
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetBaseType
+  nameWithType: TypeExtensions.GetBaseType
+- uid: Platform.Reflection.TypeExtensions.GetFirstField(System.Type)
+  name: GetFirstField(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetFirstField_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetFirstField(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetFirstField(System.Type)
+  nameWithType: TypeExtensions.GetFirstField(Type)
+- uid: Platform.Reflection.TypeExtensions.GetFirstField*
+  name: GetFirstField
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetFirstField_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetFirstField
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetFirstField
+  nameWithType: TypeExtensions.GetFirstField
+- uid: Platform.Reflection.TypeExtensions.GetGenericMethod(System.Type,System.String,System.Type[],System.Type[])
+  name: GetGenericMethod(Type, String, Type[], Type[])
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetGenericMethod_System_Type_System_String_System_Type___System_Type___
+  commentId: M:Platform.Reflection.TypeExtensions.GetGenericMethod(System.Type,System.String,System.Type[],System.Type[])
+  name.vb: GetGenericMethod(Type, String, Type(), Type())
+  fullName: Platform.Reflection.TypeExtensions.GetGenericMethod(System.Type, System.String, System.Type[], System.Type[])
+  fullName.vb: Platform.Reflection.TypeExtensions.GetGenericMethod(System.Type, System.String, System.Type(), System.Type())
+  nameWithType: TypeExtensions.GetGenericMethod(Type, String, Type[], Type[])
+  nameWithType.vb: TypeExtensions.GetGenericMethod(Type, String, Type(), Type())
+- uid: Platform.Reflection.TypeExtensions.GetGenericMethod*
+  name: GetGenericMethod
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetGenericMethod_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetGenericMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetGenericMethod
+  nameWithType: TypeExtensions.GetGenericMethod
+- uid: Platform.Reflection.TypeExtensions.GetSignedVersionOrNull(System.Type)
+  name: GetSignedVersionOrNull(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetSignedVersionOrNull_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetSignedVersionOrNull(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetSignedVersionOrNull(System.Type)
+  nameWithType: TypeExtensions.GetSignedVersionOrNull(Type)
+- uid: Platform.Reflection.TypeExtensions.GetSignedVersionOrNull*
+  name: GetSignedVersionOrNull
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetSignedVersionOrNull_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetSignedVersionOrNull
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetSignedVersionOrNull
+  nameWithType: TypeExtensions.GetSignedVersionOrNull
+- uid: Platform.Reflection.TypeExtensions.GetStaticFieldValue*
+  name: GetStaticFieldValue
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetStaticFieldValue_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetStaticFieldValue
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetStaticFieldValue
+  nameWithType: TypeExtensions.GetStaticFieldValue
+- uid: Platform.Reflection.TypeExtensions.GetStaticFieldValue``1(System.Type,System.String)
+  name: GetStaticFieldValue<T>(Type, String)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetStaticFieldValue__1_System_Type_System_String_
+  commentId: M:Platform.Reflection.TypeExtensions.GetStaticFieldValue``1(System.Type,System.String)
+  name.vb: GetStaticFieldValue(Of T)(Type, String)
+  fullName: Platform.Reflection.TypeExtensions.GetStaticFieldValue<T>(System.Type, System.String)
+  fullName.vb: Platform.Reflection.TypeExtensions.GetStaticFieldValue(Of T)(System.Type, System.String)
+  nameWithType: TypeExtensions.GetStaticFieldValue<T>(Type, String)
+  nameWithType.vb: TypeExtensions.GetStaticFieldValue(Of T)(Type, String)
+- uid: Platform.Reflection.TypeExtensions.GetStaticPropertyValue*
+  name: GetStaticPropertyValue
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetStaticPropertyValue_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetStaticPropertyValue
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetStaticPropertyValue
+  nameWithType: TypeExtensions.GetStaticPropertyValue
+- uid: Platform.Reflection.TypeExtensions.GetStaticPropertyValue``1(System.Type,System.String)
+  name: GetStaticPropertyValue<T>(Type, String)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetStaticPropertyValue__1_System_Type_System_String_
+  commentId: M:Platform.Reflection.TypeExtensions.GetStaticPropertyValue``1(System.Type,System.String)
+  name.vb: GetStaticPropertyValue(Of T)(Type, String)
+  fullName: Platform.Reflection.TypeExtensions.GetStaticPropertyValue<T>(System.Type, System.String)
+  fullName.vb: Platform.Reflection.TypeExtensions.GetStaticPropertyValue(Of T)(System.Type, System.String)
+  nameWithType: TypeExtensions.GetStaticPropertyValue<T>(Type, String)
+  nameWithType.vb: TypeExtensions.GetStaticPropertyValue(Of T)(Type, String)
+- uid: Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull(System.Type)
+  name: GetUnsignedVersionOrNull(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetUnsignedVersionOrNull_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull(System.Type)
+  nameWithType: TypeExtensions.GetUnsignedVersionOrNull(Type)
+- uid: Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull*
+  name: GetUnsignedVersionOrNull
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetUnsignedVersionOrNull_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetUnsignedVersionOrNull
+  nameWithType: TypeExtensions.GetUnsignedVersionOrNull
+- uid: Platform.Reflection.TypeExtensions.IsFloatPoint(System.Type)
+  name: IsFloatPoint(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsFloatPoint_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsFloatPoint(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsFloatPoint(System.Type)
+  nameWithType: TypeExtensions.IsFloatPoint(Type)
+- uid: Platform.Reflection.TypeExtensions.IsFloatPoint*
+  name: IsFloatPoint
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsFloatPoint_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsFloatPoint
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsFloatPoint
+  nameWithType: TypeExtensions.IsFloatPoint
+- uid: Platform.Reflection.TypeExtensions.IsGeneric(System.Type)
+  name: IsGeneric(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsGeneric_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsGeneric(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsGeneric(System.Type)
+  nameWithType: TypeExtensions.IsGeneric(Type)
+- uid: Platform.Reflection.TypeExtensions.IsGeneric(System.Type,System.Type)
+  name: IsGeneric(Type, Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsGeneric_System_Type_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsGeneric(System.Type,System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsGeneric(System.Type, System.Type)
+  nameWithType: TypeExtensions.IsGeneric(Type, Type)
+- uid: Platform.Reflection.TypeExtensions.IsGeneric*
+  name: IsGeneric
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsGeneric_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsGeneric
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsGeneric
+  nameWithType: TypeExtensions.IsGeneric
+- uid: Platform.Reflection.TypeExtensions.IsNullable(System.Type)
+  name: IsNullable(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsNullable_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsNullable(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsNullable(System.Type)
+  nameWithType: TypeExtensions.IsNullable(Type)
+- uid: Platform.Reflection.TypeExtensions.IsNullable*
+  name: IsNullable
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsNullable_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsNullable
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsNullable
+  nameWithType: TypeExtensions.IsNullable
+- uid: Platform.Reflection.TypeExtensions.IsNumeric(System.Type)
+  name: IsNumeric(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsNumeric_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsNumeric(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsNumeric(System.Type)
+  nameWithType: TypeExtensions.IsNumeric(Type)
+- uid: Platform.Reflection.TypeExtensions.IsNumeric*
+  name: IsNumeric
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsNumeric_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsNumeric
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsNumeric
+  nameWithType: TypeExtensions.IsNumeric
+- uid: Platform.Reflection.TypeExtensions.IsSigned(System.Type)
+  name: IsSigned(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsSigned_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsSigned(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsSigned(System.Type)
+  nameWithType: TypeExtensions.IsSigned(Type)
+- uid: Platform.Reflection.TypeExtensions.IsSigned*
+  name: IsSigned
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsSigned_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsSigned
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsSigned
+  nameWithType: TypeExtensions.IsSigned
+- uid: Platform.Reflection.TypeExtensions.IsSubclassOf(System.Type,System.Type)
+  name: IsSubclassOf(Type, Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsSubclassOf_System_Type_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsSubclassOf(System.Type,System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsSubclassOf(System.Type, System.Type)
+  nameWithType: TypeExtensions.IsSubclassOf(Type, Type)
+- uid: Platform.Reflection.TypeExtensions.IsSubclassOf*
+  name: IsSubclassOf
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsSubclassOf_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsSubclassOf
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsSubclassOf
+  nameWithType: TypeExtensions.IsSubclassOf
+- uid: Platform.Reflection.TypeExtensions.IsValueType(System.Type)
+  name: IsValueType(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsValueType_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.IsValueType(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.IsValueType(System.Type)
+  nameWithType: TypeExtensions.IsValueType(Type)
+- uid: Platform.Reflection.TypeExtensions.IsValueType*
+  name: IsValueType
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_IsValueType_
+  commentId: Overload:Platform.Reflection.TypeExtensions.IsValueType
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.IsValueType
+  nameWithType: TypeExtensions.IsValueType
+- uid: Platform.Reflection.Types
+  name: Types
+  href: api/Platform.Reflection.Types.html
+  commentId: T:Platform.Reflection.Types
+  fullName: Platform.Reflection.Types
+  nameWithType: Types
+- uid: Platform.Reflection.Types.ToReadOnlyCollection
+  name: ToReadOnlyCollection()
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_ToReadOnlyCollection
+  commentId: M:Platform.Reflection.Types.ToReadOnlyCollection
+  fullName: Platform.Reflection.Types.ToReadOnlyCollection()
+  nameWithType: Types.ToReadOnlyCollection()
+- uid: Platform.Reflection.Types.ToReadOnlyCollection*
+  name: ToReadOnlyCollection
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_ToReadOnlyCollection_
+  commentId: Overload:Platform.Reflection.Types.ToReadOnlyCollection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types.ToReadOnlyCollection
+  nameWithType: Types.ToReadOnlyCollection
+- uid: Platform.Reflection.Types`1
+  name: Types<T>
+  href: api/Platform.Reflection.Types-1.html
+  commentId: T:Platform.Reflection.Types`1
+  name.vb: Types(Of T)
+  fullName: Platform.Reflection.Types<T>
+  fullName.vb: Platform.Reflection.Types(Of T)
+  nameWithType: Types<T>
+  nameWithType.vb: Types(Of T)
+- uid: Platform.Reflection.Types`1.Array
+  name: Array
+  href: api/Platform.Reflection.Types-1.html#Platform_Reflection_Types_1_Array
+  commentId: P:Platform.Reflection.Types`1.Array
+  fullName: Platform.Reflection.Types<T>.Array
+  fullName.vb: Platform.Reflection.Types(Of T).Array
+  nameWithType: Types<T>.Array
+  nameWithType.vb: Types(Of T).Array
+- uid: Platform.Reflection.Types`1.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-1.html#Platform_Reflection_Types_1_Array_
+  commentId: Overload:Platform.Reflection.Types`1.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T>.Array
+  fullName.vb: Platform.Reflection.Types(Of T).Array
+  nameWithType: Types<T>.Array
+  nameWithType.vb: Types(Of T).Array
+- uid: Platform.Reflection.Types`1.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-1.html#Platform_Reflection_Types_1_Collection
+  commentId: P:Platform.Reflection.Types`1.Collection
+  fullName: Platform.Reflection.Types<T>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T).Collection
+  nameWithType: Types<T>.Collection
+  nameWithType.vb: Types(Of T).Collection
+- uid: Platform.Reflection.Types`1.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-1.html#Platform_Reflection_Types_1_Collection_
+  commentId: Overload:Platform.Reflection.Types`1.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T).Collection
+  nameWithType: Types<T>.Collection
+  nameWithType.vb: Types(Of T).Collection
+- uid: Platform.Reflection.Types`2
+  name: Types<T1, T2>
+  href: api/Platform.Reflection.Types-2.html
+  commentId: T:Platform.Reflection.Types`2
+  name.vb: Types(Of T1, T2)
+  fullName: Platform.Reflection.Types<T1, T2>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2)
+  nameWithType: Types<T1, T2>
+  nameWithType.vb: Types(Of T1, T2)
+- uid: Platform.Reflection.Types`2.Array
+  name: Array
+  href: api/Platform.Reflection.Types-2.html#Platform_Reflection_Types_2_Array
+  commentId: P:Platform.Reflection.Types`2.Array
+  fullName: Platform.Reflection.Types<T1, T2>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2).Array
+  nameWithType: Types<T1, T2>.Array
+  nameWithType.vb: Types(Of T1, T2).Array
+- uid: Platform.Reflection.Types`2.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-2.html#Platform_Reflection_Types_2_Array_
+  commentId: Overload:Platform.Reflection.Types`2.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2).Array
+  nameWithType: Types<T1, T2>.Array
+  nameWithType.vb: Types(Of T1, T2).Array
+- uid: Platform.Reflection.Types`2.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-2.html#Platform_Reflection_Types_2_Collection
+  commentId: P:Platform.Reflection.Types`2.Collection
+  fullName: Platform.Reflection.Types<T1, T2>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2).Collection
+  nameWithType: Types<T1, T2>.Collection
+  nameWithType.vb: Types(Of T1, T2).Collection
+- uid: Platform.Reflection.Types`2.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-2.html#Platform_Reflection_Types_2_Collection_
+  commentId: Overload:Platform.Reflection.Types`2.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2).Collection
+  nameWithType: Types<T1, T2>.Collection
+  nameWithType.vb: Types(Of T1, T2).Collection
+- uid: Platform.Reflection.Types`3
+  name: Types<T1, T2, T3>
+  href: api/Platform.Reflection.Types-3.html
+  commentId: T:Platform.Reflection.Types`3
+  name.vb: Types(Of T1, T2, T3)
+  fullName: Platform.Reflection.Types<T1, T2, T3>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3)
+  nameWithType: Types<T1, T2, T3>
+  nameWithType.vb: Types(Of T1, T2, T3)
+- uid: Platform.Reflection.Types`3.Array
+  name: Array
+  href: api/Platform.Reflection.Types-3.html#Platform_Reflection_Types_3_Array
+  commentId: P:Platform.Reflection.Types`3.Array
+  fullName: Platform.Reflection.Types<T1, T2, T3>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3).Array
+  nameWithType: Types<T1, T2, T3>.Array
+  nameWithType.vb: Types(Of T1, T2, T3).Array
+- uid: Platform.Reflection.Types`3.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-3.html#Platform_Reflection_Types_3_Array_
+  commentId: Overload:Platform.Reflection.Types`3.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3).Array
+  nameWithType: Types<T1, T2, T3>.Array
+  nameWithType.vb: Types(Of T1, T2, T3).Array
+- uid: Platform.Reflection.Types`3.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-3.html#Platform_Reflection_Types_3_Collection
+  commentId: P:Platform.Reflection.Types`3.Collection
+  fullName: Platform.Reflection.Types<T1, T2, T3>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3).Collection
+  nameWithType: Types<T1, T2, T3>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3).Collection
+- uid: Platform.Reflection.Types`3.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-3.html#Platform_Reflection_Types_3_Collection_
+  commentId: Overload:Platform.Reflection.Types`3.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3).Collection
+  nameWithType: Types<T1, T2, T3>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3).Collection
+- uid: Platform.Reflection.Types`4
+  name: Types<T1, T2, T3, T4>
+  href: api/Platform.Reflection.Types-4.html
+  commentId: T:Platform.Reflection.Types`4
+  name.vb: Types(Of T1, T2, T3, T4)
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4)
+  nameWithType: Types<T1, T2, T3, T4>
+  nameWithType.vb: Types(Of T1, T2, T3, T4)
+- uid: Platform.Reflection.Types`4.Array
+  name: Array
+  href: api/Platform.Reflection.Types-4.html#Platform_Reflection_Types_4_Array
+  commentId: P:Platform.Reflection.Types`4.Array
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4).Array
+  nameWithType: Types<T1, T2, T3, T4>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4).Array
+- uid: Platform.Reflection.Types`4.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-4.html#Platform_Reflection_Types_4_Array_
+  commentId: Overload:Platform.Reflection.Types`4.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4).Array
+  nameWithType: Types<T1, T2, T3, T4>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4).Array
+- uid: Platform.Reflection.Types`4.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-4.html#Platform_Reflection_Types_4_Collection
+  commentId: P:Platform.Reflection.Types`4.Collection
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4).Collection
+  nameWithType: Types<T1, T2, T3, T4>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4).Collection
+- uid: Platform.Reflection.Types`4.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-4.html#Platform_Reflection_Types_4_Collection_
+  commentId: Overload:Platform.Reflection.Types`4.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4).Collection
+  nameWithType: Types<T1, T2, T3, T4>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4).Collection
+- uid: Platform.Reflection.Types`5
+  name: Types<T1, T2, T3, T4, T5>
+  href: api/Platform.Reflection.Types-5.html
+  commentId: T:Platform.Reflection.Types`5
+  name.vb: Types(Of T1, T2, T3, T4, T5)
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5)
+  nameWithType: Types<T1, T2, T3, T4, T5>
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5)
+- uid: Platform.Reflection.Types`5.Array
+  name: Array
+  href: api/Platform.Reflection.Types-5.html#Platform_Reflection_Types_5_Array
+  commentId: P:Platform.Reflection.Types`5.Array
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5).Array
+  nameWithType: Types<T1, T2, T3, T4, T5>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5).Array
+- uid: Platform.Reflection.Types`5.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-5.html#Platform_Reflection_Types_5_Array_
+  commentId: Overload:Platform.Reflection.Types`5.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5).Array
+  nameWithType: Types<T1, T2, T3, T4, T5>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5).Array
+- uid: Platform.Reflection.Types`5.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-5.html#Platform_Reflection_Types_5_Collection
+  commentId: P:Platform.Reflection.Types`5.Collection
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5).Collection
+- uid: Platform.Reflection.Types`5.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-5.html#Platform_Reflection_Types_5_Collection_
+  commentId: Overload:Platform.Reflection.Types`5.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5).Collection
+- uid: Platform.Reflection.Types`6
+  name: Types<T1, T2, T3, T4, T5, T6>
+  href: api/Platform.Reflection.Types-6.html
+  commentId: T:Platform.Reflection.Types`6
+  name.vb: Types(Of T1, T2, T3, T4, T5, T6)
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6)
+  nameWithType: Types<T1, T2, T3, T4, T5, T6>
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6)
+- uid: Platform.Reflection.Types`6.Array
+  name: Array
+  href: api/Platform.Reflection.Types-6.html#Platform_Reflection_Types_6_Array
+  commentId: P:Platform.Reflection.Types`6.Array
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6).Array
+  nameWithType: Types<T1, T2, T3, T4, T5, T6>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6).Array
+- uid: Platform.Reflection.Types`6.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-6.html#Platform_Reflection_Types_6_Array_
+  commentId: Overload:Platform.Reflection.Types`6.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6).Array
+  nameWithType: Types<T1, T2, T3, T4, T5, T6>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6).Array
+- uid: Platform.Reflection.Types`6.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-6.html#Platform_Reflection_Types_6_Collection
+  commentId: P:Platform.Reflection.Types`6.Collection
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5, T6>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6).Collection
+- uid: Platform.Reflection.Types`6.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-6.html#Platform_Reflection_Types_6_Collection_
+  commentId: Overload:Platform.Reflection.Types`6.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5, T6>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6).Collection
+- uid: Platform.Reflection.Types`7
+  name: Types<T1, T2, T3, T4, T5, T6, T7>
+  href: api/Platform.Reflection.Types-7.html
+  commentId: T:Platform.Reflection.Types`7
+  name.vb: Types(Of T1, T2, T3, T4, T5, T6, T7)
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6, T7>
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: Types<T1, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6, T7)
+- uid: Platform.Reflection.Types`7.Array
+  name: Array
+  href: api/Platform.Reflection.Types-7.html#Platform_Reflection_Types_7_Array
+  commentId: P:Platform.Reflection.Types`7.Array
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6, T7>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6, T7).Array
+  nameWithType: Types<T1, T2, T3, T4, T5, T6, T7>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6, T7).Array
+- uid: Platform.Reflection.Types`7.Array*
+  name: Array
+  href: api/Platform.Reflection.Types-7.html#Platform_Reflection_Types_7_Array_
+  commentId: Overload:Platform.Reflection.Types`7.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6, T7>.Array
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6, T7).Array
+  nameWithType: Types<T1, T2, T3, T4, T5, T6, T7>.Array
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6, T7).Array
+- uid: Platform.Reflection.Types`7.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types-7.html#Platform_Reflection_Types_7_Collection
+  commentId: P:Platform.Reflection.Types`7.Collection
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6, T7>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6, T7).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5, T6, T7>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6, T7).Collection
+- uid: Platform.Reflection.Types`7.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types-7.html#Platform_Reflection_Types_7_Collection_
+  commentId: Overload:Platform.Reflection.Types`7.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types<T1, T2, T3, T4, T5, T6, T7>.Collection
+  fullName.vb: Platform.Reflection.Types(Of T1, T2, T3, T4, T5, T6, T7).Collection
+  nameWithType: Types<T1, T2, T3, T4, T5, T6, T7>.Collection
+  nameWithType.vb: Types(Of T1, T2, T3, T4, T5, T6, T7).Collection
