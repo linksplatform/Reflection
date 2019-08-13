@@ -11,7 +11,7 @@
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;CachedTypeInfo;AssemblyExtensions</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/linksplatform/Reflection</PackageProjectUrl>
+    <PackageProjectUrl>https://linksplatform.github.io/Reflection</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
