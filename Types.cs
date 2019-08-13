@@ -3,11 +3,13 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.Reflection
 {
     public abstract class Types
     {
-        private static readonly ConcurrentDictionary<Type, IList<Type>> Cache = new ConcurrentDictionary<Type, IList<Type>>();
+        private static readonly ConcurrentDictionary<Type, IList<Type>> _cache = new ConcurrentDictionary<Type, IList<Type>>();
 
         protected IList<Type> ToReadOnlyList()
         {
@@ -38,7 +40,7 @@ namespace Platform.Reflection
 
         public static IList<Type> Get<T>()
         {
-            return Cache.GetOrAdd(typeof(T), type =>
+            return _cache.GetOrAdd(typeof(T), type =>
             {
                 if (type == typeof(Types))
                 {

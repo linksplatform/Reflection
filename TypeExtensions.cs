@@ -5,43 +5,45 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Platform.Collections;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.Reflection
 {
     public static class TypeExtensions
     {
-        static private readonly HashSet<Type> CanBeNumericTypes;
-        static private readonly HashSet<Type> IsNumericTypes;
-        static private readonly HashSet<Type> IsSignedTypes;
-        static private readonly HashSet<Type> IsFloatPointTypes;
-        static private readonly Dictionary<Type, Type> UnsignedVersionsOfSignedTypes;
-        static private readonly Dictionary<Type, Type> SignedVersionsOfUnsignedTypes;
+        static private readonly HashSet<Type> _canBeNumericTypes;
+        static private readonly HashSet<Type> _isNumericTypes;
+        static private readonly HashSet<Type> _isSignedTypes;
+        static private readonly HashSet<Type> _isFloatPointTypes;
+        static private readonly Dictionary<Type, Type> _unsignedVersionsOfSignedTypes;
+        static private readonly Dictionary<Type, Type> _signedVersionsOfUnsignedTypes;
 
         static TypeExtensions()
         {
-            CanBeNumericTypes = new HashSet<Type> { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
-            IsNumericTypes = new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
-            IsSignedTypes = new HashSet<Type> { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
-            IsFloatPointTypes = new HashSet<Type> { typeof(decimal), typeof(double), typeof(float) };
-            UnsignedVersionsOfSignedTypes = new Dictionary<Type, Type>
+            _canBeNumericTypes = new HashSet<Type> { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
+            _isNumericTypes = new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+            _isSignedTypes = new HashSet<Type> { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
+            _isFloatPointTypes = new HashSet<Type> { typeof(decimal), typeof(double), typeof(float) };
+            _unsignedVersionsOfSignedTypes = new Dictionary<Type, Type>
             {
                 { typeof(sbyte), typeof(byte) },
                 { typeof(short), typeof(ushort) },
                 { typeof(int), typeof(uint) },
                 { typeof(long), typeof(ulong) },
             };
-            SignedVersionsOfUnsignedTypes = new Dictionary<Type, Type>
+            _signedVersionsOfUnsignedTypes = new Dictionary<Type, Type>
             {
                 { typeof(byte), typeof(sbyte)},
                 { typeof(ushort), typeof(short) },
                 { typeof(uint), typeof(int) },
                 { typeof(ulong), typeof(long) },
             };
-            CanBeNumericTypes.UnionWith(IsNumericTypes);
-            CanBeNumericTypes.UnionWith(IsSignedTypes);
-            IsNumericTypes.UnionWith(IsSignedTypes);
-            CanBeNumericTypes.UnionWith(IsFloatPointTypes);
-            IsNumericTypes.UnionWith(IsFloatPointTypes);
-            IsSignedTypes.UnionWith(IsFloatPointTypes);
+            _canBeNumericTypes.UnionWith(_isNumericTypes);
+            _canBeNumericTypes.UnionWith(_isSignedTypes);
+            _isNumericTypes.UnionWith(_isSignedTypes);
+            _canBeNumericTypes.UnionWith(_isFloatPointTypes);
+            _isNumericTypes.UnionWith(_isFloatPointTypes);
+            _isSignedTypes.UnionWith(_isFloatPointTypes);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -86,16 +88,16 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsNullable(this Type type) => type.IsGeneric(typeof(Nullable<>));
 
-        public static Type GetUnsignedVersionOrNull(this Type signedType) => UnsignedVersionsOfSignedTypes.GetOrDefault(signedType);
+        public static Type GetUnsignedVersionOrNull(this Type signedType) => _unsignedVersionsOfSignedTypes.GetOrDefault(signedType);
 
-        public static Type GetSignedVersionOrNull(this Type unsignedType) => SignedVersionsOfUnsignedTypes.GetOrDefault(unsignedType);
+        public static Type GetSignedVersionOrNull(this Type unsignedType) => _signedVersionsOfUnsignedTypes.GetOrDefault(unsignedType);
 
-        public static bool CanBeNumeric(this Type type) => CanBeNumericTypes.Contains(type);
+        public static bool CanBeNumeric(this Type type) => _canBeNumericTypes.Contains(type);
 
-        public static bool IsNumeric(this Type type) => IsNumericTypes.Contains(type);
+        public static bool IsNumeric(this Type type) => _isNumericTypes.Contains(type);
 
-        public static bool IsSigned(this Type type) => IsSignedTypes.Contains(type);
+        public static bool IsSigned(this Type type) => _isSignedTypes.Contains(type);
 
-        public static bool IsFloatPoint(this Type type) => IsFloatPointTypes.Contains(type);
+        public static bool IsFloatPoint(this Type type) => _isFloatPointTypes.Contains(type);
     }
 }

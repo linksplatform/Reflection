@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Dynamic;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.Reflection
 {
     public static class DynamicExtensions
