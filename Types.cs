@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -26,7 +25,7 @@ namespace Platform.Reflection
                 {
                     if (element.IsSubclassOf(typeof(Types)))
                     {
-                        AppendTypes(container, element.GetFirstField().GetStaticValue<IList<Type>>());
+                        AppendTypes(container, element.GetStaticPropertyValue<ReadOnlyCollection<Type>>(nameof(Types<object>.Collection)));
                     }
                     else
                     {
