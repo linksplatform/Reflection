@@ -22,8 +22,14 @@ namespace Platform.Reflection
         {
             _canBeNumericTypes = new HashSet<Type> { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };
             _isNumericTypes = new HashSet<Type> { typeof(byte), typeof(ushort), typeof(uint), typeof(ulong) };
+            _canBeNumericTypes.UnionWith(_isNumericTypes);
             _isSignedTypes = new HashSet<Type> { typeof(sbyte), typeof(short), typeof(int), typeof(long) };
+            _canBeNumericTypes.UnionWith(_isSignedTypes);
+            _isNumericTypes.UnionWith(_isSignedTypes);
             _isFloatPointTypes = new HashSet<Type> { typeof(decimal), typeof(double), typeof(float) };
+            _canBeNumericTypes.UnionWith(_isFloatPointTypes);
+            _isNumericTypes.UnionWith(_isFloatPointTypes);
+            _isSignedTypes.UnionWith(_isFloatPointTypes);
             _unsignedVersionsOfSignedTypes = new Dictionary<Type, Type>
             {
                 { typeof(sbyte), typeof(byte) },
@@ -38,12 +44,6 @@ namespace Platform.Reflection
                 { typeof(uint), typeof(int) },
                 { typeof(ulong), typeof(long) },
             };
-            _canBeNumericTypes.UnionWith(_isNumericTypes);
-            _canBeNumericTypes.UnionWith(_isSignedTypes);
-            _isNumericTypes.UnionWith(_isSignedTypes);
-            _canBeNumericTypes.UnionWith(_isFloatPointTypes);
-            _isNumericTypes.UnionWith(_isFloatPointTypes);
-            _isSignedTypes.UnionWith(_isFloatPointTypes);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
