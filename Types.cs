@@ -9,9 +9,7 @@ namespace Platform.Reflection
 {
     public abstract class Types
     {
-        private static readonly ConcurrentDictionary<Type, IList<Type>> _cache = new ConcurrentDictionary<Type, IList<Type>>();
-
-        protected IList<Type> ToReadOnlyList()
+        protected ReadOnlyCollection<Type> ToReadOnlyCollection()
         {
             var types = GetType().GetGenericArguments();
             var result = new List<Type>();
@@ -36,22 +34,6 @@ namespace Platform.Reflection
                     }
                 }
             }
-        }
-
-        public static IList<Type> Get<T>()
-        {
-            return _cache.GetOrAdd(typeof(T), type =>
-            {
-                if (type == typeof(Types))
-                {
-                    return Array.AsReadOnly(new Type[0]);
-                }
-                if (type.IsSubclassOf(typeof(Types)))
-                {
-                    return type.GetFirstField().GetStaticValue<IList<Type>>();
-                }
-                return Array.AsReadOnly(new[] { type });
-            });
         }
     }
 }
