@@ -7,7 +7,7 @@ namespace Platform.Reflection
 {
     public class Types<T> : Types
     {
-        public static readonly IList<Type> Array = new Types<T>().ToReadOnlyList();
+        public static readonly IList<Type> List = new Types<T>().ToReadOnlyList();
         private Types() { }
     }
 }
