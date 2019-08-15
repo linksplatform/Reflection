@@ -444,19 +444,19 @@ references:
   commentId: T:Platform.Reflection.Tests.TypeTests
   fullName: Platform.Reflection.Tests.TypeTests
   nameWithType: TypeTests
-- uid: Platform.Reflection.Tests.TypeTests.Test1
-  name: Test1()
-  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_Test1
-  commentId: M:Platform.Reflection.Tests.TypeTests.Test1
-  fullName: Platform.Reflection.Tests.TypeTests.Test1()
-  nameWithType: TypeTests.Test1()
-- uid: Platform.Reflection.Tests.TypeTests.Test1*
-  name: Test1
-  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_Test1_
-  commentId: Overload:Platform.Reflection.Tests.TypeTests.Test1
+- uid: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
+  name: UInt64IsNumericTest()
+  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_UInt64IsNumericTest
+  commentId: M:Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
+  fullName: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest()
+  nameWithType: TypeTests.UInt64IsNumericTest()
+- uid: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest*
+  name: UInt64IsNumericTest
+  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_UInt64IsNumericTest_
+  commentId: Overload:Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
   isSpec: "True"
-  fullName: Platform.Reflection.Tests.TypeTests.Test1
-  nameWithType: TypeTests.Test1
+  fullName: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
+  nameWithType: TypeTests.UInt64IsNumericTest
 - uid: Platform.Reflection.Type`1
   name: Type<T>
   href: api/Platform.Reflection.Type-1.html
