@@ -9,10 +9,10 @@ using Platform.Exceptions;
 
 namespace Platform.Reflection
 {
-    public class CachedTypeInfo<T>
+    public class Type<T>
     {
         public static readonly bool IsSupported;
-        public static readonly Type Type;
+        public static readonly Type TypeObject;
         public static readonly Type UnderlyingType;
         public static readonly Type SignedVersion;
         public static readonly Type UnsignedVersion;
@@ -25,13 +25,13 @@ namespace Platform.Reflection
         public static readonly T MinValue;
         public static readonly T MaxValue;
 
-        static CachedTypeInfo()
+        static Type()
         {
             try
             {
-                Type = typeof(T);
-                IsNullable = Type.IsNullable();
-                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
+                TypeObject = typeof(T);
+                IsNullable = TypeObject.IsNullable();
+                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(TypeObject) : TypeObject;
                 var canBeNumeric = UnderlyingType.CanBeNumeric();
                 var isNumeric = UnderlyingType.IsNumeric();
                 var isSigned = UnderlyingType.IsSigned();

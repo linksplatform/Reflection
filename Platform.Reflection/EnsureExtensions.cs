@@ -16,7 +16,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsUnsignedInteger<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!CachedTypeInfo<T>.IsNumeric || CachedTypeInfo<T>.IsSigned || CachedTypeInfo<T>.IsFloatPoint)
+            if (!Type<T>.IsNumeric || Type<T>.IsSigned || Type<T>.IsFloatPoint)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -35,7 +35,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsSignedInteger<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!CachedTypeInfo<T>.IsNumeric || !CachedTypeInfo<T>.IsSigned || CachedTypeInfo<T>.IsFloatPoint)
+            if (!Type<T>.IsNumeric || !Type<T>.IsSigned || Type<T>.IsFloatPoint)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -54,7 +54,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsSigned<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!CachedTypeInfo<T>.IsSigned)
+            if (!Type<T>.IsSigned)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -73,7 +73,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsNumeric<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!CachedTypeInfo<T>.IsNumeric)
+            if (!Type<T>.IsNumeric)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -92,7 +92,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CanBeNumeric<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!CachedTypeInfo<T>.CanBeNumeric)
+            if (!Type<T>.CanBeNumeric)
             {
                 throw new NotSupportedException(messageBuilder());
             }
