@@ -4,12 +4,12 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.0.4</VersionPrefix>
+    <VersionPrefix>0.0.5</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
-    <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;CachedTypeInfo;AssemblyExtensions</PackageTags>
+    <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;Type;AssemblyExtensions</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://linksplatform.github.io/Reflection</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -21,14 +21,11 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Platform.Collections dependency updated from 0.0.3 to 0.0.4.
-For all Types classes with type parameters there are now to properties Collection and Array instead of List.
-GetStaticPropertyValue method added to TypeExtensions.
-EnsureExtensions added.
-PropetyInfoExtensions added.
-XML documentation file generation turned on.
-Travis CI connected.
-Refactoring, issues fix.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed NullReferenceException for GetStaticFieldValue and GetStaticPropertyValue methods.
+CachedTypeInfo&lt;T&gt; renamed to to Type&lt;T&gt;.
+Type&lt;T&gt;.Type field renamed to Type&lt;T&gt;.TheType.
+Tests added.
+Added TypeTests.UInt64IsNumericTest.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
