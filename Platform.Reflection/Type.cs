@@ -12,7 +12,7 @@ namespace Platform.Reflection
     public class Type<T>
     {
         public static readonly bool IsSupported;
-        public static readonly Type TypeObject;
+        public static readonly Type TheType;
         public static readonly Type UnderlyingType;
         public static readonly Type SignedVersion;
         public static readonly Type UnsignedVersion;
@@ -29,9 +29,9 @@ namespace Platform.Reflection
         {
             try
             {
-                TypeObject = typeof(T);
-                IsNullable = TypeObject.IsNullable();
-                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(TypeObject) : TypeObject;
+                TheType = typeof(T);
+                IsNullable = TheType.IsNullable();
+                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(TheType) : TheType;
                 var canBeNumeric = UnderlyingType.CanBeNumeric();
                 var isNumeric = UnderlyingType.IsNumeric();
                 var isSigned = UnderlyingType.IsSigned();
