@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.0.5</VersionPrefix>
+    <VersionPrefix>0.0.6</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -21,11 +21,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Fixed NullReferenceException for GetStaticFieldValue and GetStaticPropertyValue methods.
-CachedTypeInfo&lt;T&gt; renamed to to Type&lt;T&gt;.
-Type&lt;T&gt;.Type field renamed to Type&lt;T&gt;.TheType.
-Tests added.
-Added TypeTests.UInt64IsNumericTest.</PackageReleaseNotes>
+    <PackageReleaseNotes>Type class is now static.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
