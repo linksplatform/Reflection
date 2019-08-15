@@ -9,7 +9,7 @@ using Platform.Exceptions;
 
 namespace Platform.Reflection
 {
-    public class Type<T>
+    public static class Type<T>
     {
         public static readonly bool IsSupported;
         public static readonly Type TheType;
