@@ -20,7 +20,6 @@ NuGet package: [Platform.Reflection](https://www.nuget.org/packages/Platform.Ref
 
 ## Dependent libraries
 * [Platform.Converters](https://github.com/linksplatform/Converters)
-* [Platform.Helpers](https://github.com/linksplatform/Helpers)
 
 ## Mystery files
 * [.travis.yml](https://github.com/linksplatform/Reflection/blob/master/.travis.yml) - Travis CI build configuration.
