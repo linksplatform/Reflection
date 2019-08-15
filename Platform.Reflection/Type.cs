@@ -65,8 +65,8 @@ namespace Platform.Reflection
             }
             else
             {
-                minValue = type.GetStaticFieldValue<T>("MinValue");
-                maxValue = type.GetStaticFieldValue<T>("MaxValue");
+                minValue = type.GetStaticFieldValue<T>(nameof(int.MinValue));
+                maxValue = type.GetStaticFieldValue<T>(nameof(int.MaxValue));
             }
         }
 
