@@ -5,9 +5,9 @@ namespace Platform.Reflection.Tests
     public class TypeTests
     {
         [Fact]
-        public void Test1()
+        public void UInt64IsNumericTest()
         {
-
+            Assert.True(Type<ulong>.IsNumeric);
         }
     }
 }

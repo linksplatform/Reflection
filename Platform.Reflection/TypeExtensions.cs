@@ -50,10 +50,10 @@ namespace Platform.Reflection
         public static FieldInfo GetFirstField(this Type type) => type.GetFields()[0];
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static T GetStaticFieldValue<T>(this Type type, string name) => type.GetTypeInfo().GetField(name, BindingFlags.Static).GetStaticValue<T>();
+        public static T GetStaticFieldValue<T>(this Type type, string name) => type.GetTypeInfo().GetField(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).GetStaticValue<T>();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static T GetStaticPropertyValue<T>(this Type type, string name) => type.GetTypeInfo().GetProperty(name, BindingFlags.Static).GetStaticValue<T>();
+        public static T GetStaticPropertyValue<T>(this Type type, string name) => type.GetTypeInfo().GetProperty(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).GetStaticValue<T>();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MethodInfo GetGenericMethod(this Type type, string name, Type[] genericParameterTypes, Type[] argumentTypes)
