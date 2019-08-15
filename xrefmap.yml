@@ -545,6 +545,31 @@ references:
   fullName.vb: Platform.Reflection.PropertyInfoExtensions.GetStaticValue(Of T)(System.Reflection.PropertyInfo)
   nameWithType: PropertyInfoExtensions.GetStaticValue<T>(PropertyInfo)
   nameWithType.vb: PropertyInfoExtensions.GetStaticValue(Of T)(PropertyInfo)
+- uid: Platform.Reflection.Tests
+  name: Platform.Reflection.Tests
+  href: api/Platform.Reflection.Tests.html
+  commentId: N:Platform.Reflection.Tests
+  fullName: Platform.Reflection.Tests
+  nameWithType: Platform.Reflection.Tests
+- uid: Platform.Reflection.Tests.TypeTests
+  name: TypeTests
+  href: api/Platform.Reflection.Tests.TypeTests.html
+  commentId: T:Platform.Reflection.Tests.TypeTests
+  fullName: Platform.Reflection.Tests.TypeTests
+  nameWithType: TypeTests
+- uid: Platform.Reflection.Tests.TypeTests.Test1
+  name: Test1()
+  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_Test1
+  commentId: M:Platform.Reflection.Tests.TypeTests.Test1
+  fullName: Platform.Reflection.Tests.TypeTests.Test1()
+  nameWithType: TypeTests.Test1()
+- uid: Platform.Reflection.Tests.TypeTests.Test1*
+  name: Test1
+  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_Test1_
+  commentId: Overload:Platform.Reflection.Tests.TypeTests.Test1
+  isSpec: "True"
+  fullName: Platform.Reflection.Tests.TypeTests.Test1
+  nameWithType: TypeTests.Test1
 - uid: Platform.Reflection.TypeExtensions
   name: TypeExtensions
   href: api/Platform.Reflection.TypeExtensions.html
