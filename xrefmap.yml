@@ -546,14 +546,14 @@ references:
   fullName.vb: Platform.Reflection.Type(Of T).SignedVersion
   nameWithType: Type<T>.SignedVersion
   nameWithType.vb: Type(Of T).SignedVersion
-- uid: Platform.Reflection.Type`1.TypeObject
-  name: TypeObject
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_TypeObject
-  commentId: F:Platform.Reflection.Type`1.TypeObject
-  fullName: Platform.Reflection.Type<T>.TypeObject
-  fullName.vb: Platform.Reflection.Type(Of T).TypeObject
-  nameWithType: Type<T>.TypeObject
-  nameWithType.vb: Type(Of T).TypeObject
+- uid: Platform.Reflection.Type`1.TheType
+  name: TheType
+  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_TheType
+  commentId: F:Platform.Reflection.Type`1.TheType
+  fullName: Platform.Reflection.Type<T>.TheType
+  fullName.vb: Platform.Reflection.Type(Of T).TheType
+  nameWithType: Type<T>.TheType
+  nameWithType.vb: Type(Of T).TheType
 - uid: Platform.Reflection.Type`1.UnderlyingType
   name: UnderlyingType
   href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_UnderlyingType
