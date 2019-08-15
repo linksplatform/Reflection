@@ -41,9 +41,11 @@ echo """
 \\noindent{\\Large LinksPlatform's Platform.${TRAVIS_REPO_NAME} Class Library}
 """
 
-# CSharp files
-#find * -type f -iname '*.cs' -exec sh -c 'enconv "{}"' \;
-find . -type f -iname '*.cs' | sort -b | python format-csharp-files.py
+# Project files
+find ./Platform.${TRAVIS_REPO_NAME} -type f -iname '*.cs' | sort -b | python format-csharp-files.py
+
+# Tests files
+find ./Platform.${TRAVIS_REPO_NAME}.Tests -type f -iname '*.cs' | sort -b | python format-csharp-files.py
 
 echo """
 \\printindex
