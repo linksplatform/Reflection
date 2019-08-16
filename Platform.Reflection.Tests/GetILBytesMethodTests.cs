@@ -11,22 +11,22 @@ namespace Platform.Reflection.Tests
         [Fact]
         public static void ILBytesForDelegateAreAvailableTest()
         {
-            var x = new Func<object, int>(y => 0);
-            var bytes = x.GetMethodInfo().GetILBytes();
+            var function = new Func<object, int>(argument => 0);
+            var bytes = function.GetMethodInfo().GetILBytes();
             Assert.False(bytes.IsNullOrEmpty());
         }
 
         [Fact]
         public static void ILBytesForDifferentDelegatesAreTheSameTest()
         {
-            var x = new Func<object, int>(y => 0);
-            var z = new Func<object, int>(y => 0);
-            Assert.False(x == z);
-            var xBytes = x.GetMethodInfo().GetILBytes();
-            Assert.False(xBytes.IsNullOrEmpty());
-            var zBytes = x.GetMethodInfo().GetILBytes();
-            Assert.False(zBytes.IsNullOrEmpty());
-            Assert.True(xBytes.EqualTo(zBytes));
+            var firstFunction = new Func<object, int>(argument => 0);
+            var secondFunction = new Func<object, int>(argument => 0);
+            Assert.False(firstFunction == secondFunction);
+            var firstFunctionBytes = firstFunction.GetMethodInfo().GetILBytes();
+            Assert.False(firstFunctionBytes.IsNullOrEmpty());
+            var secondFunctionBytes = secondFunction.GetMethodInfo().GetILBytes();
+            Assert.False(secondFunctionBytes.IsNullOrEmpty());
+            Assert.True(firstFunctionBytes.EqualTo(secondFunctionBytes));
         }
     }
 }
