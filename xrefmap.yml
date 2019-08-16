@@ -438,6 +438,38 @@ references:
   commentId: N:Platform.Reflection.Tests
   fullName: Platform.Reflection.Tests
   nameWithType: Platform.Reflection.Tests
+- uid: Platform.Reflection.Tests.GetILBytesMethodTests
+  name: GetILBytesMethodTests
+  href: api/Platform.Reflection.Tests.GetILBytesMethodTests.html
+  commentId: T:Platform.Reflection.Tests.GetILBytesMethodTests
+  fullName: Platform.Reflection.Tests.GetILBytesMethodTests
+  nameWithType: GetILBytesMethodTests
+- uid: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest
+  name: ILBytesForDelegateAreAvailableTest()
+  href: api/Platform.Reflection.Tests.GetILBytesMethodTests.html#Platform_Reflection_Tests_GetILBytesMethodTests_ILBytesForDelegateAreAvailableTest
+  commentId: M:Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest
+  fullName: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest()
+  nameWithType: GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest()
+- uid: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest*
+  name: ILBytesForDelegateAreAvailableTest
+  href: api/Platform.Reflection.Tests.GetILBytesMethodTests.html#Platform_Reflection_Tests_GetILBytesMethodTests_ILBytesForDelegateAreAvailableTest_
+  commentId: Overload:Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest
+  isSpec: "True"
+  fullName: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest
+  nameWithType: GetILBytesMethodTests.ILBytesForDelegateAreAvailableTest
+- uid: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
+  name: ILBytesForDifferentDelegatesAreTheSameTest()
+  href: api/Platform.Reflection.Tests.GetILBytesMethodTests.html#Platform_Reflection_Tests_GetILBytesMethodTests_ILBytesForDifferentDelegatesAreTheSameTest
+  commentId: M:Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
+  fullName: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest()
+  nameWithType: GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest()
+- uid: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest*
+  name: ILBytesForDifferentDelegatesAreTheSameTest
+  href: api/Platform.Reflection.Tests.GetILBytesMethodTests.html#Platform_Reflection_Tests_GetILBytesMethodTests_ILBytesForDifferentDelegatesAreTheSameTest_
+  commentId: Overload:Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
+  isSpec: "True"
+  fullName: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
+  nameWithType: GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
 - uid: Platform.Reflection.Tests.TypeTests
   name: TypeTests
   href: api/Platform.Reflection.Tests.TypeTests.html
