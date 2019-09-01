@@ -50,24 +50,46 @@ namespace Platform.Reflection
         {
             switch (value)
             {
-                case uint.MaxValue: generator.Emit(OpCodes.Ldc_I4_M1, value); return;
-                case 0: generator.Emit(OpCodes.Ldc_I4_0, value); return;
-                case 1: generator.Emit(OpCodes.Ldc_I4_1, value); return;
-                case 2: generator.Emit(OpCodes.Ldc_I4_2, value); return;
-                case 3: generator.Emit(OpCodes.Ldc_I4_3, value); return;
-                case 4: generator.Emit(OpCodes.Ldc_I4_4, value); return;
-                case 5: generator.Emit(OpCodes.Ldc_I4_5, value); return;
-                case 6: generator.Emit(OpCodes.Ldc_I4_6, value); return;
-                case 7: generator.Emit(OpCodes.Ldc_I4_7, value); return;
-                case 8: generator.Emit(OpCodes.Ldc_I4_8, value); return;
-            }
-            if (value <= sbyte.MaxValue)
-            {
-                generator.Emit(OpCodes.Ldc_I4_S, unchecked((byte)value));
-            }
-            else
-            {
-                generator.Emit(OpCodes.Ldc_I4, unchecked((int)value));
+                case uint.MaxValue:
+                    generator.Emit(OpCodes.Ldc_I4_M1, value);
+                    return;
+                case 0:
+                    generator.Emit(OpCodes.Ldc_I4_0, value);
+                    return;
+                case 1:
+                    generator.Emit(OpCodes.Ldc_I4_1, value);
+                    return;
+                case 2:
+                    generator.Emit(OpCodes.Ldc_I4_2, value);
+                    return;
+                case 3:
+                    generator.Emit(OpCodes.Ldc_I4_3, value);
+                    return;
+                case 4:
+                    generator.Emit(OpCodes.Ldc_I4_4, value);
+                    return;
+                case 5:
+                    generator.Emit(OpCodes.Ldc_I4_5, value);
+                    return;
+                case 6:
+                    generator.Emit(OpCodes.Ldc_I4_6, value);
+                    return;
+                case 7:
+                    generator.Emit(OpCodes.Ldc_I4_7, value);
+                    return;
+                case 8:
+                    generator.Emit(OpCodes.Ldc_I4_8, value);
+                    return;
+                default:
+                    if (value <= sbyte.MaxValue)
+                    {
+                        generator.Emit(OpCodes.Ldc_I4_S, unchecked((byte)value));
+                    }
+                    else
+                    {
+                        generator.Emit(OpCodes.Ldc_I4, unchecked((int)value));
+                    }
+                    return;
             }
         }
 
@@ -75,24 +97,46 @@ namespace Platform.Reflection
         {
             switch (value)
             {
-                case -1: generator.Emit(OpCodes.Ldc_I4_M1, value); return;
-                case 0: generator.Emit(OpCodes.Ldc_I4_0, value); return;
-                case 1: generator.Emit(OpCodes.Ldc_I4_1, value); return;
-                case 2: generator.Emit(OpCodes.Ldc_I4_2, value); return;
-                case 3: generator.Emit(OpCodes.Ldc_I4_3, value); return;
-                case 4: generator.Emit(OpCodes.Ldc_I4_4, value); return;
-                case 5: generator.Emit(OpCodes.Ldc_I4_5, value); return;
-                case 6: generator.Emit(OpCodes.Ldc_I4_6, value); return;
-                case 7: generator.Emit(OpCodes.Ldc_I4_7, value); return;
-                case 8: generator.Emit(OpCodes.Ldc_I4_8, value); return;
-            }
-            if (value >= sbyte.MinValue && value <= sbyte.MaxValue)
-            {
-                generator.Emit(OpCodes.Ldc_I4_S, unchecked((byte)value));
-            }
-            else
-            {
-                generator.Emit(OpCodes.Ldc_I4, value);
+                case -1:
+                    generator.Emit(OpCodes.Ldc_I4_M1, value);
+                    return;
+                case 0:
+                    generator.Emit(OpCodes.Ldc_I4_0, value);
+                    return;
+                case 1:
+                    generator.Emit(OpCodes.Ldc_I4_1, value);
+                    return;
+                case 2:
+                    generator.Emit(OpCodes.Ldc_I4_2, value);
+                    return;
+                case 3:
+                    generator.Emit(OpCodes.Ldc_I4_3, value);
+                    return;
+                case 4:
+                    generator.Emit(OpCodes.Ldc_I4_4, value);
+                    return;
+                case 5:
+                    generator.Emit(OpCodes.Ldc_I4_5, value);
+                    return;
+                case 6:
+                    generator.Emit(OpCodes.Ldc_I4_6, value);
+                    return;
+                case 7:
+                    generator.Emit(OpCodes.Ldc_I4_7, value);
+                    return;
+                case 8:
+                    generator.Emit(OpCodes.Ldc_I4_8, value);
+                    return;
+                default:
+                    if (value >= sbyte.MinValue && value <= sbyte.MaxValue)
+                    {
+                        generator.Emit(OpCodes.Ldc_I4_S, unchecked((byte)value));
+                    }
+                    else
+                    {
+                        generator.Emit(OpCodes.Ldc_I4, value);
+                    }
+                    return;
             }
         }
 
