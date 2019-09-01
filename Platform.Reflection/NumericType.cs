@@ -28,9 +28,9 @@ namespace Platform.Reflection
         {
             try
             {
-                Type = typeof(T);
-                IsNullable = Type.IsNullable();
-                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
+                var type = typeof(T);
+                var isNullable = Type.IsNullable();
+                var underlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
                 var canBeNumeric = UnderlyingType.CanBeNumeric();
                 var isNumeric = UnderlyingType.IsNumeric();
                 var isSigned = UnderlyingType.IsSigned();
@@ -38,6 +38,9 @@ namespace Platform.Reflection
                 var bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
                 GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
                 GetSignedAndUnsignedVersions(UnderlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
+                Type = type;
+                IsNullable = isNullable;
+                UnderlyingType = underlyingType;
                 CanBeNumeric = canBeNumeric;
                 IsNumeric = isNumeric;
                 IsSigned = isSigned;

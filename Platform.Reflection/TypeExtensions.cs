@@ -91,16 +91,22 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsNullable(this Type type) => type.IsGeneric(typeof(Nullable<>));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Type GetUnsignedVersionOrNull(this Type signedType) => _unsignedVersionsOfSignedTypes.GetOrDefault(signedType);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Type GetSignedVersionOrNull(this Type unsignedType) => _signedVersionsOfUnsignedTypes.GetOrDefault(unsignedType);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool CanBeNumeric(this Type type) => _canBeNumericTypes.Contains(type);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsNumeric(this Type type) => _isNumericTypes.Contains(type);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsSigned(this Type type) => _isSignedTypes.Contains(type);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsFloatPoint(this Type type) => _isFloatPointTypes.Contains(type);
     }
 }

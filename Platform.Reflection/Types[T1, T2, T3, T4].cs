@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Platform.Collections.Lists;
 
@@ -10,7 +9,7 @@ namespace Platform.Reflection
     public class Types<T1, T2, T3, T4> : Types
     {
         public static ReadOnlyCollection<Type> Collection { get; } = new Types<T1, T2, T3, T4>().ToReadOnlyCollection();
-        public static Type[] Array => ((IList<Type>)Collection).ToArray();
+        public static Type[] Array => Collection.ToArray();
         private Types() { }
     }
 }
