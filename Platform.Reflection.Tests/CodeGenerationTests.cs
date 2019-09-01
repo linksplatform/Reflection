@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection.Emit;
 using Xunit;
 
 namespace Platform.Reflection.Tests
