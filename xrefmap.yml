@@ -410,6 +410,111 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.MethodInfoExtensions.GetILBytes
   nameWithType: MethodInfoExtensions.GetILBytes
+- uid: Platform.Reflection.NumericType`1
+  name: NumericType<T>
+  href: api/Platform.Reflection.NumericType-1.html
+  commentId: T:Platform.Reflection.NumericType`1
+  name.vb: NumericType(Of T)
+  fullName: Platform.Reflection.NumericType<T>
+  fullName.vb: Platform.Reflection.NumericType(Of T)
+  nameWithType: NumericType<T>
+  nameWithType.vb: NumericType(Of T)
+- uid: Platform.Reflection.NumericType`1.BitsLength
+  name: BitsLength
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_BitsLength
+  commentId: F:Platform.Reflection.NumericType`1.BitsLength
+  fullName: Platform.Reflection.NumericType<T>.BitsLength
+  fullName.vb: Platform.Reflection.NumericType(Of T).BitsLength
+  nameWithType: NumericType<T>.BitsLength
+  nameWithType.vb: NumericType(Of T).BitsLength
+- uid: Platform.Reflection.NumericType`1.CanBeNumeric
+  name: CanBeNumeric
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_CanBeNumeric
+  commentId: F:Platform.Reflection.NumericType`1.CanBeNumeric
+  fullName: Platform.Reflection.NumericType<T>.CanBeNumeric
+  fullName.vb: Platform.Reflection.NumericType(Of T).CanBeNumeric
+  nameWithType: NumericType<T>.CanBeNumeric
+  nameWithType.vb: NumericType(Of T).CanBeNumeric
+- uid: Platform.Reflection.NumericType`1.IsFloatPoint
+  name: IsFloatPoint
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_IsFloatPoint
+  commentId: F:Platform.Reflection.NumericType`1.IsFloatPoint
+  fullName: Platform.Reflection.NumericType<T>.IsFloatPoint
+  fullName.vb: Platform.Reflection.NumericType(Of T).IsFloatPoint
+  nameWithType: NumericType<T>.IsFloatPoint
+  nameWithType.vb: NumericType(Of T).IsFloatPoint
+- uid: Platform.Reflection.NumericType`1.IsNullable
+  name: IsNullable
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_IsNullable
+  commentId: F:Platform.Reflection.NumericType`1.IsNullable
+  fullName: Platform.Reflection.NumericType<T>.IsNullable
+  fullName.vb: Platform.Reflection.NumericType(Of T).IsNullable
+  nameWithType: NumericType<T>.IsNullable
+  nameWithType.vb: NumericType(Of T).IsNullable
+- uid: Platform.Reflection.NumericType`1.IsNumeric
+  name: IsNumeric
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_IsNumeric
+  commentId: F:Platform.Reflection.NumericType`1.IsNumeric
+  fullName: Platform.Reflection.NumericType<T>.IsNumeric
+  fullName.vb: Platform.Reflection.NumericType(Of T).IsNumeric
+  nameWithType: NumericType<T>.IsNumeric
+  nameWithType.vb: NumericType(Of T).IsNumeric
+- uid: Platform.Reflection.NumericType`1.IsSigned
+  name: IsSigned
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_IsSigned
+  commentId: F:Platform.Reflection.NumericType`1.IsSigned
+  fullName: Platform.Reflection.NumericType<T>.IsSigned
+  fullName.vb: Platform.Reflection.NumericType(Of T).IsSigned
+  nameWithType: NumericType<T>.IsSigned
+  nameWithType.vb: NumericType(Of T).IsSigned
+- uid: Platform.Reflection.NumericType`1.MaxValue
+  name: MaxValue
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_MaxValue
+  commentId: F:Platform.Reflection.NumericType`1.MaxValue
+  fullName: Platform.Reflection.NumericType<T>.MaxValue
+  fullName.vb: Platform.Reflection.NumericType(Of T).MaxValue
+  nameWithType: NumericType<T>.MaxValue
+  nameWithType.vb: NumericType(Of T).MaxValue
+- uid: Platform.Reflection.NumericType`1.MinValue
+  name: MinValue
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_MinValue
+  commentId: F:Platform.Reflection.NumericType`1.MinValue
+  fullName: Platform.Reflection.NumericType<T>.MinValue
+  fullName.vb: Platform.Reflection.NumericType(Of T).MinValue
+  nameWithType: NumericType<T>.MinValue
+  nameWithType.vb: NumericType(Of T).MinValue
+- uid: Platform.Reflection.NumericType`1.SignedVersion
+  name: SignedVersion
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_SignedVersion
+  commentId: F:Platform.Reflection.NumericType`1.SignedVersion
+  fullName: Platform.Reflection.NumericType<T>.SignedVersion
+  fullName.vb: Platform.Reflection.NumericType(Of T).SignedVersion
+  nameWithType: NumericType<T>.SignedVersion
+  nameWithType.vb: NumericType(Of T).SignedVersion
+- uid: Platform.Reflection.NumericType`1.Type
+  name: Type
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_Type
+  commentId: F:Platform.Reflection.NumericType`1.Type
+  fullName: Platform.Reflection.NumericType<T>.Type
+  fullName.vb: Platform.Reflection.NumericType(Of T).Type
+  nameWithType: NumericType<T>.Type
+  nameWithType.vb: NumericType(Of T).Type
+- uid: Platform.Reflection.NumericType`1.UnderlyingType
+  name: UnderlyingType
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_UnderlyingType
+  commentId: F:Platform.Reflection.NumericType`1.UnderlyingType
+  fullName: Platform.Reflection.NumericType<T>.UnderlyingType
+  fullName.vb: Platform.Reflection.NumericType(Of T).UnderlyingType
+  nameWithType: NumericType<T>.UnderlyingType
+  nameWithType.vb: NumericType(Of T).UnderlyingType
+- uid: Platform.Reflection.NumericType`1.UnsignedVersion
+  name: UnsignedVersion
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_UnsignedVersion
+  commentId: F:Platform.Reflection.NumericType`1.UnsignedVersion
+  fullName: Platform.Reflection.NumericType<T>.UnsignedVersion
+  fullName.vb: Platform.Reflection.NumericType(Of T).UnsignedVersion
+  nameWithType: NumericType<T>.UnsignedVersion
+  nameWithType.vb: NumericType(Of T).UnsignedVersion
 - uid: Platform.Reflection.PropertyInfoExtensions
   name: PropertyInfoExtensions
   href: api/Platform.Reflection.PropertyInfoExtensions.html
@@ -470,138 +575,25 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.Tests.GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
   nameWithType: GetILBytesMethodTests.ILBytesForDifferentDelegatesAreTheSameTest
-- uid: Platform.Reflection.Tests.TypeTests
-  name: TypeTests
-  href: api/Platform.Reflection.Tests.TypeTests.html
-  commentId: T:Platform.Reflection.Tests.TypeTests
-  fullName: Platform.Reflection.Tests.TypeTests
-  nameWithType: TypeTests
-- uid: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
+- uid: Platform.Reflection.Tests.NumericTypeTests
+  name: NumericTypeTests
+  href: api/Platform.Reflection.Tests.NumericTypeTests.html
+  commentId: T:Platform.Reflection.Tests.NumericTypeTests
+  fullName: Platform.Reflection.Tests.NumericTypeTests
+  nameWithType: NumericTypeTests
+- uid: Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest
   name: UInt64IsNumericTest()
-  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_UInt64IsNumericTest
-  commentId: M:Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
-  fullName: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest()
-  nameWithType: TypeTests.UInt64IsNumericTest()
-- uid: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest*
+  href: api/Platform.Reflection.Tests.NumericTypeTests.html#Platform_Reflection_Tests_NumericTypeTests_UInt64IsNumericTest
+  commentId: M:Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest
+  fullName: Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest()
+  nameWithType: NumericTypeTests.UInt64IsNumericTest()
+- uid: Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest*
   name: UInt64IsNumericTest
-  href: api/Platform.Reflection.Tests.TypeTests.html#Platform_Reflection_Tests_TypeTests_UInt64IsNumericTest_
-  commentId: Overload:Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
+  href: api/Platform.Reflection.Tests.NumericTypeTests.html#Platform_Reflection_Tests_NumericTypeTests_UInt64IsNumericTest_
+  commentId: Overload:Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest
   isSpec: "True"
-  fullName: Platform.Reflection.Tests.TypeTests.UInt64IsNumericTest
-  nameWithType: TypeTests.UInt64IsNumericTest
-- uid: Platform.Reflection.Type`1
-  name: Type<T>
-  href: api/Platform.Reflection.Type-1.html
-  commentId: T:Platform.Reflection.Type`1
-  name.vb: Type(Of T)
-  fullName: Platform.Reflection.Type<T>
-  fullName.vb: Platform.Reflection.Type(Of T)
-  nameWithType: Type<T>
-  nameWithType.vb: Type(Of T)
-- uid: Platform.Reflection.Type`1.BitsLength
-  name: BitsLength
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_BitsLength
-  commentId: F:Platform.Reflection.Type`1.BitsLength
-  fullName: Platform.Reflection.Type<T>.BitsLength
-  fullName.vb: Platform.Reflection.Type(Of T).BitsLength
-  nameWithType: Type<T>.BitsLength
-  nameWithType.vb: Type(Of T).BitsLength
-- uid: Platform.Reflection.Type`1.CanBeNumeric
-  name: CanBeNumeric
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_CanBeNumeric
-  commentId: F:Platform.Reflection.Type`1.CanBeNumeric
-  fullName: Platform.Reflection.Type<T>.CanBeNumeric
-  fullName.vb: Platform.Reflection.Type(Of T).CanBeNumeric
-  nameWithType: Type<T>.CanBeNumeric
-  nameWithType.vb: Type(Of T).CanBeNumeric
-- uid: Platform.Reflection.Type`1.IsFloatPoint
-  name: IsFloatPoint
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_IsFloatPoint
-  commentId: F:Platform.Reflection.Type`1.IsFloatPoint
-  fullName: Platform.Reflection.Type<T>.IsFloatPoint
-  fullName.vb: Platform.Reflection.Type(Of T).IsFloatPoint
-  nameWithType: Type<T>.IsFloatPoint
-  nameWithType.vb: Type(Of T).IsFloatPoint
-- uid: Platform.Reflection.Type`1.IsNullable
-  name: IsNullable
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_IsNullable
-  commentId: F:Platform.Reflection.Type`1.IsNullable
-  fullName: Platform.Reflection.Type<T>.IsNullable
-  fullName.vb: Platform.Reflection.Type(Of T).IsNullable
-  nameWithType: Type<T>.IsNullable
-  nameWithType.vb: Type(Of T).IsNullable
-- uid: Platform.Reflection.Type`1.IsNumeric
-  name: IsNumeric
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_IsNumeric
-  commentId: F:Platform.Reflection.Type`1.IsNumeric
-  fullName: Platform.Reflection.Type<T>.IsNumeric
-  fullName.vb: Platform.Reflection.Type(Of T).IsNumeric
-  nameWithType: Type<T>.IsNumeric
-  nameWithType.vb: Type(Of T).IsNumeric
-- uid: Platform.Reflection.Type`1.IsSigned
-  name: IsSigned
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_IsSigned
-  commentId: F:Platform.Reflection.Type`1.IsSigned
-  fullName: Platform.Reflection.Type<T>.IsSigned
-  fullName.vb: Platform.Reflection.Type(Of T).IsSigned
-  nameWithType: Type<T>.IsSigned
-  nameWithType.vb: Type(Of T).IsSigned
-- uid: Platform.Reflection.Type`1.IsSupported
-  name: IsSupported
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_IsSupported
-  commentId: F:Platform.Reflection.Type`1.IsSupported
-  fullName: Platform.Reflection.Type<T>.IsSupported
-  fullName.vb: Platform.Reflection.Type(Of T).IsSupported
-  nameWithType: Type<T>.IsSupported
-  nameWithType.vb: Type(Of T).IsSupported
-- uid: Platform.Reflection.Type`1.MaxValue
-  name: MaxValue
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_MaxValue
-  commentId: F:Platform.Reflection.Type`1.MaxValue
-  fullName: Platform.Reflection.Type<T>.MaxValue
-  fullName.vb: Platform.Reflection.Type(Of T).MaxValue
-  nameWithType: Type<T>.MaxValue
-  nameWithType.vb: Type(Of T).MaxValue
-- uid: Platform.Reflection.Type`1.MinValue
-  name: MinValue
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_MinValue
-  commentId: F:Platform.Reflection.Type`1.MinValue
-  fullName: Platform.Reflection.Type<T>.MinValue
-  fullName.vb: Platform.Reflection.Type(Of T).MinValue
-  nameWithType: Type<T>.MinValue
-  nameWithType.vb: Type(Of T).MinValue
-- uid: Platform.Reflection.Type`1.SignedVersion
-  name: SignedVersion
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_SignedVersion
-  commentId: F:Platform.Reflection.Type`1.SignedVersion
-  fullName: Platform.Reflection.Type<T>.SignedVersion
-  fullName.vb: Platform.Reflection.Type(Of T).SignedVersion
-  nameWithType: Type<T>.SignedVersion
-  nameWithType.vb: Type(Of T).SignedVersion
-- uid: Platform.Reflection.Type`1.TheType
-  name: TheType
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_TheType
-  commentId: F:Platform.Reflection.Type`1.TheType
-  fullName: Platform.Reflection.Type<T>.TheType
-  fullName.vb: Platform.Reflection.Type(Of T).TheType
-  nameWithType: Type<T>.TheType
-  nameWithType.vb: Type(Of T).TheType
-- uid: Platform.Reflection.Type`1.UnderlyingType
-  name: UnderlyingType
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_UnderlyingType
-  commentId: F:Platform.Reflection.Type`1.UnderlyingType
-  fullName: Platform.Reflection.Type<T>.UnderlyingType
-  fullName.vb: Platform.Reflection.Type(Of T).UnderlyingType
-  nameWithType: Type<T>.UnderlyingType
-  nameWithType.vb: Type(Of T).UnderlyingType
-- uid: Platform.Reflection.Type`1.UnsignedVersion
-  name: UnsignedVersion
-  href: api/Platform.Reflection.Type-1.html#Platform_Reflection_Type_1_UnsignedVersion
-  commentId: F:Platform.Reflection.Type`1.UnsignedVersion
-  fullName: Platform.Reflection.Type<T>.UnsignedVersion
-  fullName.vb: Platform.Reflection.Type(Of T).UnsignedVersion
-  nameWithType: Type<T>.UnsignedVersion
-  nameWithType.vb: Type(Of T).UnsignedVersion
+  fullName: Platform.Reflection.Tests.NumericTypeTests.UInt64IsNumericTest
+  nameWithType: NumericTypeTests.UInt64IsNumericTest
 - uid: Platform.Reflection.TypeExtensions
   name: TypeExtensions
   href: api/Platform.Reflection.TypeExtensions.html
