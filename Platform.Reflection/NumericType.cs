@@ -29,15 +29,15 @@ namespace Platform.Reflection
             try
             {
                 var type = typeof(T);
-                var isNullable = Type.IsNullable();
-                var underlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
-                var canBeNumeric = UnderlyingType.CanBeNumeric();
-                var isNumeric = UnderlyingType.IsNumeric();
-                var isSigned = UnderlyingType.IsSigned();
-                var isFloatPoint = UnderlyingType.IsFloatPoint();
-                var bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
-                GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
-                GetSignedAndUnsignedVersions(UnderlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
+                var isNullable = type.IsNullable();
+                var underlyingType = isNullable ? Nullable.GetUnderlyingType(type) : type;
+                var canBeNumeric = underlyingType.CanBeNumeric();
+                var isNumeric = underlyingType.IsNumeric();
+                var isSigned = underlyingType.IsSigned();
+                var isFloatPoint = underlyingType.IsFloatPoint();
+                var bitsLength = Marshal.SizeOf(underlyingType) * 8;
+                GetMinAndMaxValues(underlyingType, out T minValue, out T maxValue);
+                GetSignedAndUnsignedVersions(underlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
                 Type = type;
                 IsNullable = isNullable;
                 UnderlyingType = underlyingType;
