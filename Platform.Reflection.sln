@@ -5,21 +5,7 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection", "Platform.Reflection\Platform.Reflection.csproj", "{45200E72-08B3-4E14-9D6A-B2451C3488EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Reflection.Tests", "Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{4F4FCC12-45C4-4766-9152-EB675F749ABA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7216FC75-3B05-486D-AF5C-D9C7B79ABD8C}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		.travis.yml = .travis.yml
-		docfx.json = docfx.json
-		format-csharp-files.py = format-csharp-files.py
-		format-document.sh = format-document.sh
-		generate-pdf.sh = generate-pdf.sh
-		publish-docs.sh = publish-docs.sh
-		push-nuget.bat = push-nuget.bat
-		README.md = README.md
-		toc.yml = toc.yml
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Tests", "Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{4F4FCC12-45C4-4766-9152-EB675F749ABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
