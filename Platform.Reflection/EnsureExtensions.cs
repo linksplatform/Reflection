@@ -16,7 +16,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsUnsignedInteger<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!Type<T>.IsNumeric || Type<T>.IsSigned || Type<T>.IsFloatPoint)
+            if (!NumericType<T>.IsNumeric || NumericType<T>.IsSigned || NumericType<T>.IsFloatPoint)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -35,7 +35,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsSignedInteger<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!Type<T>.IsNumeric || !Type<T>.IsSigned || Type<T>.IsFloatPoint)
+            if (!NumericType<T>.IsNumeric || !NumericType<T>.IsSigned || NumericType<T>.IsFloatPoint)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -54,7 +54,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsSigned<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!Type<T>.IsSigned)
+            if (!NumericType<T>.IsSigned)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -73,7 +73,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void IsNumeric<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!Type<T>.IsNumeric)
+            if (!NumericType<T>.IsNumeric)
             {
                 throw new NotSupportedException(messageBuilder());
             }
@@ -92,7 +92,7 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CanBeNumeric<T>(this EnsureAlwaysExtensionRoot root, Func<string> messageBuilder)
         {
-            if (!Type<T>.CanBeNumeric)
+            if (!NumericType<T>.CanBeNumeric)
             {
                 throw new NotSupportedException(messageBuilder());
             }

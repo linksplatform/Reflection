@@ -2,12 +2,12 @@ using Xunit;
 
 namespace Platform.Reflection.Tests
 {
-    public class TypeTests
+    public class NumericTypeTests
     {
         [Fact]
         public void UInt64IsNumericTest()
         {
-            Assert.True(Type<ulong>.IsNumeric);
+            Assert.True(NumericType<ulong>.IsNumeric);
         }
     }
 }

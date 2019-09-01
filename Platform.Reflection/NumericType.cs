@@ -9,10 +9,9 @@ using Platform.Exceptions;
 
 namespace Platform.Reflection
 {
-    public static class Type<T>
+    public static class NumericType<T>
     {
-        public static readonly bool IsSupported;
-        public static readonly Type TheType;
+        public static readonly Type Type;
         public static readonly Type UnderlyingType;
         public static readonly Type SignedVersion;
         public static readonly Type UnsignedVersion;
@@ -25,13 +24,13 @@ namespace Platform.Reflection
         public static readonly T MinValue;
         public static readonly T MaxValue;
 
-        static Type()
+        static NumericType()
         {
             try
             {
-                TheType = typeof(T);
-                IsNullable = TheType.IsNullable();
-                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(TheType) : TheType;
+                Type = typeof(T);
+                IsNullable = Type.IsNullable();
+                UnderlyingType = IsNullable ? Nullable.GetUnderlyingType(Type) : Type;
                 var canBeNumeric = UnderlyingType.CanBeNumeric();
                 var isNumeric = UnderlyingType.IsNumeric();
                 var isSigned = UnderlyingType.IsSigned();
@@ -39,7 +38,6 @@ namespace Platform.Reflection
                 var bitsLength = Marshal.SizeOf(UnderlyingType) * 8;
                 GetMinAndMaxValues(UnderlyingType, out T minValue, out T maxValue);
                 GetSignedAndUnsignedVersions(UnderlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
-                IsSupported = true;
                 CanBeNumeric = canBeNumeric;
                 IsNumeric = isNumeric;
                 IsSigned = isSigned;
