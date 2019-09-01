@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using Platform.Collections.Lists;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -8,6 +9,9 @@ namespace Platform.Reflection
 {
     public abstract class Types
     {
+        public static ReadOnlyCollection<Type> Collection { get; } = new ReadOnlyCollection<Type>(new Type[0]);
+        public static Type[] Array => Collection.ToArray();
+
         protected ReadOnlyCollection<Type> ToReadOnlyCollection()
         {
             var types = GetType().GetGenericArguments();

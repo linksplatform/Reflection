@@ -8,8 +8,8 @@ namespace Platform.Reflection
 {
     public class Types<T> : Types
     {
-        public static ReadOnlyCollection<Type> Collection { get; } = new Types<T>().ToReadOnlyCollection();
-        public static Type[] Array => Collection.ToArray();
+        public new static ReadOnlyCollection<Type> Collection { get; } = new Types<T>().ToReadOnlyCollection();
+        public new static Type[] Array => Collection.ToArray();
         private Types() { }
     }
 }
