@@ -8,7 +8,7 @@ namespace Platform.Reflection.Tests
         [Fact]
         public static void EmptyActionCompilationTest()
         {
-            Action compiledAction = DelegateHelpers.Compile<Action>(generator =>
+            var compiledAction = DelegateHelpers.Compile<Action>(generator =>
             {
                 generator.Return();
             });
@@ -18,7 +18,7 @@ namespace Platform.Reflection.Tests
         [Fact]
         public static void FailedActionCompilationTest()
         {
-            Action compiledAction = DelegateHelpers.Compile<Action>(generator =>
+            var compiledAction = DelegateHelpers.Compile<Action>(generator =>
             {
                 throw new NotImplementedException();
             });
