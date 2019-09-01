@@ -6,7 +6,8 @@
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
     <VersionPrefix>0.0.6</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net461</TargetFrameworks>
+    <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;Type;AssemblyExtensions</PackageTags>
@@ -24,9 +25,12 @@
     <PackageReleaseNotes>Type class is now static.</PackageReleaseNotes>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.3.0" />
     <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Platform.Collections" Version="0.0.5" />
   </ItemGroup>
 
