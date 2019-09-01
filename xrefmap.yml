@@ -829,6 +829,32 @@ references:
   commentId: T:Platform.Reflection.Types
   fullName: Platform.Reflection.Types
   nameWithType: Types
+- uid: Platform.Reflection.Types.Array
+  name: Array
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_Array
+  commentId: P:Platform.Reflection.Types.Array
+  fullName: Platform.Reflection.Types.Array
+  nameWithType: Types.Array
+- uid: Platform.Reflection.Types.Array*
+  name: Array
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_Array_
+  commentId: Overload:Platform.Reflection.Types.Array
+  isSpec: "True"
+  fullName: Platform.Reflection.Types.Array
+  nameWithType: Types.Array
+- uid: Platform.Reflection.Types.Collection
+  name: Collection
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_Collection
+  commentId: P:Platform.Reflection.Types.Collection
+  fullName: Platform.Reflection.Types.Collection
+  nameWithType: Types.Collection
+- uid: Platform.Reflection.Types.Collection*
+  name: Collection
+  href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_Collection_
+  commentId: Overload:Platform.Reflection.Types.Collection
+  isSpec: "True"
+  fullName: Platform.Reflection.Types.Collection
+  nameWithType: Types.Collection
 - uid: Platform.Reflection.Types.ToReadOnlyCollection
   name: ToReadOnlyCollection()
   href: api/Platform.Reflection.Types.html#Platform_Reflection_Types_ToReadOnlyCollection
