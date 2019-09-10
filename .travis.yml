@@ -8,8 +8,8 @@ before_install:
   - export TRAVIS_REPO_NAME=$(echo "${TRAVIS_REPO_SLUG#*/}" | sed 's/.*/\u&/')
   - export SOURCE_BRANCH="master"
 script:
-  - dotnet build -c Release
-  - dotnet test -c Release
+  - dotnet build -c Release -f netstandard2.0
+  - dotnet test -c Release -f netcoreapp2.1
 after_success:
   - bash ./generate-pdf.sh
   - bash ./publish-docs.sh
