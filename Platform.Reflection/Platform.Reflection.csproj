@@ -6,8 +6,8 @@
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks Condition="'$(MSBuildRuntimeType)' == 'Core'">netstandard2.0</TargetFrameworks>
-    <TargetFrameworks Condition="'$(MSBuildRuntimeType)' != 'Core'">net461;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(MSBuildRuntimeType)' != 'Core'">net461;$(TargetFrameworks)</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;NumericType;AssemblyExtensions;DelegateHelpers;EnsureExtensions;ILGeneratorExtensions;NotSupportedExceptionDelegateFactory;PropertyInfoExtensions</PackageTags>
