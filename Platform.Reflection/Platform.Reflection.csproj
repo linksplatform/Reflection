@@ -6,8 +6,7 @@
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net461</TargetFrameworks>
-    <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;Types;TypeExtensions;MethodInfoExtensions;FieldInfoExtensions;DynamicExtensions;NumericType;AssemblyExtensions;DelegateHelpers;EnsureExtensions;ILGeneratorExtensions;NotSupportedExceptionDelegateFactory;PropertyInfoExtensions</PackageTags>

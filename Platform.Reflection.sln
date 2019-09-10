@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection", "Platform.Reflection\Platform.Reflection.csproj", "{45200E72-08B3-4E14-9D6A-B2451C3488EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Reflection", "Platform.Reflection\Platform.Reflection.csproj", "{45200E72-08B3-4E14-9D6A-B2451C3488EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Tests", "Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{4F4FCC12-45C4-4766-9152-EB675F749ABA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Reflection.Tests", "Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{4F4FCC12-45C4-4766-9152-EB675F749ABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
