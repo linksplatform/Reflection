@@ -12,12 +12,12 @@ Version="${PackageFileName#$PackageFileNamePrefix}"
 Version="${Version%$PackageFileNameSuffix}"
 
 # Ensure NuGet package does not exist
-#NuGetPageStatus="$(curl -Is https://www.nuget.org/packages/Platform.${TRAVIS_REPO_NAME}/${Version} | head -1)"
-#StatusContents=( $NuGetPageStatus )
-#if [ ${StatusContents[-2]} == "200" ]; then
-#  echo "NuGet with current version is already pushed."
-#  exit 0
-#fi
+NuGetPageStatus="$(curl -Is https://www.nuget.org/packages/Platform.${TRAVIS_REPO_NAME}/${Version} | head -1)"
+StatusContents=( $NuGetPageStatus )
+if [ ${StatusContents[-2]} == "200" ]; then
+  echo "NuGet with current version is already pushed."
+  exit 0
+fi
 
 # Push NuGet package
 dotnet nuget push -s https://api.nuget.org/v3/index.json -k ${NUGETTOKEN} ./**/*.nupkg
