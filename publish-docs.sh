@@ -55,6 +55,6 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 git push https://$COMMIT_USER_NAME:$TOKEN@$REPOSITORY.git $TARGET_BRANCH
 
 # Clean up
-
 rm -r out
+rm -r _site
 rm -r docfx.console*
