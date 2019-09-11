@@ -51,34 +51,34 @@ namespace Platform.Reflection
             switch (value)
             {
                 case uint.MaxValue:
-                    generator.Emit(OpCodes.Ldc_I4_M1, value);
+                    generator.Emit(OpCodes.Ldc_I4_M1);
                     return;
                 case 0:
-                    generator.Emit(OpCodes.Ldc_I4_0, value);
+                    generator.Emit(OpCodes.Ldc_I4_0);
                     return;
                 case 1:
-                    generator.Emit(OpCodes.Ldc_I4_1, value);
+                    generator.Emit(OpCodes.Ldc_I4_1);
                     return;
                 case 2:
-                    generator.Emit(OpCodes.Ldc_I4_2, value);
+                    generator.Emit(OpCodes.Ldc_I4_2);
                     return;
                 case 3:
-                    generator.Emit(OpCodes.Ldc_I4_3, value);
+                    generator.Emit(OpCodes.Ldc_I4_3);
                     return;
                 case 4:
-                    generator.Emit(OpCodes.Ldc_I4_4, value);
+                    generator.Emit(OpCodes.Ldc_I4_4);
                     return;
                 case 5:
-                    generator.Emit(OpCodes.Ldc_I4_5, value);
+                    generator.Emit(OpCodes.Ldc_I4_5);
                     return;
                 case 6:
-                    generator.Emit(OpCodes.Ldc_I4_6, value);
+                    generator.Emit(OpCodes.Ldc_I4_6);
                     return;
                 case 7:
-                    generator.Emit(OpCodes.Ldc_I4_7, value);
+                    generator.Emit(OpCodes.Ldc_I4_7);
                     return;
                 case 8:
-                    generator.Emit(OpCodes.Ldc_I4_8, value);
+                    generator.Emit(OpCodes.Ldc_I4_8);
                     return;
                 default:
                     if (value <= sbyte.MaxValue)
@@ -98,34 +98,34 @@ namespace Platform.Reflection
             switch (value)
             {
                 case -1:
-                    generator.Emit(OpCodes.Ldc_I4_M1, value);
+                    generator.Emit(OpCodes.Ldc_I4_M1);
                     return;
                 case 0:
-                    generator.Emit(OpCodes.Ldc_I4_0, value);
+                    generator.Emit(OpCodes.Ldc_I4_0);
                     return;
                 case 1:
-                    generator.Emit(OpCodes.Ldc_I4_1, value);
+                    generator.Emit(OpCodes.Ldc_I4_1);
                     return;
                 case 2:
-                    generator.Emit(OpCodes.Ldc_I4_2, value);
+                    generator.Emit(OpCodes.Ldc_I4_2);
                     return;
                 case 3:
-                    generator.Emit(OpCodes.Ldc_I4_3, value);
+                    generator.Emit(OpCodes.Ldc_I4_3);
                     return;
                 case 4:
-                    generator.Emit(OpCodes.Ldc_I4_4, value);
+                    generator.Emit(OpCodes.Ldc_I4_4);
                     return;
                 case 5:
-                    generator.Emit(OpCodes.Ldc_I4_5, value);
+                    generator.Emit(OpCodes.Ldc_I4_5);
                     return;
                 case 6:
-                    generator.Emit(OpCodes.Ldc_I4_6, value);
+                    generator.Emit(OpCodes.Ldc_I4_6);
                     return;
                 case 7:
-                    generator.Emit(OpCodes.Ldc_I4_7, value);
+                    generator.Emit(OpCodes.Ldc_I4_7);
                     return;
                 case 8:
-                    generator.Emit(OpCodes.Ldc_I4_8, value);
+                    generator.Emit(OpCodes.Ldc_I4_8);
                     return;
                 default:
                     if (value >= sbyte.MinValue && value <= sbyte.MaxValue)
@@ -143,25 +143,21 @@ namespace Platform.Reflection
         public static void LoadConstant(this ILGenerator generator, short value)
         {
             generator.LoadConstant((int)value);
-            generator.ConvertTo<short>();
         }
 
         public static void LoadConstant(this ILGenerator generator, ushort value)
         {
             generator.LoadConstant((int)value);
-            generator.ConvertTo<ushort>();
         }
 
         public static void LoadConstant(this ILGenerator generator, sbyte value)
         {
             generator.LoadConstant((int)value);
-            generator.ConvertTo<sbyte>();
         }
 
         public static void LoadConstant(this ILGenerator generator, byte value)
         {
             generator.LoadConstant((int)value);
-            generator.ConvertTo<byte>();
         }
 
         public static void LoadConstantOne<TConstant>(this ILGenerator generator) => LoadConstantOne(generator, typeof(TConstant));
@@ -214,10 +210,11 @@ namespace Platform.Reflection
             }
         }
 
-        public static void LoadConstant<TConstant>(this ILGenerator generator, object constantValue) => LoadConstant(generator, typeof(TConstant), constantValue);
+        public static void LoadConstant<TConstant>(this ILGenerator generator, TConstant constantValue) => LoadConstant(generator, typeof(TConstant), constantValue);
 
         public static void LoadConstant(this ILGenerator generator, Type constantType, object constantValue)
         {
+            constantValue = Convert.ChangeType(constantValue, constantType);
             if (constantType == typeof(float))
             {
                 generator.LoadConstant((float)constantValue);
@@ -298,25 +295,23 @@ namespace Platform.Reflection
 
         public static void LoadArgument(this ILGenerator generator, int argumentIndex)
         {
-            if (argumentIndex == 0)
+            switch (argumentIndex)
             {
-                generator.Emit(OpCodes.Ldarg_0);
-            }
-            else if (argumentIndex == 1)
-            {
-                generator.Emit(OpCodes.Ldarg_1);
-            }
-            else if (argumentIndex == 2)
-            {
-                generator.Emit(OpCodes.Ldarg_2);
-            }
-            else if (argumentIndex == 3)
-            {
-                generator.Emit(OpCodes.Ldarg_3);
-            }
-            else
-            {
-                generator.Emit(OpCodes.Ldarg, argumentIndex);
+                case 0:
+                    generator.Emit(OpCodes.Ldarg_0);
+                    break;
+                case 1:
+                    generator.Emit(OpCodes.Ldarg_1);
+                    break;
+                case 2:
+                    generator.Emit(OpCodes.Ldarg_2);
+                    break;
+                case 3:
+                    generator.Emit(OpCodes.Ldarg_3);
+                    break;
+                default:
+                    generator.Emit(OpCodes.Ldarg, argumentIndex);
+                    break;
             }
         }
 
