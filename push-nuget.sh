@@ -12,8 +12,14 @@ Version="${PackageFileName#$PackageFileNamePrefix}"
 Version="${Version%$PackageFileNameSuffix}"
 
 # Ensure NuGet package does not exist
-NuGetPageStatus="$(curl -Is https://www.nuget.org/packages/Platform.${TRAVIS_REPO_NAME}/${Version} | head -1)"
+NuGetPageStatus="$(curl -Is https://www.nuget.org/packages/Platform.${TRAVIS_REPO_NAME}/${Version}/ContactOwners | head -1)"
 StatusContents=( $NuGetPageStatus )
+echo $NuGetPageStatus
+echo ${StatusContents[-2]}
+echo ${StatusContents[-1]}
+echo ${StatusContents[0]}
+echo ${StatusContents[1]}
+echo ${StatusContents[2]}
 if [ ${StatusContents[-2]} == "200" ]; then
   echo "NuGet with current version is already pushed."
   exit 0
