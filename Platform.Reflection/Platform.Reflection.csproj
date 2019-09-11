@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>0.1.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -22,16 +22,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>Latest</LangVersion>
-    <PackageReleaseNotes>Added support for net461 (.NET Framework 4.6.1).
-Platform.Collections dependency updated from 0.0.4 to 0.0.5.
-Added System.Reflection.Emit.ILGeneration and System.Reflection.Emit.Lightweight dependencies.
-Added Platform.Reflection.Sigil replacement API.
-Added Collection and Array static properties to Types class, they represent empty array.
-Type&lt;T&gt; renamed to NumericType&lt;T&gt;.
-Added GetILBytesMethodTests.
-Refactoring, issues fix.
-
-This release is not backward compatible with previous 0.0.6 release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Travis CI build configuration updated to support automatic NuGet publishing.
+Project files now support building at dotnet, Travis CI, MonoDevelop and Visual Studio environments.
+Fixed bugs with incorrect instuctions emitting at ILGeneratorExtensions.
+Refactoring.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
