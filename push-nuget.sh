@@ -11,9 +11,9 @@ set -e # Exit with nonzero exit code if anything fails
 dotnet pack -c Release
 
 # Get version string
-PackageFileName=$(echo Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVIS_REPO_NAME}.*.nupkg)
 PackageFileNamePrefix="Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVIS_REPO_NAME}."
 PackageFileNameSuffix=".nupkg"
+PackageFileName=$(echo ${PackageFileNamePrefix}*${PackageFileNameSuffix})
 echo $PackageFileName
 Version = "${$PackageFileName#$PackageFileNamePrefix}"
 Version = "${$Version%$PackageFileNameSuffix}"
