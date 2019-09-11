@@ -16,6 +16,7 @@ NuGetPackageUrl="https://globalcdn.nuget.org/packages/Platform.${TRAVIS_REPO_NAM
 echo $NuGetPackageUrl
 NuGetPageStatus="$(curl -Is ${NuGetPackageUrl} | head -1)"
 StatusContents=( $NuGetPageStatus )
+echo ${StatusContents[1]}
 if [ ${StatusContents[1]} == "200" ]; then
   echo "NuGet with current version is already pushed."
   exit 0
