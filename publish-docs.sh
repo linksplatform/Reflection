@@ -56,6 +56,6 @@ git push https://$COMMIT_USER_NAME:$TOKEN@$REPOSITORY.git $TARGET_BRANCH
 cd ..
 
 # Clean up
-rm -r out
-rm -r _site
-rm -r docfx.console*
+rm -rf out
+rm -rf _site
+rm -rf docfx.console*
