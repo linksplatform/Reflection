@@ -15,8 +15,8 @@ PackageFileNamePrefix="Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVI
 PackageFileNameSuffix=".nupkg"
 PackageFileName=$(echo ${PackageFileNamePrefix}*${PackageFileNameSuffix})
 echo $PackageFileName
-Version = "${$PackageFileName#$PackageFileNamePrefix}"
-Version = "${$Version%$PackageFileNameSuffix}"
+Version = "${${PackageFileName}#${PackageFileNamePrefix}}"
+Version = "${${Version}%${PackageFileNameSuffix}}"
 echo $Version
 
 dotnet nuget push -s https://api.nuget.org/v3/index.json -k ${NUGETTOKEN} **/*.nupkg
