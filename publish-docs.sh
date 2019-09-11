@@ -53,3 +53,8 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Now that we're all set up, we can push.
 git push https://$COMMIT_USER_NAME:$TOKEN@$REPOSITORY.git $TARGET_BRANCH
+
+# Clean up
+
+rm -r out
+rm -r docfx.console*
