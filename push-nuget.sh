@@ -10,7 +10,14 @@ set -e # Exit with nonzero exit code if anything fails
 
 dotnet pack -c Release
 
-ls Platform.${TRAVIS_REPO_NAME}/bin/Release/netstandard*/
+# Get version string
+PackageFileName=$(echo Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVIS_REPO_NAME}.*.nupkg)
+PackageFileNamePrefix="Platform.${TRAVIS_REPO_NAME}/bin/Release/Platform.${TRAVIS_REPO_NAME}."
+PackageFileNameSuffix=".nupkg"
+echo $PackageFileName
+Version = "${$PackageFileName#$PackageFileNamePrefix}"
+Version = "${$Version%$PackageFileNameSuffix}"
+echo $Version
 
 dotnet nuget push -s https://api.nuget.org/v3/index.json -k ${NUGETTOKEN} **/*.nupkg
 
