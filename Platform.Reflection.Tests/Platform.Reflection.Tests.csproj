@@ -4,6 +4,7 @@
     <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
     <TargetFrameworks Condition="'$(MSBuildRuntimeType)' != 'Core'">net461;$(TargetFrameworks)</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <LangVersion>Latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
