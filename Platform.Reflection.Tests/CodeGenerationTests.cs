@@ -60,9 +60,7 @@ namespace Platform.Reflection.Tests
             {
                 void emitCode(System.Reflection.Emit.ILGenerator generator)
                 {
-                    generator.LoadConstant(72893);
-                    generator.LoadConstant(67421);
-                    generator.Add();
+                    generator.LoadConstant(140314);
                     generator.Return();
                 };
                 DelegateWithoutAggressiveInlining = DelegateHelpers.Compile<Func<int>>(emitCode, aggressiveInlining: false);
@@ -79,18 +77,38 @@ namespace Platform.Reflection.Tests
         [Fact]
         public void AggressiveInliningEffectTest()
         {
-            const int N = 100000000;
+            const int N = 10000000;
         
             int result = 0;
 
-            var ts4 = Performance.Measure(() =>
-            {
-                for (int i = 0; i < N; i++)
-                {
-                    result = MethodsContainer.WrapperForDelegateWithAggressiveInlining();
-                }
-            });
+            // Warm up
 
+            for (int i = 0; i < N; i++)
+            {
+                result = MethodsContainer.DelegateWithoutAggressiveInlining();
+            }
+            for (int i = 0; i < N; i++)
+            {
+                result = MethodsContainer.DelegateWithAggressiveInlining();
+            }
+            for (int i = 0; i < N; i++)
+            {
+                result = MethodsContainer.WrapperForDelegateWithoutAggressiveInlining();
+            }
+            for (int i = 0; i < N; i++)
+            {
+                result = MethodsContainer.WrapperForDelegateWithAggressiveInlining();
+            }
+            for (int i = 0; i < N; i++)
+            {
+                result = Function();
+            }
+            for (int i = 0; i < N; i++)
+            {
+                result = 140314;
+            }
+
+            // Measure
             var ts1 = Performance.Measure(() =>
             {
                 for (int i = 0; i < N; i++)
@@ -98,8 +116,6 @@ namespace Platform.Reflection.Tests
                     result = MethodsContainer.DelegateWithoutAggressiveInlining();
                 }
             });
-
-            // Currently fastest
             var ts2 = Performance.Measure(() =>
             {
                 for (int i = 0; i < N; i++)
@@ -107,7 +123,6 @@ namespace Platform.Reflection.Tests
                     result = MethodsContainer.DelegateWithAggressiveInlining();
                 }
             });
-
             var ts3 = Performance.Measure(() =>
             {
                 for (int i = 0; i < N; i++)
@@ -115,9 +130,42 @@ namespace Platform.Reflection.Tests
                     result = MethodsContainer.WrapperForDelegateWithoutAggressiveInlining();
                 }
             });
+            var ts4 = Performance.Measure(() =>
+            {
+                for (int i = 0; i < N; i++)
+                {
+                    result = MethodsContainer.WrapperForDelegateWithAggressiveInlining();
+                }
+            });
+            var ts5 = Performance.Measure(() =>
+            {
+                for (int i = 0; i < N; i++)
+                {
+                    result = Function();
+                }
+            });
+            var ts6 = Performance.Measure(() =>
+            {
+                for (int i = 0; i < N; i++)
+                {
+                    result = 140314;
+                }
+            });
 
-            var output = $"{ts1} {ts2} {ts3} {ts4} {result}";
+            var output = $"{ts1} {ts2} {ts3} {ts4} {ts5} {ts6} {result}";
             _output.WriteLine(output);
+
+            Assert.True(ts5 < ts1);
+            Assert.True(ts5 < ts2);
+            Assert.True(ts5 < ts3);
+            Assert.True(ts5 < ts4);
+            Assert.True(ts6 < ts1);
+            Assert.True(ts6 < ts2);
+            Assert.True(ts6 < ts3);
+            Assert.True(ts6 < ts4);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static int Function() => 140314;
     }
 }
