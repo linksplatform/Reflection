@@ -61,6 +61,15 @@ references:
   fullName.vb: Platform.Reflection.DelegateHelpers.Compile(Of TDelegate)(System.Action(Of System.Reflection.Emit.ILGenerator))
   nameWithType: DelegateHelpers.Compile<TDelegate>(Action<ILGenerator>)
   nameWithType.vb: DelegateHelpers.Compile(Of TDelegate)(Action(Of ILGenerator))
+- uid: Platform.Reflection.DelegateHelpers.Compile``1(System.Action{System.Reflection.Emit.ILGenerator},System.Boolean)
+  name: Compile<TDelegate>(Action<ILGenerator>, Boolean)
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_Compile__1_System_Action_System_Reflection_Emit_ILGenerator__System_Boolean_
+  commentId: M:Platform.Reflection.DelegateHelpers.Compile``1(System.Action{System.Reflection.Emit.ILGenerator},System.Boolean)
+  name.vb: Compile(Of TDelegate)(Action(Of ILGenerator), Boolean)
+  fullName: Platform.Reflection.DelegateHelpers.Compile<TDelegate>(System.Action<System.Reflection.Emit.ILGenerator>, System.Boolean)
+  fullName.vb: Platform.Reflection.DelegateHelpers.Compile(Of TDelegate)(System.Action(Of System.Reflection.Emit.ILGenerator), System.Boolean)
+  nameWithType: DelegateHelpers.Compile<TDelegate>(Action<ILGenerator>, Boolean)
+  nameWithType.vb: DelegateHelpers.Compile(Of TDelegate)(Action(Of ILGenerator), Boolean)
 - uid: Platform.Reflection.DelegateHelpers.CompileOrDefault*
   name: CompileOrDefault
   href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileOrDefault_
@@ -77,6 +86,15 @@ references:
   fullName.vb: Platform.Reflection.DelegateHelpers.CompileOrDefault(Of TDelegate)(System.Action(Of System.Reflection.Emit.ILGenerator))
   nameWithType: DelegateHelpers.CompileOrDefault<TDelegate>(Action<ILGenerator>)
   nameWithType.vb: DelegateHelpers.CompileOrDefault(Of TDelegate)(Action(Of ILGenerator))
+- uid: Platform.Reflection.DelegateHelpers.CompileOrDefault``1(System.Action{System.Reflection.Emit.ILGenerator},System.Boolean)
+  name: CompileOrDefault<TDelegate>(Action<ILGenerator>, Boolean)
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileOrDefault__1_System_Action_System_Reflection_Emit_ILGenerator__System_Boolean_
+  commentId: M:Platform.Reflection.DelegateHelpers.CompileOrDefault``1(System.Action{System.Reflection.Emit.ILGenerator},System.Boolean)
+  name.vb: CompileOrDefault(Of TDelegate)(Action(Of ILGenerator), Boolean)
+  fullName: Platform.Reflection.DelegateHelpers.CompileOrDefault<TDelegate>(System.Action<System.Reflection.Emit.ILGenerator>, System.Boolean)
+  fullName.vb: Platform.Reflection.DelegateHelpers.CompileOrDefault(Of TDelegate)(System.Action(Of System.Reflection.Emit.ILGenerator), System.Boolean)
+  nameWithType: DelegateHelpers.CompileOrDefault<TDelegate>(Action<ILGenerator>, Boolean)
+  nameWithType.vb: DelegateHelpers.CompileOrDefault(Of TDelegate)(Action(Of ILGenerator), Boolean)
 - uid: Platform.Reflection.DynamicExtensions
   name: DynamicExtensions
   href: api/Platform.Reflection.DynamicExtensions.html
@@ -1285,6 +1303,32 @@ references:
   commentId: T:Platform.Reflection.Tests.CodeGenerationTests
   fullName: Platform.Reflection.Tests.CodeGenerationTests
   nameWithType: CodeGenerationTests
+- uid: Platform.Reflection.Tests.CodeGenerationTests.#ctor(ITestOutputHelper)
+  name: CodeGenerationTests(ITestOutputHelper)
+  href: api/Platform.Reflection.Tests.CodeGenerationTests.html#Platform_Reflection_Tests_CodeGenerationTests__ctor_ITestOutputHelper_
+  commentId: M:Platform.Reflection.Tests.CodeGenerationTests.#ctor(ITestOutputHelper)
+  fullName: Platform.Reflection.Tests.CodeGenerationTests.CodeGenerationTests(ITestOutputHelper)
+  nameWithType: CodeGenerationTests.CodeGenerationTests(ITestOutputHelper)
+- uid: Platform.Reflection.Tests.CodeGenerationTests.#ctor*
+  name: CodeGenerationTests
+  href: api/Platform.Reflection.Tests.CodeGenerationTests.html#Platform_Reflection_Tests_CodeGenerationTests__ctor_
+  commentId: Overload:Platform.Reflection.Tests.CodeGenerationTests.#ctor
+  isSpec: "True"
+  fullName: Platform.Reflection.Tests.CodeGenerationTests.CodeGenerationTests
+  nameWithType: CodeGenerationTests.CodeGenerationTests
+- uid: Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest
+  name: AggressiveInliningEffectTest()
+  href: api/Platform.Reflection.Tests.CodeGenerationTests.html#Platform_Reflection_Tests_CodeGenerationTests_AggressiveInliningEffectTest
+  commentId: M:Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest
+  fullName: Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest()
+  nameWithType: CodeGenerationTests.AggressiveInliningEffectTest()
+- uid: Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest*
+  name: AggressiveInliningEffectTest
+  href: api/Platform.Reflection.Tests.CodeGenerationTests.html#Platform_Reflection_Tests_CodeGenerationTests_AggressiveInliningEffectTest_
+  commentId: Overload:Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest
+  isSpec: "True"
+  fullName: Platform.Reflection.Tests.CodeGenerationTests.AggressiveInliningEffectTest
+  nameWithType: CodeGenerationTests.AggressiveInliningEffectTest
 - uid: Platform.Reflection.Tests.CodeGenerationTests.ConstantLoadingTest
   name: ConstantLoadingTest()
   href: api/Platform.Reflection.Tests.CodeGenerationTests.html#Platform_Reflection_Tests_CodeGenerationTests_ConstantLoadingTest
