@@ -17,6 +17,7 @@ NuGet package: [Platform.Reflection](https://www.nuget.org/packages/Platform.Ref
 [PDF file](https://linksplatform.github.io/Reflection/Platform.Reflection.pdf) with code for e-readers.
 
 ## Depend on
+*   [System.Reflection.Emit](https://www.nuget.org/packages/System.Reflection.Emit)
 *   [System.Reflection.Emit.Lightweight](https://www.nuget.org/packages/System.Reflection.Emit.Lightweight)
 *   [Platform.Collections](https://github.com/linksplatform/Collections)
 
