@@ -70,6 +70,22 @@ references:
   fullName.vb: Platform.Reflection.DelegateHelpers.Compile(Of TDelegate)(System.Action(Of ILGenerator), System.Boolean)
   nameWithType: DelegateHelpers.Compile<TDelegate>(Action<ILGenerator>, Boolean)
   nameWithType.vb: DelegateHelpers.Compile(Of TDelegate)(Action(Of ILGenerator), Boolean)
+- uid: Platform.Reflection.DelegateHelpers.CompileDynamicMethod*
+  name: CompileDynamicMethod
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileDynamicMethod_
+  commentId: Overload:Platform.Reflection.DelegateHelpers.CompileDynamicMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.DelegateHelpers.CompileDynamicMethod
+  nameWithType: DelegateHelpers.CompileDynamicMethod
+- uid: Platform.Reflection.DelegateHelpers.CompileDynamicMethod``1(System.Action{ILGenerator})
+  name: CompileDynamicMethod<TDelegate>(Action<ILGenerator>)
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileDynamicMethod__1_System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.DelegateHelpers.CompileDynamicMethod``1(System.Action{ILGenerator})
+  name.vb: CompileDynamicMethod(Of TDelegate)(Action(Of ILGenerator))
+  fullName: Platform.Reflection.DelegateHelpers.CompileDynamicMethod<TDelegate>(System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.DelegateHelpers.CompileDynamicMethod(Of TDelegate)(System.Action(Of ILGenerator))
+  nameWithType: DelegateHelpers.CompileDynamicMethod<TDelegate>(Action<ILGenerator>)
+  nameWithType.vb: DelegateHelpers.CompileDynamicMethod(Of TDelegate)(Action(Of ILGenerator))
 - uid: Platform.Reflection.DelegateHelpers.CompileOrDefault*
   name: CompileOrDefault
   href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileOrDefault_
@@ -95,6 +111,22 @@ references:
   fullName.vb: Platform.Reflection.DelegateHelpers.CompileOrDefault(Of TDelegate)(System.Action(Of ILGenerator), System.Boolean)
   nameWithType: DelegateHelpers.CompileOrDefault<TDelegate>(Action<ILGenerator>, Boolean)
   nameWithType.vb: DelegateHelpers.CompileOrDefault(Of TDelegate)(Action(Of ILGenerator), Boolean)
+- uid: Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod*
+  name: CompileTypeMemberMethod
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileTypeMemberMethod_
+  commentId: Overload:Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod
+  nameWithType: DelegateHelpers.CompileTypeMemberMethod
+- uid: Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod``1(System.Action{ILGenerator})
+  name: CompileTypeMemberMethod<TDelegate>(Action<ILGenerator>)
+  href: api/Platform.Reflection.DelegateHelpers.html#Platform_Reflection_DelegateHelpers_CompileTypeMemberMethod__1_System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod``1(System.Action{ILGenerator})
+  name.vb: CompileTypeMemberMethod(Of TDelegate)(Action(Of ILGenerator))
+  fullName: Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod<TDelegate>(System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod(Of TDelegate)(System.Action(Of ILGenerator))
+  nameWithType: DelegateHelpers.CompileTypeMemberMethod<TDelegate>(Action<ILGenerator>)
+  nameWithType.vb: DelegateHelpers.CompileTypeMemberMethod(Of TDelegate)(Action(Of ILGenerator))
 - uid: Platform.Reflection.DynamicExtensions
   name: DynamicExtensions
   href: api/Platform.Reflection.DynamicExtensions.html
@@ -1154,6 +1186,19 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.MethodInfoExtensions.GetILBytes
   nameWithType: MethodInfoExtensions.GetILBytes
+- uid: Platform.Reflection.MethodInfoExtensions.GetParameterTypes(System.Reflection.MethodInfo)
+  name: GetParameterTypes(MethodInfo)
+  href: api/Platform.Reflection.MethodInfoExtensions.html#Platform_Reflection_MethodInfoExtensions_GetParameterTypes_System_Reflection_MethodInfo_
+  commentId: M:Platform.Reflection.MethodInfoExtensions.GetParameterTypes(System.Reflection.MethodInfo)
+  fullName: Platform.Reflection.MethodInfoExtensions.GetParameterTypes(System.Reflection.MethodInfo)
+  nameWithType: MethodInfoExtensions.GetParameterTypes(MethodInfo)
+- uid: Platform.Reflection.MethodInfoExtensions.GetParameterTypes*
+  name: GetParameterTypes
+  href: api/Platform.Reflection.MethodInfoExtensions.html#Platform_Reflection_MethodInfoExtensions_GetParameterTypes_
+  commentId: Overload:Platform.Reflection.MethodInfoExtensions.GetParameterTypes
+  isSpec: "True"
+  fullName: Platform.Reflection.MethodInfoExtensions.GetParameterTypes
+  nameWithType: MethodInfoExtensions.GetParameterTypes
 - uid: Platform.Reflection.NotSupportedExceptionDelegateFactory`1
   name: NotSupportedExceptionDelegateFactory<TDelegate>
   href: api/Platform.Reflection.NotSupportedExceptionDelegateFactory-1.html
@@ -1307,6 +1352,87 @@ references:
   fullName.vb: Platform.Reflection.PropertyInfoExtensions.GetStaticValue(Of T)(System.Reflection.PropertyInfo)
   nameWithType: PropertyInfoExtensions.GetStaticValue<T>(PropertyInfo)
   nameWithType.vb: PropertyInfoExtensions.GetStaticValue(Of T)(PropertyInfo)
+- uid: Platform.Reflection.TypeBuilderExtensions
+  name: TypeBuilderExtensions
+  href: api/Platform.Reflection.TypeBuilderExtensions.html
+  commentId: T:Platform.Reflection.TypeBuilderExtensions
+  fullName: Platform.Reflection.TypeBuilderExtensions
+  nameWithType: TypeBuilderExtensions
+- uid: Platform.Reflection.TypeBuilderExtensions.DefaultMethodImplAttributes
+  name: DefaultMethodImplAttributes
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_DefaultMethodImplAttributes
+  commentId: F:Platform.Reflection.TypeBuilderExtensions.DefaultMethodImplAttributes
+  fullName: Platform.Reflection.TypeBuilderExtensions.DefaultMethodImplAttributes
+  nameWithType: TypeBuilderExtensions.DefaultMethodImplAttributes
+- uid: Platform.Reflection.TypeBuilderExtensions.DefaultStaticMethodAttributes
+  name: DefaultStaticMethodAttributes
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_DefaultStaticMethodAttributes
+  commentId: F:Platform.Reflection.TypeBuilderExtensions.DefaultStaticMethodAttributes
+  fullName: Platform.Reflection.TypeBuilderExtensions.DefaultStaticMethodAttributes
+  nameWithType: TypeBuilderExtensions.DefaultStaticMethodAttributes
+- uid: Platform.Reflection.TypeBuilderExtensions.DefaultVirtualMethodAttributes
+  name: DefaultVirtualMethodAttributes
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_DefaultVirtualMethodAttributes
+  commentId: F:Platform.Reflection.TypeBuilderExtensions.DefaultVirtualMethodAttributes
+  fullName: Platform.Reflection.TypeBuilderExtensions.DefaultVirtualMethodAttributes
+  nameWithType: TypeBuilderExtensions.DefaultVirtualMethodAttributes
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitMethod(TypeBuilder,System.String,System.Reflection.MethodAttributes,System.Reflection.MethodImplAttributes,System.Type,System.Type[],System.Action{ILGenerator})
+  name: EmitMethod(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Type, Type[], Action<ILGenerator>)
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitMethod_TypeBuilder_System_String_System_Reflection_MethodAttributes_System_Reflection_MethodImplAttributes_System_Type_System_Type___System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.TypeBuilderExtensions.EmitMethod(TypeBuilder,System.String,System.Reflection.MethodAttributes,System.Reflection.MethodImplAttributes,System.Type,System.Type[],System.Action{ILGenerator})
+  name.vb: EmitMethod(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Type, Type(), Action(Of ILGenerator))
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitMethod(TypeBuilder, System.String, System.Reflection.MethodAttributes, System.Reflection.MethodImplAttributes, System.Type, System.Type[], System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.TypeBuilderExtensions.EmitMethod(TypeBuilder, System.String, System.Reflection.MethodAttributes, System.Reflection.MethodImplAttributes, System.Type, System.Type(), System.Action(Of ILGenerator))
+  nameWithType: TypeBuilderExtensions.EmitMethod(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Type, Type[], Action<ILGenerator>)
+  nameWithType.vb: TypeBuilderExtensions.EmitMethod(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Type, Type(), Action(Of ILGenerator))
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitMethod*
+  name: EmitMethod
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitMethod_
+  commentId: Overload:Platform.Reflection.TypeBuilderExtensions.EmitMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitMethod
+  nameWithType: TypeBuilderExtensions.EmitMethod
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitMethod``1(TypeBuilder,System.String,System.Reflection.MethodAttributes,System.Reflection.MethodImplAttributes,System.Action{ILGenerator})
+  name: EmitMethod<TDelegate>(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Action<ILGenerator>)
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitMethod__1_TypeBuilder_System_String_System_Reflection_MethodAttributes_System_Reflection_MethodImplAttributes_System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.TypeBuilderExtensions.EmitMethod``1(TypeBuilder,System.String,System.Reflection.MethodAttributes,System.Reflection.MethodImplAttributes,System.Action{ILGenerator})
+  name.vb: EmitMethod(Of TDelegate)(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Action(Of ILGenerator))
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitMethod<TDelegate>(TypeBuilder, System.String, System.Reflection.MethodAttributes, System.Reflection.MethodImplAttributes, System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.TypeBuilderExtensions.EmitMethod(Of TDelegate)(TypeBuilder, System.String, System.Reflection.MethodAttributes, System.Reflection.MethodImplAttributes, System.Action(Of ILGenerator))
+  nameWithType: TypeBuilderExtensions.EmitMethod<TDelegate>(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Action<ILGenerator>)
+  nameWithType.vb: TypeBuilderExtensions.EmitMethod(Of TDelegate)(TypeBuilder, String, MethodAttributes, MethodImplAttributes, Action(Of ILGenerator))
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod*
+  name: EmitStaticMethod
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitStaticMethod_
+  commentId: Overload:Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod
+  nameWithType: TypeBuilderExtensions.EmitStaticMethod
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod``1(TypeBuilder,System.String,System.Action{ILGenerator})
+  name: EmitStaticMethod<TDelegate>(TypeBuilder, String, Action<ILGenerator>)
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitStaticMethod__1_TypeBuilder_System_String_System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod``1(TypeBuilder,System.String,System.Action{ILGenerator})
+  name.vb: EmitStaticMethod(Of TDelegate)(TypeBuilder, String, Action(Of ILGenerator))
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod<TDelegate>(TypeBuilder, System.String, System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.TypeBuilderExtensions.EmitStaticMethod(Of TDelegate)(TypeBuilder, System.String, System.Action(Of ILGenerator))
+  nameWithType: TypeBuilderExtensions.EmitStaticMethod<TDelegate>(TypeBuilder, String, Action<ILGenerator>)
+  nameWithType.vb: TypeBuilderExtensions.EmitStaticMethod(Of TDelegate)(TypeBuilder, String, Action(Of ILGenerator))
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod*
+  name: EmitVirtualMethod
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitVirtualMethod_
+  commentId: Overload:Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod
+  nameWithType: TypeBuilderExtensions.EmitVirtualMethod
+- uid: Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod``1(TypeBuilder,System.String,System.Action{ILGenerator})
+  name: EmitVirtualMethod<TDelegate>(TypeBuilder, String, Action<ILGenerator>)
+  href: api/Platform.Reflection.TypeBuilderExtensions.html#Platform_Reflection_TypeBuilderExtensions_EmitVirtualMethod__1_TypeBuilder_System_String_System_Action_ILGenerator__
+  commentId: M:Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod``1(TypeBuilder,System.String,System.Action{ILGenerator})
+  name.vb: EmitVirtualMethod(Of TDelegate)(TypeBuilder, String, Action(Of ILGenerator))
+  fullName: Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod<TDelegate>(TypeBuilder, System.String, System.Action<ILGenerator>)
+  fullName.vb: Platform.Reflection.TypeBuilderExtensions.EmitVirtualMethod(Of TDelegate)(TypeBuilder, System.String, System.Action(Of ILGenerator))
+  nameWithType: TypeBuilderExtensions.EmitVirtualMethod<TDelegate>(TypeBuilder, String, Action<ILGenerator>)
+  nameWithType.vb: TypeBuilderExtensions.EmitVirtualMethod(Of TDelegate)(TypeBuilder, String, Action(Of ILGenerator))
 - uid: Platform.Reflection.TypeExtensions
   name: TypeExtensions
   href: api/Platform.Reflection.TypeExtensions.html
@@ -1326,6 +1452,12 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.TypeExtensions.CanBeNumeric
   nameWithType: TypeExtensions.CanBeNumeric
+- uid: Platform.Reflection.TypeExtensions.DefaultDelegateMethodName
+  name: DefaultDelegateMethodName
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_DefaultDelegateMethodName
+  commentId: F:Platform.Reflection.TypeExtensions.DefaultDelegateMethodName
+  fullName: Platform.Reflection.TypeExtensions.DefaultDelegateMethodName
+  nameWithType: TypeExtensions.DefaultDelegateMethodName
 - uid: Platform.Reflection.TypeExtensions.GetAssembly(System.Type)
   name: GetAssembly(Type)
   href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetAssembly_System_Type_
@@ -1352,6 +1484,48 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.TypeExtensions.GetBaseType
   nameWithType: TypeExtensions.GetBaseType
+- uid: Platform.Reflection.TypeExtensions.GetDelegateCharacteristics(System.Type,System.Type@,System.Type[]@)
+  name: GetDelegateCharacteristics(Type, out Type, out Type[])
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateCharacteristics_System_Type_System_Type__System_Type____
+  commentId: M:Platform.Reflection.TypeExtensions.GetDelegateCharacteristics(System.Type,System.Type@,System.Type[]@)
+  name.vb: GetDelegateCharacteristics(Type, ByRef Type, ByRef Type())
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateCharacteristics(System.Type, out System.Type, out System.Type[])
+  fullName.vb: Platform.Reflection.TypeExtensions.GetDelegateCharacteristics(System.Type, ByRef System.Type, ByRef System.Type())
+  nameWithType: TypeExtensions.GetDelegateCharacteristics(Type, out Type, out Type[])
+  nameWithType.vb: TypeExtensions.GetDelegateCharacteristics(Type, ByRef Type, ByRef Type())
+- uid: Platform.Reflection.TypeExtensions.GetDelegateCharacteristics*
+  name: GetDelegateCharacteristics
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateCharacteristics_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetDelegateCharacteristics
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateCharacteristics
+  nameWithType: TypeExtensions.GetDelegateCharacteristics
+- uid: Platform.Reflection.TypeExtensions.GetDelegateParameterTypes(System.Type)
+  name: GetDelegateParameterTypes(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateParameterTypes_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetDelegateParameterTypes(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateParameterTypes(System.Type)
+  nameWithType: TypeExtensions.GetDelegateParameterTypes(Type)
+- uid: Platform.Reflection.TypeExtensions.GetDelegateParameterTypes*
+  name: GetDelegateParameterTypes
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateParameterTypes_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetDelegateParameterTypes
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateParameterTypes
+  nameWithType: TypeExtensions.GetDelegateParameterTypes
+- uid: Platform.Reflection.TypeExtensions.GetDelegateReturnType(System.Type)
+  name: GetDelegateReturnType(Type)
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateReturnType_System_Type_
+  commentId: M:Platform.Reflection.TypeExtensions.GetDelegateReturnType(System.Type)
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateReturnType(System.Type)
+  nameWithType: TypeExtensions.GetDelegateReturnType(Type)
+- uid: Platform.Reflection.TypeExtensions.GetDelegateReturnType*
+  name: GetDelegateReturnType
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetDelegateReturnType_
+  commentId: Overload:Platform.Reflection.TypeExtensions.GetDelegateReturnType
+  isSpec: "True"
+  fullName: Platform.Reflection.TypeExtensions.GetDelegateReturnType
+  nameWithType: TypeExtensions.GetDelegateReturnType
 - uid: Platform.Reflection.TypeExtensions.GetFirstField(System.Type)
   name: GetFirstField(Type)
   href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_GetFirstField_System_Type_
@@ -1536,6 +1710,12 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.TypeExtensions.IsValueType
   nameWithType: TypeExtensions.IsValueType
+- uid: Platform.Reflection.TypeExtensions.StaticMemberBindingFlags
+  name: StaticMemberBindingFlags
+  href: api/Platform.Reflection.TypeExtensions.html#Platform_Reflection_TypeExtensions_StaticMemberBindingFlags
+  commentId: F:Platform.Reflection.TypeExtensions.StaticMemberBindingFlags
+  fullName: Platform.Reflection.TypeExtensions.StaticMemberBindingFlags
+  nameWithType: TypeExtensions.StaticMemberBindingFlags
 - uid: Platform.Reflection.Types
   name: Types
   href: api/Platform.Reflection.Types.html

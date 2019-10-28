@@ -127,7 +127,7 @@
     <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_Compile__1_System_Action_ILGenerator__.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.Compile%60%601(System.Action%7BILGenerator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/Reflection/blob/50f5b6bbfe972ce56fa094524f752f67a28d013e/Platform.Reflection/DelegateHelpers.cs/#L46">View Source</a>
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L45">View Source</a>
   </span>
   <a id="Platform_Reflection_DelegateHelpers_Compile_" data-uid="Platform.Reflection.DelegateHelpers.Compile*"></a>
   <h4 id="Platform_Reflection_DelegateHelpers_Compile__1_System_Action_ILGenerator__" data-uid="Platform.Reflection.DelegateHelpers.Compile``1(System.Action{ILGenerator})">Compile&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;)</h4>
@@ -190,7 +190,7 @@
     <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_Compile__1_System_Action_ILGenerator__System_Boolean_.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.Compile%60%601(System.Action%7BILGenerator%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/Reflection/blob/50f5b6bbfe972ce56fa094524f752f67a28d013e/Platform.Reflection/DelegateHelpers.cs/#L34">View Source</a>
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L33">View Source</a>
   </span>
   <a id="Platform_Reflection_DelegateHelpers_Compile_" data-uid="Platform.Reflection.DelegateHelpers.Compile*"></a>
   <h4 id="Platform_Reflection_DelegateHelpers_Compile__1_System_Action_ILGenerator__System_Boolean_" data-uid="Platform.Reflection.DelegateHelpers.Compile``1(System.Action{ILGenerator},System.Boolean)">Compile&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;, Boolean)</h4>
@@ -198,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TDelegate Compile&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode, bool aggressiveInlining)
+    <pre><code class="lang-csharp hljs">public static TDelegate Compile&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode, bool typeMemberMethod)
     where TDelegate : Delegate</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -218,7 +218,69 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">aggressiveInlining</span></td>
+        <td><span class="parametername">typeMemberMethod</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TDelegate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDelegate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_CompileDynamicMethod__1_System_Action_ILGenerator__.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.CompileDynamicMethod%60%601(System.Action%7BILGenerator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L48">View Source</a>
+  </span>
+  <a id="Platform_Reflection_DelegateHelpers_CompileDynamicMethod_" data-uid="Platform.Reflection.DelegateHelpers.CompileDynamicMethod*"></a>
+  <h4 id="Platform_Reflection_DelegateHelpers_CompileDynamicMethod__1_System_Action_ILGenerator__" data-uid="Platform.Reflection.DelegateHelpers.CompileDynamicMethod``1(System.Action{ILGenerator})">CompileDynamicMethod&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TDelegate CompileDynamicMethod&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">ILGenerator</span>&gt;</td>
+        <td><span class="parametername">emitCode</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -258,7 +320,7 @@
     <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_CompileOrDefault__1_System_Action_ILGenerator__.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.CompileOrDefault%60%601(System.Action%7BILGenerator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/Reflection/blob/50f5b6bbfe972ce56fa094524f752f67a28d013e/Platform.Reflection/DelegateHelpers.cs/#L31">View Source</a>
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L30">View Source</a>
   </span>
   <a id="Platform_Reflection_DelegateHelpers_CompileOrDefault_" data-uid="Platform.Reflection.DelegateHelpers.CompileOrDefault*"></a>
   <h4 id="Platform_Reflection_DelegateHelpers_CompileOrDefault__1_System_Action_ILGenerator__" data-uid="Platform.Reflection.DelegateHelpers.CompileOrDefault``1(System.Action{ILGenerator})">CompileOrDefault&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;)</h4>
@@ -321,7 +383,7 @@
     <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_CompileOrDefault__1_System_Action_ILGenerator__System_Boolean_.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.CompileOrDefault%60%601(System.Action%7BILGenerator%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/Reflection/blob/50f5b6bbfe972ce56fa094524f752f67a28d013e/Platform.Reflection/DelegateHelpers.cs/#L15">View Source</a>
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L14">View Source</a>
   </span>
   <a id="Platform_Reflection_DelegateHelpers_CompileOrDefault_" data-uid="Platform.Reflection.DelegateHelpers.CompileOrDefault*"></a>
   <h4 id="Platform_Reflection_DelegateHelpers_CompileOrDefault__1_System_Action_ILGenerator__System_Boolean_" data-uid="Platform.Reflection.DelegateHelpers.CompileOrDefault``1(System.Action{ILGenerator},System.Boolean)">CompileOrDefault&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;, Boolean)</h4>
@@ -329,7 +391,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TDelegate CompileOrDefault&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode, bool aggressiveInlining)
+    <pre><code class="lang-csharp hljs">public static TDelegate CompileOrDefault&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode, bool typeMemberMethod)
     where TDelegate : Delegate</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -349,7 +411,69 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">aggressiveInlining</span></td>
+        <td><span class="parametername">typeMemberMethod</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TDelegate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TDelegate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers_CompileTypeMemberMethod__1_System_Action_ILGenerator__.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod%60%601(System.Action%7BILGenerator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L58">View Source</a>
+  </span>
+  <a id="Platform_Reflection_DelegateHelpers_CompileTypeMemberMethod_" data-uid="Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod*"></a>
+  <h4 id="Platform_Reflection_DelegateHelpers_CompileTypeMemberMethod__1_System_Action_ILGenerator__" data-uid="Platform.Reflection.DelegateHelpers.CompileTypeMemberMethod``1(System.Action{ILGenerator})">CompileTypeMemberMethod&lt;TDelegate&gt;(Action&lt;ILGenerator&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TDelegate CompileTypeMemberMethod&lt;TDelegate&gt;(Action&lt;ILGenerator&gt; emitCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">ILGenerator</span>&gt;</td>
+        <td><span class="parametername">emitCode</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -395,7 +519,7 @@
                     <a href="https://github.com/linksplatform/Reflection/new/master/apiSpec/new?filename=Platform_Reflection_DelegateHelpers.md&amp;value=---%0Auid%3A%20Platform.Reflection.DelegateHelpers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/linksplatform/Reflection/blob/50f5b6bbfe972ce56fa094524f752f67a28d013e/Platform.Reflection/DelegateHelpers.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/linksplatform/Reflection/blob/c4cff3289ed8df9f48fe9d6b50627583c6eacb16/Platform.Reflection/DelegateHelpers.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
