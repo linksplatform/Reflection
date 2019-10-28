@@ -23,7 +23,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <LangVersion>Latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Travis CI build configuration updated to support automatic NuGet publishing.
 Project files now support building at dotnet, Travis CI, MonoDevelop and Visual Studio environments.
 Fixed bugs with incorrect instuctions emitting at ILGeneratorExtensions.
