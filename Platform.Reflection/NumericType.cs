@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Platform.Exceptions;
 
@@ -24,6 +25,7 @@ namespace Platform.Reflection
         public static readonly T MinValue;
         public static readonly T MaxValue;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static NumericType()
         {
             try
@@ -57,6 +59,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetMinAndMaxValues(Type type, out T minValue, out T maxValue)
         {
             if (type == typeof(bool))
@@ -71,6 +74,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetSignedAndUnsignedVersions(Type type, bool isSigned, out Type signedVersion, out Type unsignedVersion)
         {
             if (isSigned)

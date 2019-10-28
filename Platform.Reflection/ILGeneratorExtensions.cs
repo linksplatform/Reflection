@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -9,8 +10,10 @@ namespace Platform.Reflection
 {
     public static class ILGeneratorExtensions
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Throw<T>(this ILGenerator generator) => generator.ThrowException(typeof(T));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator)
         {
             var type = typeof(TTarget);
@@ -67,6 +70,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CheckedConvert<TSource, TTarget>(this ILGenerator generator)
         {
             var type = typeof(TTarget);
@@ -179,16 +183,22 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, bool value) => generator.LoadConstant(value ? 1 : 0);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, float value) => generator.Emit(OpCodes.Ldc_R4, value);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, double value) => generator.Emit(OpCodes.Ldc_R8, value);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, ulong value) => generator.Emit(OpCodes.Ldc_I8, unchecked((long)value));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, long value) => generator.Emit(OpCodes.Ldc_I8, value);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, uint value)
         {
             switch (value)
@@ -236,6 +246,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, int value)
         {
             switch (value)
@@ -283,28 +294,34 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, short value)
         {
             generator.LoadConstant((int)value);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, ushort value)
         {
             generator.LoadConstant((int)value);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, sbyte value)
         {
             generator.LoadConstant((int)value);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, byte value)
         {
             generator.LoadConstant((int)value);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstantOne<TConstant>(this ILGenerator generator) => LoadConstantOne(generator, typeof(TConstant));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstantOne(this ILGenerator generator, Type constantType)
         {
             if (constantType == typeof(float))
@@ -353,8 +370,10 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant<TConstant>(this ILGenerator generator, TConstant constantValue) => LoadConstant(generator, typeof(TConstant), constantValue);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, Type constantType, object constantValue)
         {
             constantValue = Convert.ChangeType(constantValue, constantType);
@@ -404,38 +423,51 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Increment<TValue>(this ILGenerator generator) => generator.Increment(typeof(TValue));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Decrement<TValue>(this ILGenerator generator) => generator.Decrement(typeof(TValue));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Increment(this ILGenerator generator, Type valueType)
         {
             generator.LoadConstantOne(valueType);
             generator.Add();
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Add(this ILGenerator generator) => generator.Emit(OpCodes.Add);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Decrement(this ILGenerator generator, Type valueType)
         {
             generator.LoadConstantOne(valueType);
             generator.Subtract();
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Subtract(this ILGenerator generator) => generator.Emit(OpCodes.Sub);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Negate(this ILGenerator generator) => generator.Emit(OpCodes.Neg);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void And(this ILGenerator generator) => generator.Emit(OpCodes.And);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Or(this ILGenerator generator) => generator.Emit(OpCodes.Or);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Not(this ILGenerator generator) => generator.Emit(OpCodes.Not);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ShiftLeft(this ILGenerator generator) => generator.Emit(OpCodes.Shl);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ShiftRight(this ILGenerator generator) => generator.Emit(OpCodes.Shr);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadArgument(this ILGenerator generator, int argumentIndex)
         {
             switch (argumentIndex)
@@ -458,6 +490,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadArguments(this ILGenerator generator, params int[] argumentIndices)
         {
             for (var i = 0; i < argumentIndices.Length; i++)
@@ -466,12 +499,16 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreArgument(this ILGenerator generator, int argumentIndex) => generator.Emit(OpCodes.Starg, argumentIndex);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareGreaterThan(this ILGenerator generator) => generator.Emit(OpCodes.Cgt);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedCompareGreaterThan(this ILGenerator generator) => generator.Emit(OpCodes.Cgt_Un);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareGreaterThan(this ILGenerator generator, bool isSigned)
         {
             if (isSigned)
@@ -484,10 +521,13 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareLessThan(this ILGenerator generator) => generator.Emit(OpCodes.Clt);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedCompareLessThan(this ILGenerator generator) => generator.Emit(OpCodes.Clt_Un);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareLessThan(this ILGenerator generator, bool isSigned)
         {
             if (isSigned)
@@ -500,10 +540,13 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfGreaterOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Bge, label);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedBranchIfGreaterOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Bge_Un, label);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfGreaterOrEqual(this ILGenerator generator, bool isSigned, Label label)
         {
             if (isSigned)
@@ -516,10 +559,13 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfLessOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Ble, label);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedBranchIfLessOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Ble_Un, label);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfLessOrEqual(this ILGenerator generator, bool isSigned, Label label)
         {
             if (isSigned)
@@ -532,28 +578,40 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Box<TBox>(this ILGenerator generator) => generator.Box(typeof(TBox));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Box(this ILGenerator generator, Type boxedType) => generator.Emit(OpCodes.Box, boxedType);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Call(this ILGenerator generator, MethodInfo method) => generator.Emit(OpCodes.Call, method);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Return(this ILGenerator generator) => generator.Emit(OpCodes.Ret);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Unbox<TUnbox>(this ILGenerator generator) => generator.Unbox(typeof(TUnbox));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Unbox(this ILGenerator generator, Type typeToUnbox) => generator.Emit(OpCodes.Unbox, typeToUnbox);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnboxValue<TUnbox>(this ILGenerator generator) => generator.UnboxValue(typeof(TUnbox));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnboxValue(this ILGenerator generator, Type typeToUnbox) => generator.Emit(OpCodes.Unbox_Any, typeToUnbox);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LocalBuilder DeclareLocal<T>(this ILGenerator generator) => generator.DeclareLocal(typeof(T));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadLocal(this ILGenerator generator, LocalBuilder local) => generator.Emit(OpCodes.Ldloc, local);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLocal(this ILGenerator generator, LocalBuilder local) => generator.Emit(OpCodes.Stloc, local);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void NewObject(this ILGenerator generator, Type type, params Type[] parameterTypes)
         {
             var allConstructors = type.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
@@ -569,13 +627,16 @@ namespace Platform.Reflection
             generator.NewObject(constructor);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void NewObject(this ILGenerator generator, ConstructorInfo constructor)
         {
             generator.Emit(OpCodes.Newobj, constructor);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadIndirect<T>(this ILGenerator generator, bool isVolatile = false, byte? unaligned = null) => generator.LoadIndirect(typeof(T), isVolatile, unaligned);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadIndirect(this ILGenerator generator, Type type, bool isVolatile = false, byte? unaligned = null)
         {
             if (unaligned.HasValue && unaligned != 1 && unaligned != 2 && unaligned != 4)
@@ -648,8 +709,10 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreIndirect<T>(this ILGenerator generator, bool isVolatile = false, byte? unaligned = null) => generator.StoreIndirect(typeof(T), isVolatile, unaligned);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreIndirect(this ILGenerator generator, Type type, bool isVolatile = false, byte? unaligned = null)
         {
             if (unaligned.HasValue && unaligned != 1 && unaligned != 2 && unaligned != 4)

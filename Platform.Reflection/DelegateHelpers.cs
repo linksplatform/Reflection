@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using Platform.Exceptions;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -11,6 +12,7 @@ namespace Platform.Reflection
 {
     public static class DelegateHelpers
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileOrDefault<TDelegate>(Action<ILGenerator> emitCode, bool aggressiveInlining)
             where TDelegate : Delegate
         {
@@ -26,8 +28,10 @@ namespace Platform.Reflection
             return @delegate;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileOrDefault<TDelegate>(Action<ILGenerator> emitCode) where TDelegate : Delegate => CompileOrDefault<TDelegate>(emitCode, false);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate Compile<TDelegate>(Action<ILGenerator> emitCode, bool aggressiveInlining)
             where TDelegate : Delegate
         {
@@ -39,8 +43,10 @@ namespace Platform.Reflection
             return @delegate;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate Compile<TDelegate>(Action<ILGenerator> emitCode) where TDelegate : Delegate => Compile<TDelegate>(emitCode, false);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static TDelegate CompileUsingDynamicMethod<TDelegate>(Action<ILGenerator> emitCode)
         {
             var delegateType = typeof(TDelegate);
@@ -53,6 +59,7 @@ namespace Platform.Reflection
             return (TDelegate)(object)dynamicMethod.CreateDelegate(delegateType);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static TDelegate CompileUsingMethodBuilder<TDelegate>(Action<ILGenerator> emitCode)
         {
             AssemblyName assemblyName = new AssemblyName(GetNewName());
@@ -72,6 +79,7 @@ namespace Platform.Reflection
             return (TDelegate)(object)typeInfo.GetMethod(methodName).CreateDelegate(delegateType);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string GetNewName() => Guid.NewGuid().ToString("N");
     }
 }

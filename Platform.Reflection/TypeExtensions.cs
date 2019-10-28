@@ -18,6 +18,7 @@ namespace Platform.Reflection
         static private readonly Dictionary<Type, Type> _unsignedVersionsOfSignedTypes;
         static private readonly Dictionary<Type, Type> _signedVersionsOfUnsignedTypes;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static TypeExtensions()
         {
             _canBeNumericTypes = new HashSet<Type> { typeof(bool), typeof(char), typeof(DateTime), typeof(TimeSpan) };

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using Platform.Exceptions;
 using Platform.Collections.Lists;
 
@@ -15,6 +16,7 @@ namespace Platform.Reflection
         /// <remarks>
         /// Source: http://haacked.com/archive/2012/07/23/get-all-types-in-an-assembly.aspx/
         /// </remarks>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Type[] GetLoadableTypes(this Assembly assembly)
         {
             Ensure.Always.ArgumentNotNull(assembly, nameof(assembly));
@@ -28,6 +30,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Type[] GetCachedLoadableTypes(this Assembly assembly) => _loadableTypesCache.GetOrAdd(assembly, GetLoadableTypes);
     }
 }
