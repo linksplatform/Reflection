@@ -295,28 +295,16 @@ namespace Platform.Reflection
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void LoadConstant(this ILGenerator generator, short value)
-        {
-            generator.LoadConstant((int)value);
-        }
+        public static void LoadConstant(this ILGenerator generator, short value) => generator.LoadConstant((int)value);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void LoadConstant(this ILGenerator generator, ushort value)
-        {
-            generator.LoadConstant((int)value);
-        }
+        public static void LoadConstant(this ILGenerator generator, ushort value) => generator.LoadConstant((int)value);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void LoadConstant(this ILGenerator generator, sbyte value)
-        {
-            generator.LoadConstant((int)value);
-        }
+        public static void LoadConstant(this ILGenerator generator, sbyte value) => generator.LoadConstant((int)value);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void LoadConstant(this ILGenerator generator, byte value)
-        {
-            generator.LoadConstant((int)value);
-        }
+        public static void LoadConstant(this ILGenerator generator, byte value) => generator.LoadConstant((int)value);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstantOne<TConstant>(this ILGenerator generator) => LoadConstantOne(generator, typeof(TConstant));
@@ -628,10 +616,7 @@ namespace Platform.Reflection
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void NewObject(this ILGenerator generator, ConstructorInfo constructor)
-        {
-            generator.Emit(OpCodes.Newobj, constructor);
-        }
+        public static void NewObject(this ILGenerator generator, ConstructorInfo constructor) => generator.Emit(OpCodes.Newobj, constructor);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadIndirect<T>(this ILGenerator generator, bool isVolatile = false, byte? unaligned = null) => generator.LoadIndirect(typeof(T), isVolatile, unaligned);
