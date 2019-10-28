@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/home/travis/build/linksplatform/Reflection",
+  "source_base_path": "/home/runner/work/Reflection/Reflection",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "JNDkgfHukrKG6KT6bdjFDQ=="
+          "hash": "hUgBTNP4R5fXVxECMMt4xw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.AssemblyExtensions.html",
-          "hash": "AU4HTNrFCWE4TAyQUqW+EQ=="
+          "hash": "B7YEcWXxb86rI6xGV2BdnA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.DelegateHelpers.html",
-          "hash": "dgw+E5oOXQPd/YTJx9VUbg=="
+          "hash": "p9WjOaIzTDzN5nqFQxzsGw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.DynamicExtensions.html",
-          "hash": "3+sWo1+k71rng5p/MkdfKw=="
+          "hash": "g7opWvLRsePQ6IDz42R/eQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.EnsureExtensions.html",
-          "hash": "Hbs/YwIfmxRcODyKzwu9WQ=="
+          "hash": "9L1hxTfZlYmfUIJmI3PHLQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.FieldInfoExtensions.html",
-          "hash": "w2ah8WAKllLmatKEc/f+6A=="
+          "hash": "htg1W6wwvC38IOp9DgjQvA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.ILGeneratorExtensions.html",
-          "hash": "T8Nq+un1Il5iPQIV95kl4g=="
+          "hash": "H+bTViXjk6Kaejp030xbvg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.MethodInfoExtensions.html",
-          "hash": "+4w5XUaxDCMiS8IFn4HGzA=="
+          "hash": "ZnDuzG0+lDZO46668GNs8Q=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.NotSupportedExceptionDelegateFactory-1.html",
-          "hash": "oBWwfQlJiZTEKM/vVhJsCg=="
+          "hash": "jHwZG72EhMbpJzSDfS3lvA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.NumericType-1.html",
-          "hash": "K9AnQ53yM1gxBcGPMW+R2Q=="
+          "hash": "LaaesRXBHtQULwqqK0zNFw=="
         }
       },
       "is_incremental": false,
@@ -138,55 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.PropertyInfoExtensions.html",
-          "hash": "3ZdZJSg2R1IuEUO5MAkCSg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.Reflection.Tests.CodeGenerationTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.Reflection.Tests.CodeGenerationTests.html",
-          "hash": "w4K4rRymKdKVPye+Mn+l1g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.Reflection.Tests.GetILBytesMethodTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.Reflection.Tests.GetILBytesMethodTests.html",
-          "hash": "sCZQH3UlpUrxqyhOsaKLYg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.Reflection.Tests.NumericTypeTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.Reflection.Tests.NumericTypeTests.html",
-          "hash": "n/6GTd00sV14/XzD8ICC/A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.Reflection.Tests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.Reflection.Tests.html",
-          "hash": "2ZpixH+Leu4Q3unkOC7pFA=="
+          "hash": "tMsZn8lMHR9ZTigbkF00VQ=="
         }
       },
       "is_incremental": false,
@@ -198,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.TypeExtensions.html",
-          "hash": "iYavQlSbyOl1973SVWa1iw=="
+          "hash": "UJIbJd9+cQef5lQvMutQTg=="
         }
       },
       "is_incremental": false,
@@ -210,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-1.html",
-          "hash": "f/uuCQxsoeczl8kiQOXI3A=="
+          "hash": "F5/eF52CXYc5lIcIh5mNDQ=="
         }
       },
       "is_incremental": false,
@@ -222,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-2.html",
-          "hash": "HGpads35sAzKDmPjA3NcvA=="
+          "hash": "/W6pWRwMSzs9Tw1E1n8o1g=="
         }
       },
       "is_incremental": false,
@@ -234,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-3.html",
-          "hash": "N4OUITP/deokQxlBGeIkFg=="
+          "hash": "GLHBvpjTJL3rrbubzYsVjg=="
         }
       },
       "is_incremental": false,
@@ -246,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-4.html",
-          "hash": "7XXOuvkwH/f4qxTYFPeSSg=="
+          "hash": "Wgrf9GgiriZ10z+ZpZa+pA=="
         }
       },
       "is_incremental": false,
@@ -258,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-5.html",
-          "hash": "iQFS2EzYfba9gLd3IItwfg=="
+          "hash": "sDK/0XjxLC++vE/slOcZUQ=="
         }
       },
       "is_incremental": false,
@@ -270,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-6.html",
-          "hash": "i6u5Cf0MN7GA8wsVZxCmXg=="
+          "hash": "UAjoFG0mo41nVTWIcMLDXg=="
         }
       },
       "is_incremental": false,
@@ -282,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types-7.html",
-          "hash": "E+7ZW3dK7hga0ocR3t9yCQ=="
+          "hash": "l2oRmUtikcq8+1hj5G/QHA=="
         }
       },
       "is_incremental": false,
@@ -294,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Reflection.Types.html",
-          "hash": "cx65Ta2ZnfZTFS0q0sFakA=="
+          "hash": "n77cFdStc8ICl7lIYhGbmw=="
         }
       },
       "is_incremental": false,
@@ -318,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lpL+Ai55I3zzDp10G74jRA=="
+          "hash": "05m0iq+H8OSorjwZMgDvcg=="
         }
       },
       "is_incremental": false,
@@ -351,16 +303,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 24,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 20,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
