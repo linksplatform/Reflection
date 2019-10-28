@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -9,5 +11,8 @@ namespace Platform.Reflection
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static byte[] GetILBytes(this MethodInfo methodInfo) => methodInfo.GetMethodBody().GetILAsByteArray();
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Type[] GetParameterTypes(this MethodInfo methodInfo) => methodInfo.GetParameters().Select(s => s.ParameterType).ToArray();
     }
 }

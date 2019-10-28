@@ -11,6 +11,9 @@ namespace Platform.Reflection
 {
     public static class TypeExtensions
     {
+        static public readonly BindingFlags StaticMemberBindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
+        static public readonly string DefaultDelegateMethodName = "Invoke";
+
         static private readonly HashSet<Type> _canBeNumericTypes;
         static private readonly HashSet<Type> _isNumericTypes;
         static private readonly HashSet<Type> _isSignedTypes;
@@ -51,10 +54,10 @@ namespace Platform.Reflection
         public static FieldInfo GetFirstField(this Type type) => type.GetFields()[0];
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static T GetStaticFieldValue<T>(this Type type, string name) => type.GetTypeInfo().GetField(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).GetStaticValue<T>();
+        public static T GetStaticFieldValue<T>(this Type type, string name) => type.GetField(name, StaticMemberBindingFlags).GetStaticValue<T>();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static T GetStaticPropertyValue<T>(this Type type, string name) => type.GetTypeInfo().GetProperty(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).GetStaticValue<T>();
+        public static T GetStaticPropertyValue<T>(this Type type, string name) => type.GetProperty(name, StaticMemberBindingFlags).GetStaticValue<T>();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static MethodInfo GetGenericMethod(this Type type, string name, Type[] genericParameterTypes, Type[] argumentTypes)
@@ -72,19 +75,19 @@ namespace Platform.Reflection
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Type GetBaseType(this Type type) => type.GetTypeInfo().BaseType;
+        public static Type GetBaseType(this Type type) => type.BaseType;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Assembly GetAssembly(this Type type) => type.GetTypeInfo().Assembly;
+        public static Assembly GetAssembly(this Type type) => type.Assembly;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool IsSubclassOf(this Type type, Type superClass) => type.GetTypeInfo().IsSubclassOf(superClass);
+        public static bool IsSubclassOf(this Type type, Type superClass) => type.IsSubclassOf(superClass);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool IsValueType(this Type type) => type.GetTypeInfo().IsValueType;
+        public static bool IsValueType(this Type type) => type.IsValueType;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool IsGeneric(this Type type) => type.GetTypeInfo().IsGenericType;
+        public static bool IsGeneric(this Type type) => type.IsGenericType;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsGeneric(this Type type, Type genericTypeDefinition) => type.IsGeneric() && type.GetGenericTypeDefinition() == genericTypeDefinition;
@@ -109,5 +112,19 @@ namespace Platform.Reflection
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsFloatPoint(this Type type) => _isFloatPointTypes.Contains(type);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Type GetDelegateReturnType(this Type delegateType) => delegateType.GetMethod(DefaultDelegateMethodName).ReturnType;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Type[] GetDelegateParameterTypes(this Type delegateType) => delegateType.GetMethod(DefaultDelegateMethodName).GetParameterTypes();
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void GetDelegateCharacteristics(this Type delegateType, out Type returnType, out Type[] parameterTypes)
+        {
+            var invoke = delegateType.GetMethod(DefaultDelegateMethodName);
+            returnType = invoke.ReturnType;
+            parameterTypes = invoke.GetParameterTypes();
+        }
     }
 }
