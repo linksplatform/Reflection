@@ -13,6 +13,6 @@ namespace Platform.Reflection
         public static byte[] GetILBytes(this MethodInfo methodInfo) => methodInfo.GetMethodBody().GetILAsByteArray();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Type[] GetParameterTypes(this MethodInfo methodInfo) => methodInfo.GetParameters().Select(s => s.ParameterType).ToArray();
+        public static Type[] GetParameterTypes(this MethodInfo methodInfo) => methodInfo.GetParameters().Select(p => p.ParameterType).ToArray();
     }
 }
