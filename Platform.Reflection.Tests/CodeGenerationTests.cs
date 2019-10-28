@@ -1,8 +1,8 @@
-﻿using Platform.Diagnostics;
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using Xunit;
 using Xunit.Abstractions;
+using Platform.Diagnostics;
 
 namespace Platform.Reflection.Tests
 {

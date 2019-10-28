@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Platform.Reflection\Platform.Reflection.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Platform.Diagnostics" Version="0.0.3" />
+  </ItemGroup>
+
 </Project>
