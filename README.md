@@ -24,12 +24,3 @@ NuGet package: [Platform.Reflection](https://www.nuget.org/packages/Platform.Ref
 ## Dependent libraries
 *   [Platform.Converters](https://github.com/linksplatform/Converters)
 *   [Platform.Singletons](https://github.com/linksplatform/Singletons)
-
-## Mystery files
-*   [.travis.yml](https://github.com/linksplatform/Reflection/blob/master/.travis.yml) - [Travis CI](https://travis-ci.com) build configuration.
-*   [docfx.json](https://github.com/linksplatform/Reflection/blob/master/docfx.json) and [toc.yml](https://github.com/linksplatform/Reflection/blob/master/toc.yml) - [DocFX](https://dotnet.github.io/docfx) build configuration.
-*   [format-document.sh](https://github.com/linksplatform/Reflection/blob/master/format-document.sh) - script for formatting `tex` file for generating PDF from it.
-*   [format-csharp-files.py](https://github.com/linksplatform/Reflection/blob/master/format-csharp-files.py) - script for formatting `.cs` files as a part of `tex` file.
-*   [generate-pdf.sh](https://github.com/linksplatform/Reflection/blob/master/generate-pdf.sh) - script that generates PDF with code for e-readers.
-*   [publish-docs.sh](https://github.com/linksplatform/Reflection/blob/master/publish-docs.sh) - script that publishes generated documentation and PDF with code for e-readers to [gh-pages](https://github.com/linksplatform/Reflection/tree/gh-pages) branch.
-*   [push-nuget.sh](https://github.com/linksplatform/Reflection/blob/master/push-nuget.sh) - script for publishing current version of [NuGet](https://www.nuget.org) package.
