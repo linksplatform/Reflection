@@ -552,6 +552,22 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.ILGeneratorExtensions.Call
   nameWithType: ILGeneratorExtensions.Call
+- uid: Platform.Reflection.ILGeneratorExtensions.CheckedConvert*
+  name: CheckedConvert
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CheckedConvert_
+  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.CheckedConvert
+  isSpec: "True"
+  fullName: Platform.Reflection.ILGeneratorExtensions.CheckedConvert
+  nameWithType: ILGeneratorExtensions.CheckedConvert
+- uid: Platform.Reflection.ILGeneratorExtensions.CheckedConvert``2(ILGenerator)
+  name: CheckedConvert<TSource, TTarget>(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CheckedConvert__2_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.CheckedConvert``2(ILGenerator)
+  name.vb: CheckedConvert(Of TSource, TTarget)(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.CheckedConvert<TSource, TTarget>(ILGenerator)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.CheckedConvert(Of TSource, TTarget)(ILGenerator)
+  nameWithType: ILGeneratorExtensions.CheckedConvert<TSource, TTarget>(ILGenerator)
+  nameWithType.vb: ILGeneratorExtensions.CheckedConvert(Of TSource, TTarget)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.CompareGreaterThan(ILGenerator)
   name: CompareGreaterThan(ILGenerator)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CompareGreaterThan_ILGenerator_
@@ -590,22 +606,6 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.ILGeneratorExtensions.CompareLessThan
   nameWithType: ILGeneratorExtensions.CompareLessThan
-- uid: Platform.Reflection.ILGeneratorExtensions.ConvertTo*
-  name: ConvertTo
-  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_ConvertTo_
-  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.ConvertTo
-  isSpec: "True"
-  fullName: Platform.Reflection.ILGeneratorExtensions.ConvertTo
-  nameWithType: ILGeneratorExtensions.ConvertTo
-- uid: Platform.Reflection.ILGeneratorExtensions.ConvertTo``1(ILGenerator)
-  name: ConvertTo<T>(ILGenerator)
-  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_ConvertTo__1_ILGenerator_
-  commentId: M:Platform.Reflection.ILGeneratorExtensions.ConvertTo``1(ILGenerator)
-  name.vb: ConvertTo(Of T)(ILGenerator)
-  fullName: Platform.Reflection.ILGeneratorExtensions.ConvertTo<T>(ILGenerator)
-  fullName.vb: Platform.Reflection.ILGeneratorExtensions.ConvertTo(Of T)(ILGenerator)
-  nameWithType: ILGeneratorExtensions.ConvertTo<T>(ILGenerator)
-  nameWithType.vb: ILGeneratorExtensions.ConvertTo(Of T)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.DeclareLocal*
   name: DeclareLocal
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_DeclareLocal_
@@ -1067,6 +1067,22 @@ references:
   fullName.vb: Platform.Reflection.ILGeneratorExtensions.UnboxValue(Of TUnbox)(ILGenerator)
   nameWithType: ILGeneratorExtensions.UnboxValue<TUnbox>(ILGenerator)
   nameWithType.vb: ILGeneratorExtensions.UnboxValue(Of TUnbox)(ILGenerator)
+- uid: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert*
+  name: UncheckedConvert
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_UncheckedConvert_
+  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.UncheckedConvert
+  isSpec: "True"
+  fullName: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert
+  nameWithType: ILGeneratorExtensions.UncheckedConvert
+- uid: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert``2(ILGenerator)
+  name: UncheckedConvert<TSource, TTarget>(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_UncheckedConvert__2_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.UncheckedConvert``2(ILGenerator)
+  name.vb: UncheckedConvert(Of TSource, TTarget)(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert<TSource, TTarget>(ILGenerator)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator)
+  nameWithType: ILGeneratorExtensions.UncheckedConvert<TSource, TTarget>(ILGenerator)
+  nameWithType.vb: ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.UnsignedBranchIfGreaterOrEqual(ILGenerator,Label)
   name: UnsignedBranchIfGreaterOrEqual(ILGenerator, Label)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_UnsignedBranchIfGreaterOrEqual_ILGenerator_Label_
