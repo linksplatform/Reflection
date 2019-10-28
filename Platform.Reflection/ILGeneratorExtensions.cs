@@ -11,9 +11,9 @@ namespace Platform.Reflection
     {
         public static void Throw<T>(this ILGenerator generator) => generator.ThrowException(typeof(T));
 
-        public static void ConvertTo<T>(this ILGenerator generator)
+        public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator)
         {
-            var type = typeof(T);
+            var type = typeof(TTarget);
             if (type == typeof(short))
             {
                 generator.Emit(OpCodes.Conv_I2);
@@ -29,6 +29,149 @@ namespace Platform.Reflection
             else if (type == typeof(byte))
             {
                 generator.Emit(OpCodes.Conv_U1);
+            }
+            else if (type == typeof(int))
+            {
+                generator.Emit(OpCodes.Conv_I4);
+            }
+            else if (type == typeof(uint))
+            {
+                generator.Emit(OpCodes.Conv_U4);
+            }
+            else if (type == typeof(long))
+            {
+                generator.Emit(OpCodes.Conv_I8);
+            }
+            else if (type == typeof(ulong))
+            {
+                generator.Emit(OpCodes.Conv_U8);
+            }
+            else if (type == typeof(float))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_R4);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_R_Un);
+                }
+            }
+            else if (type == typeof(double))
+            {
+                generator.Emit(OpCodes.Conv_R8);
+            }
+            else
+            {
+                throw new NotSupportedException();
+            }
+        }
+
+        public static void CheckedConvert<TSource, TTarget>(this ILGenerator generator)
+        {
+            var type = typeof(TTarget);
+            if (type == typeof(short))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I2);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I2_Un);
+                }
+            }
+            else if (type == typeof(ushort))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U2);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U2_Un);
+                }
+            }
+            else if (type == typeof(sbyte))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I1);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I1_Un);
+                }
+            }
+            else if (type == typeof(byte))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U1);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U1_Un);
+                }
+            }
+            else if (type == typeof(int))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I4);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I4_Un);
+                }
+            }
+            else if (type == typeof(uint))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U4);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U4_Un);
+                }
+            }
+            else if (type == typeof(long))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I8);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_I8_Un);
+                }
+            }
+            else if (type == typeof(ulong))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U8);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_Ovf_U8_Un);
+                }
+            }
+            else if (type == typeof(float))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_R4);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_R_Un);
+                }
+            }
+            else if (type == typeof(double))
+            {
+                generator.Emit(OpCodes.Conv_R8);
             }
             else
             {
