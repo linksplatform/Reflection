@@ -1,5 +1,5 @@
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.Reflection)](https://www.nuget.org/packages/Platform.Reflection)
-[![Build Status](https://travis-ci.com/linksplatform/Reflection.svg?branch=master)](https://travis-ci.com/linksplatform/Reflection)
+[![Actions Status](https://github.com/linksplatform/Reflection/workflows/CD/badge.svg)](https://github.com/linksplatform/Reflection/actions?workflow=CD)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/af08bf638ea6420faccd181b331a5999)](https://app.codacy.com/app/drakonard/Reflection?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Reflection&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/reflection/badge/master)](https://www.codefactor.io/repository/github/linksplatform/reflection/overview/master)
 
