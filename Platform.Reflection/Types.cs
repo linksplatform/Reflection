@@ -10,7 +10,7 @@ namespace Platform.Reflection
 {
     public abstract class Types
     {
-        public static ReadOnlyCollection<Type> Collection { get; } = new ReadOnlyCollection<Type>(new Type[0]);
+        public static ReadOnlyCollection<Type> Collection { get; } = new ReadOnlyCollection<Type>(System.Array.Empty<Type>());
         public static Type[] Array => Collection.ToArray();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
