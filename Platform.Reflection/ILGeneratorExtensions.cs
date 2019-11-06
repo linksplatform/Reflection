@@ -14,42 +14,74 @@ namespace Platform.Reflection
         public static void Throw<T>(this ILGenerator generator) => generator.ThrowException(typeof(T));
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator)
+        public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator) => UncheckedConvert<TSource, TTarget>(generator, extendSign: false);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator, bool extendSign)
         {
-            var type = typeof(TTarget);
-            if (type == typeof(short))
+            var sourceType = typeof(TSource);
+            var targetType = typeof(TTarget);
+            if (sourceType == targetType)
             {
-                generator.Emit(OpCodes.Conv_I2);
+                return;
             }
-            else if (type == typeof(ushort))
+            if (extendSign)
             {
-                generator.Emit(OpCodes.Conv_U2);
+                if (sourceType == typeof(byte))
+                {
+                    generator.Emit(OpCodes.Conv_I1);
+                }
+                if (sourceType == typeof(ushort))
+                {
+                    generator.Emit(OpCodes.Conv_I2);
+                }
             }
-            else if (type == typeof(sbyte))
+            if (NumericType<TSource>.BitsLength > NumericType<TTarget>.BitsLength)
             {
-                generator.Emit(OpCodes.Conv_I1);
+                if (targetType == typeof(short))
+                {
+                    generator.Emit(OpCodes.Conv_I2);
+                }
+                else if (targetType == typeof(ushort))
+                {
+                    generator.Emit(OpCodes.Conv_U2);
+                }
+                else if (targetType == typeof(sbyte))
+                {
+                    generator.Emit(OpCodes.Conv_I1);
+                }
+                else if (targetType == typeof(byte))
+                {
+                    generator.Emit(OpCodes.Conv_U1);
+                }
+                else if (targetType == typeof(int))
+                {
+                    generator.Emit(OpCodes.Conv_I4);
+                }
+                else if (targetType == typeof(uint))
+                {
+                    generator.Emit(OpCodes.Conv_U4);
+                }
+                else if (targetType == typeof(long))
+                {
+                    generator.Emit(OpCodes.Conv_I8);
+                }
+                else if (targetType == typeof(ulong))
+                {
+                    generator.Emit(OpCodes.Conv_U8);
+                }
             }
-            else if (type == typeof(byte))
+            else
             {
-                generator.Emit(OpCodes.Conv_U1);
+                if (!extendSign)
+                {
+                    if (sourceType == typeof(uint) && targetType == typeof(long))
+                    {
+                        generator.Emit(OpCodes.Conv_U8);
+                    }
+                }
             }
-            else if (type == typeof(int))
-            {
-                generator.Emit(OpCodes.Conv_I4);
-            }
-            else if (type == typeof(uint))
-            {
-                generator.Emit(OpCodes.Conv_U4);
-            }
-            else if (type == typeof(long))
-            {
-                generator.Emit(OpCodes.Conv_I8);
-            }
-            else if (type == typeof(ulong))
-            {
-                generator.Emit(OpCodes.Conv_U8);
-            }
-            else if (type == typeof(float))
+            if (targetType == typeof(float))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -60,13 +92,9 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_R_Un);
                 }
             }
-            else if (type == typeof(double))
+            else if (targetType == typeof(double))
             {
                 generator.Emit(OpCodes.Conv_R8);
-            }
-            else
-            {
-                throw new NotSupportedException();
             }
         }
 
