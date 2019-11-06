@@ -21,7 +21,8 @@ namespace Platform.Reflection
         public static readonly bool IsSigned;
         public static readonly bool CanBeNumeric;
         public static readonly bool IsNullable;
-        public static readonly int BitsLength;
+        public static readonly int BytesSize;
+        public static readonly int BitsSize;
         public static readonly T MinValue;
         public static readonly T MaxValue;
 
@@ -37,7 +38,8 @@ namespace Platform.Reflection
                 var isNumeric = underlyingType.IsNumeric();
                 var isSigned = underlyingType.IsSigned();
                 var isFloatPoint = underlyingType.IsFloatPoint();
-                var bitsLength = Marshal.SizeOf(underlyingType) * 8;
+                var bytesSize = Marshal.SizeOf(underlyingType);
+                var bitsSize = bytesSize * 8;
                 GetMinAndMaxValues(underlyingType, out T minValue, out T maxValue);
                 GetSignedAndUnsignedVersions(underlyingType, isSigned, out Type signedVersion, out Type unsignedVersion);
                 Type = type;
@@ -47,7 +49,8 @@ namespace Platform.Reflection
                 IsNumeric = isNumeric;
                 IsSigned = isSigned;
                 IsFloatPoint = isFloatPoint;
-                BitsLength = bitsLength;
+                BytesSize = bytesSize;
+                BitsSize = bitsSize;
                 MinValue = minValue;
                 MaxValue = maxValue;
                 SignedVersion = signedVersion;

@@ -36,7 +36,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_I2);
                 }
             }
-            if (NumericType<TSource>.BitsLength > NumericType<TTarget>.BitsLength)
+            if (NumericType<TSource>.BitsSize > NumericType<TTarget>.BitsSize)
             {
                 if (targetType == typeof(short))
                 {
