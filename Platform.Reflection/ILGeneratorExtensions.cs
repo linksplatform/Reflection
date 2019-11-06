@@ -88,6 +88,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToBoolean<TSource>(this ILGenerator generator)
         {
             generator.LoadConstant<TSource>(default);
@@ -105,6 +106,7 @@ namespace Platform.Reflection
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToInteger(this ILGenerator generator, Type targetType)
         {
             if (targetType == typeof(sbyte))
