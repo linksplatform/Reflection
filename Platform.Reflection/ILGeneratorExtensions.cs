@@ -38,38 +38,7 @@ namespace Platform.Reflection
             }
             if (NumericType<TSource>.BitsSize > NumericType<TTarget>.BitsSize)
             {
-                if (targetType == typeof(short))
-                {
-                    generator.Emit(OpCodes.Conv_I2);
-                }
-                else if (targetType == typeof(ushort))
-                {
-                    generator.Emit(OpCodes.Conv_U2);
-                }
-                else if (targetType == typeof(sbyte))
-                {
-                    generator.Emit(OpCodes.Conv_I1);
-                }
-                else if (targetType == typeof(byte))
-                {
-                    generator.Emit(OpCodes.Conv_U1);
-                }
-                else if (targetType == typeof(int))
-                {
-                    generator.Emit(OpCodes.Conv_I4);
-                }
-                else if (targetType == typeof(uint))
-                {
-                    generator.Emit(OpCodes.Conv_U4);
-                }
-                else if (targetType == typeof(long))
-                {
-                    generator.Emit(OpCodes.Conv_I8);
-                }
-                else if (targetType == typeof(ulong))
-                {
-                    generator.Emit(OpCodes.Conv_U8);
-                }
+                generator.ConvertInteger<TSource, TTarget>();
             }
             else
             {
@@ -80,6 +49,23 @@ namespace Platform.Reflection
                         generator.Emit(OpCodes.Conv_U8);
                     }
                 }
+#if NET471
+                if (sourceType == typeof(byte) || sourceType == typeof(ushort))
+                {
+                    if (extendSign && targetType == typeof(long))
+                    {
+                        generator.Emit(OpCodes.Conv_I8);
+                    }
+                    else
+                    {
+                        generator.ConvertInteger<TSource, TTarget>();
+                    }
+                }
+                if (extendSign && sourceType == typeof(uint) && targetType == typeof(long))
+                {
+                    generator.Emit(OpCodes.Conv_I8);
+                }
+#endif
             }
             if (targetType == typeof(float))
             {
@@ -95,6 +81,50 @@ namespace Platform.Reflection
             else if (targetType == typeof(double))
             {
                 generator.Emit(OpCodes.Conv_R8);
+            }
+        }
+
+        private static void ConvertInteger<TSource, TTarget>(this ILGenerator generator)
+        {
+            var targetType = typeof(TTarget);
+            if (targetType == typeof(sbyte))
+            {
+                generator.Emit(OpCodes.Conv_I1);
+            }
+            else if (targetType == typeof(byte))
+            {
+                generator.Emit(OpCodes.Conv_U1);
+            }
+            else if (targetType == typeof(short))
+            {
+                generator.Emit(OpCodes.Conv_I2);
+            }
+            else if (targetType == typeof(ushort))
+            {
+                generator.Emit(OpCodes.Conv_U2);
+            }
+            else if (targetType == typeof(int))
+            {
+                generator.Emit(OpCodes.Conv_I4);
+            }
+            else if (targetType == typeof(uint))
+            {
+                generator.Emit(OpCodes.Conv_U4);
+            }
+            else if (targetType == typeof(long))
+            {
+                if (NumericType<TSource>.IsSigned)
+                {
+                    generator.Emit(OpCodes.Conv_I8);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_U8);
+                }
+            }
+            else if (targetType == typeof(ulong))
+            {
+                generator.Emit(OpCodes.Conv_U8);
             }
         }
 
