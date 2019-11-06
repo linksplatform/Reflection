@@ -1115,6 +1115,15 @@ references:
   fullName.vb: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator)
   nameWithType: ILGeneratorExtensions.UncheckedConvert<TSource, TTarget>(ILGenerator)
   nameWithType.vb: ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator)
+- uid: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert``2(ILGenerator,System.Boolean)
+  name: UncheckedConvert<TSource, TTarget>(ILGenerator, Boolean)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_UncheckedConvert__2_ILGenerator_System_Boolean_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.UncheckedConvert``2(ILGenerator,System.Boolean)
+  name.vb: UncheckedConvert(Of TSource, TTarget)(ILGenerator, Boolean)
+  fullName: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert<TSource, TTarget>(ILGenerator, System.Boolean)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator, System.Boolean)
+  nameWithType: ILGeneratorExtensions.UncheckedConvert<TSource, TTarget>(ILGenerator, Boolean)
+  nameWithType.vb: ILGeneratorExtensions.UncheckedConvert(Of TSource, TTarget)(ILGenerator, Boolean)
 - uid: Platform.Reflection.ILGeneratorExtensions.UnsignedBranchIfGreaterOrEqual(ILGenerator,Label)
   name: UnsignedBranchIfGreaterOrEqual(ILGenerator, Label)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_UnsignedBranchIfGreaterOrEqual_ILGenerator_Label_
