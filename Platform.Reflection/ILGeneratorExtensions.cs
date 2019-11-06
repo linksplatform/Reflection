@@ -42,8 +42,16 @@ namespace Platform.Reflection
             }
             else
             {
+                if (sourceType == typeof(uint) && targetType == typeof(long) && !extendSign)
+                {
+                    generator.Emit(OpCodes.Conv_U8);
+                }
 #if NETFRAMEWORK
-                if (sourceType == typeof(byte) || sourceType == typeof(ushort))
+                else if (sourceType == typeof(uint) && targetType == typeof(long) && extendSign)
+                {
+                    generator.Emit(OpCodes.Conv_I8);
+                }
+                else if (sourceType == typeof(byte) || sourceType == typeof(ushort))
                 {
                     if (targetType == typeof(long))
                     {
@@ -57,15 +65,11 @@ namespace Platform.Reflection
                         }
                     }
                 }
-                if (sourceType == typeof(uint) && targetType == typeof(long) && extendSign)
+                else
                 {
-                    generator.Emit(OpCodes.Conv_I8);
+                    generator.ConvertToInteger(targetType);
                 }
 #endif
-                if (sourceType == typeof(uint) && targetType == typeof(long) && !extendSign)
-                {
-                    generator.Emit(OpCodes.Conv_U8);
-                }
             }
             if (targetType == typeof(float))
             {

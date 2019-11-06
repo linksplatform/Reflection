@@ -45,7 +45,7 @@ namespace Platform.Reflection.Tests
         }
 
         [Fact]
-        public void ConversionWithSignExtensionTest()
+        public void UnsignedIntegersConversionWithSignExtensionTest()
         {
             object[] withSignExtension = new object[]
             {
@@ -84,6 +84,94 @@ namespace Platform.Reflection.Tests
             Assert.NotEqual(withSignExtension[i], withoutSignExtension[i++]);
             Assert.NotEqual(withSignExtension[i], withoutSignExtension[i++]);
             Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+        }
+
+        [Fact]
+        public void SignedIntegersConversionOfMinusOneWithSignExtensionTest()
+        {
+            object[] withSignExtension = new object[]
+            {
+                CompileUncheckedConverter<sbyte, byte>(extendSign: true)(-1),
+                CompileUncheckedConverter<sbyte, ushort>(extendSign: true)(-1),
+                CompileUncheckedConverter<short, ushort>(extendSign: true)(-1),
+                CompileUncheckedConverter<sbyte, uint>(extendSign: true)(-1),
+                CompileUncheckedConverter<short, uint>(extendSign: true)(-1),
+                CompileUncheckedConverter<int, uint>(extendSign: true)(-1),
+                CompileUncheckedConverter<sbyte, ulong>(extendSign: true)(-1),
+                CompileUncheckedConverter<short, ulong>(extendSign: true)(-1),
+                CompileUncheckedConverter<int, ulong>(extendSign: true)(-1),
+                CompileUncheckedConverter<long, ulong>(extendSign: true)(-1)
+            };
+            object[] withoutSignExtension = new object[]
+            {
+                CompileUncheckedConverter<sbyte, byte>(extendSign: false)(-1),
+                CompileUncheckedConverter<sbyte, ushort>(extendSign: false)(-1),
+                CompileUncheckedConverter<short, ushort>(extendSign: false)(-1),
+                CompileUncheckedConverter<sbyte, uint>(extendSign: false)(-1),
+                CompileUncheckedConverter<short, uint>(extendSign: false)(-1),
+                CompileUncheckedConverter<int, uint>(extendSign: false)(-1),
+                CompileUncheckedConverter<sbyte, ulong>(extendSign: false)(-1),
+                CompileUncheckedConverter<short, ulong>(extendSign: false)(-1),
+                CompileUncheckedConverter<int, ulong>(extendSign: false)(-1),
+                CompileUncheckedConverter<long, ulong>(extendSign: false)(-1)
+            };
+            var i = 0;
+            Assert.Equal((byte)255, (byte)withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal((ushort)65535, (ushort)withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal((ushort)65535, (ushort)withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(4294967295, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(4294967295, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(4294967295, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(18446744073709551615, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(18446744073709551615, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(18446744073709551615, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+            Assert.Equal(18446744073709551615, withSignExtension[i]);
+            Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
+        }
+
+        [Fact]
+        public void SignedIntegersConversionOfTwoWithSignExtensionTest()
+        {
+            object[] withSignExtension = new object[]
+            {
+                CompileUncheckedConverter<sbyte, byte>(extendSign: true)(2),
+                CompileUncheckedConverter<sbyte, ushort>(extendSign: true)(2),
+                CompileUncheckedConverter<short, ushort>(extendSign: true)(2),
+                CompileUncheckedConverter<sbyte, uint>(extendSign: true)(2),
+                CompileUncheckedConverter<short, uint>(extendSign: true)(2),
+                CompileUncheckedConverter<int, uint>(extendSign: true)(2),
+                CompileUncheckedConverter<sbyte, ulong>(extendSign: true)(2),
+                CompileUncheckedConverter<short, ulong>(extendSign: true)(2),
+                CompileUncheckedConverter<int, ulong>(extendSign: true)(2),
+                CompileUncheckedConverter<long, ulong>(extendSign: true)(2)
+            };
+            object[] withoutSignExtension = new object[]
+            {
+                CompileUncheckedConverter<sbyte, byte>(extendSign: false)(2),
+                CompileUncheckedConverter<sbyte, ushort>(extendSign: false)(2),
+                CompileUncheckedConverter<short, ushort>(extendSign: false)(2),
+                CompileUncheckedConverter<sbyte, uint>(extendSign: false)(2),
+                CompileUncheckedConverter<short, uint>(extendSign: false)(2),
+                CompileUncheckedConverter<int, uint>(extendSign: false)(2),
+                CompileUncheckedConverter<sbyte, ulong>(extendSign: false)(2),
+                CompileUncheckedConverter<short, ulong>(extendSign: false)(2),
+                CompileUncheckedConverter<int, ulong>(extendSign: false)(2),
+                CompileUncheckedConverter<long, ulong>(extendSign: false)(2)
+            };
+            for (var i = 0; i < withSignExtension.Length; i++)
+            {
+                Assert.Equal(2UL, Convert.ToUInt64(withSignExtension[i]));
+                Assert.Equal(withSignExtension[i], withoutSignExtension[i]);
+            }
         }
 
         private static Converter<TSource, TTarget> CompileUncheckedConverter<TSource, TTarget>(bool extendSign)
