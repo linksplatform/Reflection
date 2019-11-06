@@ -38,7 +38,7 @@ namespace Platform.Reflection
             }
             if (NumericType<TSource>.BitsSize > NumericType<TTarget>.BitsSize)
             {
-                generator.ConvertToInteger<TSource, TTarget>();
+                generator.ConvertToInteger(targetType);
             }
             else
             {
@@ -84,9 +84,8 @@ namespace Platform.Reflection
             }
         }
 
-        private static void ConvertToInteger<TSource, TTarget>(this ILGenerator generator)
+        private static void ConvertToInteger(this ILGenerator generator, Type targetType)
         {
-            var targetType = typeof(TTarget);
             if (targetType == typeof(sbyte))
             {
                 generator.Emit(OpCodes.Conv_I1);
