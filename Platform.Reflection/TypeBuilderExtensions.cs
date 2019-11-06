@@ -10,7 +10,7 @@ namespace Platform.Reflection
     public static class TypeBuilderExtensions
     {
         public static readonly MethodAttributes DefaultStaticMethodAttributes = MethodAttributes.Public | MethodAttributes.Static;
-        public static readonly MethodAttributes DefaultVirtualMethodAttributes = MethodAttributes.Public | MethodAttributes.Virtual | MethodAttributes.Final | MethodAttributes.HideBySig;
+        public static readonly MethodAttributes DefaultFinalVirtualMethodAttributes = MethodAttributes.Public | MethodAttributes.Virtual | MethodAttributes.Final | MethodAttributes.HideBySig;
         public static readonly MethodImplAttributes DefaultMethodImplAttributes = MethodImplAttributes.IL | MethodImplAttributes.Managed | MethodImplAttributes.AggressiveInlining;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -33,6 +33,6 @@ namespace Platform.Reflection
         public static void EmitStaticMethod<TDelegate>(this TypeBuilder type, string methodName, Action<ILGenerator> emitCode) => type.EmitMethod<TDelegate>(methodName, DefaultStaticMethodAttributes, DefaultMethodImplAttributes, emitCode);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void EmitVirtualMethod<TDelegate>(this TypeBuilder type, string methodName, Action<ILGenerator> emitCode) => type.EmitMethod<TDelegate>(methodName, DefaultVirtualMethodAttributes, DefaultMethodImplAttributes, emitCode);
+        public static void EmitFinalVirtualMethod<TDelegate>(this TypeBuilder type, string methodName, Action<ILGenerator> emitCode) => type.EmitMethod<TDelegate>(methodName, DefaultFinalVirtualMethodAttributes, DefaultMethodImplAttributes, emitCode);
     }
 }
