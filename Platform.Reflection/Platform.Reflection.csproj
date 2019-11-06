@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.2.0</VersionPrefix>
+    <VersionPrefix>0.3.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -24,32 +24,17 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>The lowest supported version of .NET Framework is now 4.7.1.
-Added support for .NET Standard 2.1 (.NET Core 3.0).
-Microsoft.NET.Test.Sdk from 16.2.0 to 16.3.0.
-System.Reflection.Emit.Lightweight from 4.3.0 to 4.6.0.
-Platform.Diagnostics from 0.0.2 to 0.0.3.
-Platform.Collections from 0.0.5 to 0.1.0.
-ILGeneratorExtensions.ConvertTo method replaced with two: UncheckedConvert and CheckedConvert.
-DelegateHelpers:
-* Methods CompileOrDefault and Compile now have overloads to switch between CompileDynamicMethod and CompileTypeMemberMethod usage.
-* Methods CompileDynamicMethod and CompileTypeMemberMethod now public.
-Added MethodInfoExtensions.GetParameterTypes method.
-Added TypeBuilderExtensions.
-Added TypeExtensions constants:
-* StaticMemberBindingFlags,
-* DefaultDelegateMethodName.
-Added TypeExtensions methods: 
-* GetDelegateReturnType,
-* GetDelegateParameterTypes,
-* GetDelegateCharacteristics.
-CodeGenerationTests.AggressiveInliningEffectTest transformed into Platform.Reflection.Benchmarks.CodeGenerationBenchmarks.
-Source link enabled.
-Travis CI disabled.
-GitHub Actions enabled.
-Refactoring, performance optimizations, issues fix.
+    <PackageReleaseNotes>Added support for conversion with sign extension and without it (by default).
+ILGeneratorExtensions.UncheckedConvert method now has additional boolean argument extendSign.
+TypeBuilderExtensions.DefaultVirtualMethodAttributes renamed to DefaultFinalVirtualMethodAttributes.
+TypeBuilderExtensions.EmitVirtualMethod renamed to EmitFinalVirtualMethod.
+NumericType&lt;T&gt;.BitsLength renamed to BitsSize.
+Added new NumericType&lt;T&gt;.BytesSize constant.
+If source and target type of conversion are the same then no instructions emitted.
+Added support for conversion to boolean for primitive types.
+Issues fix.
 
-This release is not backward compatible with the previous 0.1.1 release.</PackageReleaseNotes>
+This release is not backward compatible with the previous 0.2.0 release.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
@@ -57,7 +42,7 @@ This release is not backward compatible with the previous 0.1.1 release.</Packag
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19554-01" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19554-01" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('netstandard'))">
