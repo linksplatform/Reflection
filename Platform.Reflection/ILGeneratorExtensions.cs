@@ -82,6 +82,27 @@ namespace Platform.Reflection
             {
                 generator.Emit(OpCodes.Conv_R8);
             }
+            else if (targetType == typeof(bool))
+            {
+                generator.ConvertToBoolean<TSource>();
+            }
+        }
+
+        private static void ConvertToBoolean<TSource>(this ILGenerator generator)
+        {
+            generator.LoadConstant<TSource>(default);
+            var sourceType = typeof(TSource);
+            if (sourceType == typeof(float) || sourceType == typeof(double))
+            {
+                generator.Emit(OpCodes.Ceq);
+                // Inversion of the first Ceq instruction
+                generator.LoadConstant<int>(0);
+                generator.Emit(OpCodes.Ceq);
+            }
+            else
+            {
+                generator.Emit(OpCodes.Cgt_Un);
+            }
         }
 
         private static void ConvertToInteger(this ILGenerator generator, Type targetType)
@@ -231,6 +252,10 @@ namespace Platform.Reflection
             else if (targetType == typeof(double))
             {
                 generator.Emit(OpCodes.Conv_R8);
+            }
+            else if (targetType == typeof(bool))
+            {
+                generator.ConvertToBoolean<TSource>();
             }
             else
             {
