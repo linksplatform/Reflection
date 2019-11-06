@@ -1243,14 +1243,22 @@ references:
   fullName.vb: Platform.Reflection.NumericType(Of T)
   nameWithType: NumericType<T>
   nameWithType.vb: NumericType(Of T)
-- uid: Platform.Reflection.NumericType`1.BitsLength
-  name: BitsLength
-  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_BitsLength
-  commentId: F:Platform.Reflection.NumericType`1.BitsLength
-  fullName: Platform.Reflection.NumericType<T>.BitsLength
-  fullName.vb: Platform.Reflection.NumericType(Of T).BitsLength
-  nameWithType: NumericType<T>.BitsLength
-  nameWithType.vb: NumericType(Of T).BitsLength
+- uid: Platform.Reflection.NumericType`1.BitsSize
+  name: BitsSize
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_BitsSize
+  commentId: F:Platform.Reflection.NumericType`1.BitsSize
+  fullName: Platform.Reflection.NumericType<T>.BitsSize
+  fullName.vb: Platform.Reflection.NumericType(Of T).BitsSize
+  nameWithType: NumericType<T>.BitsSize
+  nameWithType.vb: NumericType(Of T).BitsSize
+- uid: Platform.Reflection.NumericType`1.BytesSize
+  name: BytesSize
+  href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_BytesSize
+  commentId: F:Platform.Reflection.NumericType`1.BytesSize
+  fullName: Platform.Reflection.NumericType<T>.BytesSize
+  fullName.vb: Platform.Reflection.NumericType(Of T).BytesSize
+  nameWithType: NumericType<T>.BytesSize
+  nameWithType.vb: NumericType(Of T).BytesSize
 - uid: Platform.Reflection.NumericType`1.CanBeNumeric
   name: CanBeNumeric
   href: api/Platform.Reflection.NumericType-1.html#Platform_Reflection_NumericType_1_CanBeNumeric
