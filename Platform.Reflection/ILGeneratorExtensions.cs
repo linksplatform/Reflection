@@ -42,7 +42,7 @@ namespace Platform.Reflection
             }
             else
             {
-#if NET471
+#if NETFRAMEWORK
                 if (sourceType == typeof(byte) || sourceType == typeof(ushort))
                 {
                     if (targetType == typeof(long))
