@@ -101,8 +101,13 @@ namespace Platform.Reflection
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CheckedConvert<TSource, TTarget>(this ILGenerator generator)
         {
-            var type = typeof(TTarget);
-            if (type == typeof(short))
+            var sourceType = typeof(TSource);
+            var targetType = typeof(TTarget);
+            if (sourceType == targetType)
+            {
+                return;
+            }
+            if (targetType == typeof(short))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -113,7 +118,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_I2_Un);
                 }
             }
-            else if (type == typeof(ushort))
+            else if (targetType == typeof(ushort))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -124,7 +129,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_U2_Un);
                 }
             }
-            else if (type == typeof(sbyte))
+            else if (targetType == typeof(sbyte))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -135,7 +140,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_I1_Un);
                 }
             }
-            else if (type == typeof(byte))
+            else if (targetType == typeof(byte))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -146,7 +151,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_U1_Un);
                 }
             }
-            else if (type == typeof(int))
+            else if (targetType == typeof(int))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -157,7 +162,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_I4_Un);
                 }
             }
-            else if (type == typeof(uint))
+            else if (targetType == typeof(uint))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -168,7 +173,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_U4_Un);
                 }
             }
-            else if (type == typeof(long))
+            else if (targetType == typeof(long))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -179,7 +184,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_I8_Un);
                 }
             }
-            else if (type == typeof(ulong))
+            else if (targetType == typeof(ulong))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -190,7 +195,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_U8_Un);
                 }
             }
-            else if (type == typeof(float))
+            else if (targetType == typeof(float))
             {
                 if (NumericType<TSource>.IsSigned)
                 {
@@ -201,7 +206,7 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_R_Un);
                 }
             }
-            else if (type == typeof(double))
+            else if (targetType == typeof(double))
             {
                 generator.Emit(OpCodes.Conv_R8);
             }
