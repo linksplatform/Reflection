@@ -38,34 +38,34 @@ namespace Platform.Reflection
             }
             if (NumericType<TSource>.BitsSize > NumericType<TTarget>.BitsSize)
             {
-                generator.ConvertInteger<TSource, TTarget>();
+                generator.ConvertToInteger<TSource, TTarget>();
             }
             else
             {
-                if (!extendSign)
-                {
-                    if (sourceType == typeof(uint) && targetType == typeof(long))
-                    {
-                        generator.Emit(OpCodes.Conv_U8);
-                    }
-                }
 #if NET471
                 if (sourceType == typeof(byte) || sourceType == typeof(ushort))
                 {
-                    if (extendSign && targetType == typeof(long))
+                    if (targetType == typeof(long))
                     {
-                        generator.Emit(OpCodes.Conv_I8);
-                    }
-                    else
-                    {
-                        generator.ConvertInteger<TSource, TTarget>();
+                        if (extendSign)
+                        {
+                            generator.Emit(OpCodes.Conv_I8);
+                        }
+                        else
+                        {
+                            generator.Emit(OpCodes.Conv_U8);
+                        }
                     }
                 }
-                if (extendSign && sourceType == typeof(uint) && targetType == typeof(long))
+                if (sourceType == typeof(uint) && targetType == typeof(long) && extendSign)
                 {
                     generator.Emit(OpCodes.Conv_I8);
                 }
 #endif
+                if (sourceType == typeof(uint) && targetType == typeof(long) && !extendSign)
+                {
+                    generator.Emit(OpCodes.Conv_U8);
+                }
             }
             if (targetType == typeof(float))
             {
@@ -84,7 +84,7 @@ namespace Platform.Reflection
             }
         }
 
-        private static void ConvertInteger<TSource, TTarget>(this ILGenerator generator)
+        private static void ConvertToInteger<TSource, TTarget>(this ILGenerator generator)
         {
             var targetType = typeof(TTarget);
             if (targetType == typeof(sbyte))
@@ -113,14 +113,7 @@ namespace Platform.Reflection
             }
             else if (targetType == typeof(long))
             {
-                if (NumericType<TSource>.IsSigned)
-                {
-                    generator.Emit(OpCodes.Conv_I8);
-                }
-                else
-                {
-                    generator.Emit(OpCodes.Conv_U8);
-                }
+                generator.Emit(OpCodes.Conv_I8);
             }
             else if (targetType == typeof(ulong))
             {
