@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.3.0</VersionPrefix>
+    <VersionPrefix>0.3.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -24,17 +24,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Added support for conversion with sign extension and without it (by default).
-ILGeneratorExtensions.UncheckedConvert method now has additional boolean argument extendSign.
-TypeBuilderExtensions.DefaultVirtualMethodAttributes renamed to DefaultFinalVirtualMethodAttributes.
-TypeBuilderExtensions.EmitVirtualMethod renamed to EmitFinalVirtualMethod.
-NumericType&lt;T&gt;.BitsLength renamed to BitsSize.
-Added new NumericType&lt;T&gt;.BytesSize constant.
-If source and target type of conversion are the same then no instructions emitted.
-Added support for conversion to boolean for primitive types.
-Issues fix.
-
-This release is not backward compatible with the previous 0.2.0 release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed bug with different behaviour at conversion of integers on .NET and .NET Core.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
