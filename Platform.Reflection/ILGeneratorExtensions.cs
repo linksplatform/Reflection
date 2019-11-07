@@ -38,38 +38,11 @@ namespace Platform.Reflection
             }
             if (NumericType<TSource>.BitsSize > NumericType<TTarget>.BitsSize)
             {
-                generator.ConvertToInteger(targetType);
+                generator.ConvertToInteger<TSource>(targetType, extendSign: false);
             }
             else
             {
-                if (sourceType == typeof(uint) && targetType == typeof(long) && !extendSign)
-                {
-                    generator.Emit(OpCodes.Conv_U8);
-                }
-#if NETFRAMEWORK
-                else if (sourceType == typeof(uint) && targetType == typeof(long) && extendSign)
-                {
-                    generator.Emit(OpCodes.Conv_I8);
-                }
-                else if (sourceType == typeof(byte) || sourceType == typeof(ushort))
-                {
-                    if (targetType == typeof(long))
-                    {
-                        if (extendSign)
-                        {
-                            generator.Emit(OpCodes.Conv_I8);
-                        }
-                        else
-                        {
-                            generator.Emit(OpCodes.Conv_U8);
-                        }
-                    }
-                }
-                else
-                {
-                    generator.ConvertToInteger(targetType);
-                }
-#endif
+                generator.ConvertToInteger<TSource>(targetType, extendSign);
             }
             if (targetType == typeof(float))
             {
@@ -111,7 +84,7 @@ namespace Platform.Reflection
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void ConvertToInteger(this ILGenerator generator, Type targetType)
+        private static void ConvertToInteger<TSource>(this ILGenerator generator, Type targetType, bool extendSign)
         {
             if (targetType == typeof(sbyte))
             {
@@ -137,13 +110,16 @@ namespace Platform.Reflection
             {
                 generator.Emit(OpCodes.Conv_U4);
             }
-            else if (targetType == typeof(long))
+            else if (targetType == typeof(long) || targetType == typeof(ulong))
             {
-                generator.Emit(OpCodes.Conv_I8);
-            }
-            else if (targetType == typeof(ulong))
-            {
-                generator.Emit(OpCodes.Conv_U8);
+                if (NumericType<TSource>.IsSigned || extendSign)
+                {
+                    generator.Emit(OpCodes.Conv_I8);
+                }
+                else
+                {
+                    generator.Emit(OpCodes.Conv_U8);
+                }
             }
         }
 
