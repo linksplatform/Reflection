@@ -10,9 +10,6 @@ namespace Platform.Reflection.Benchmarks
     [MemoryDiagnoser]
     public class CodeGenerationBenchmarks
     {
-        [Params(1000, 10000, 100000, 1000000, 10000000, 100000000)]
-        public int N { get; set; }
-
         private class MethodsContainer
         {
             public static readonly Func<int> TypeMemberMethodDelegate = DelegateHelpers.Compile<Func<int>>(EmitCode, typeMemberMethod: false);
