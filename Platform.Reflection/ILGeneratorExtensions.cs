@@ -31,7 +31,7 @@ namespace Platform.Reflection
                 {
                     generator.Emit(OpCodes.Conv_I1);
                 }
-                if (sourceType == typeof(ushort))
+                if (sourceType == typeof(ushort) || sourceType == typeof(char))
                 {
                     generator.Emit(OpCodes.Conv_I2);
                 }
@@ -98,9 +98,13 @@ namespace Platform.Reflection
             {
                 generator.Emit(OpCodes.Conv_I2);
             }
-            else if (targetType == typeof(ushort))
+            else if (targetType == typeof(ushort) || targetType == typeof(char))
             {
-                generator.Emit(OpCodes.Conv_U2);
+                var sourceType = typeof(TSource);
+                if (sourceType != typeof(ushort) && sourceType != typeof(char))
+                {
+                    generator.Emit(OpCodes.Conv_U2);
+                }
             }
             else if (targetType == typeof(int))
             {
@@ -143,15 +147,18 @@ namespace Platform.Reflection
                     generator.Emit(OpCodes.Conv_Ovf_I2_Un);
                 }
             }
-            else if (targetType == typeof(ushort))
+            else if (targetType == typeof(ushort) || targetType == typeof(char))
             {
-                if (NumericType<TSource>.IsSigned)
+                if (sourceType != typeof(ushort) && sourceType != typeof(char))
                 {
-                    generator.Emit(OpCodes.Conv_Ovf_U2);
-                }
-                else
-                {
-                    generator.Emit(OpCodes.Conv_Ovf_U2_Un);
+                    if (NumericType<TSource>.IsSigned)
+                    {
+                        generator.Emit(OpCodes.Conv_Ovf_U2);
+                    }
+                    else
+                    {
+                        generator.Emit(OpCodes.Conv_Ovf_U2_Un);
+                    }
                 }
             }
             else if (targetType == typeof(sbyte))
