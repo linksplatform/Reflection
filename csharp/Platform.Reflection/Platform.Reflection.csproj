@@ -44,7 +44,7 @@ Platform.Collections dependency updated from 0.1.0 to 0.2.0.</PackageReleaseNote
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Collections" Version="0.2.0" />
+    <PackageReference Include="Platform.Collections" Version="0.2.1" />
   </ItemGroup>
 
 </Project>
