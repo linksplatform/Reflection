@@ -600,6 +600,22 @@ references:
   fullName.vb: Platform.Reflection.ILGeneratorExtensions.CheckedConvert(Of TSource, TTarget)(ILGenerator)
   nameWithType: ILGeneratorExtensions.CheckedConvert<TSource, TTarget>(ILGenerator)
   nameWithType.vb: ILGeneratorExtensions.CheckedConvert(Of TSource, TTarget)(ILGenerator)
+- uid: Platform.Reflection.ILGeneratorExtensions.CheckedMultiply*
+  name: CheckedMultiply
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CheckedMultiply_
+  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.CheckedMultiply
+  isSpec: "True"
+  fullName: Platform.Reflection.ILGeneratorExtensions.CheckedMultiply
+  nameWithType: ILGeneratorExtensions.CheckedMultiply
+- uid: Platform.Reflection.ILGeneratorExtensions.CheckedMultiply``1(ILGenerator)
+  name: CheckedMultiply<T>(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CheckedMultiply__1_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.CheckedMultiply``1(ILGenerator)
+  name.vb: CheckedMultiply(Of T)(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.CheckedMultiply<T>(ILGenerator)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.CheckedMultiply(Of T)(ILGenerator)
+  nameWithType: ILGeneratorExtensions.CheckedMultiply<T>(ILGenerator)
+  nameWithType.vb: ILGeneratorExtensions.CheckedMultiply(Of T)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.CompareGreaterThan(ILGenerator)
   name: CompareGreaterThan(ILGenerator)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_CompareGreaterThan_ILGenerator_
@@ -676,6 +692,22 @@ references:
   fullName.vb: Platform.Reflection.ILGeneratorExtensions.Decrement(Of TValue)(ILGenerator)
   nameWithType: ILGeneratorExtensions.Decrement<TValue>(ILGenerator)
   nameWithType.vb: ILGeneratorExtensions.Decrement(Of TValue)(ILGenerator)
+- uid: Platform.Reflection.ILGeneratorExtensions.Divide*
+  name: Divide
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Divide_
+  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.Divide
+  isSpec: "True"
+  fullName: Platform.Reflection.ILGeneratorExtensions.Divide
+  nameWithType: ILGeneratorExtensions.Divide
+- uid: Platform.Reflection.ILGeneratorExtensions.Divide``1(ILGenerator)
+  name: Divide<T>(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Divide__1_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.Divide``1(ILGenerator)
+  name.vb: Divide(Of T)(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.Divide<T>(ILGenerator)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.Divide(Of T)(ILGenerator)
+  nameWithType: ILGeneratorExtensions.Divide<T>(ILGenerator)
+  nameWithType.vb: ILGeneratorExtensions.Divide(Of T)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.Increment(ILGenerator,System.Type)
   name: Increment(ILGenerator, Type)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Increment_ILGenerator_System_Type_
@@ -875,6 +907,19 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.ILGeneratorExtensions.LoadLocal
   nameWithType: ILGeneratorExtensions.LoadLocal
+- uid: Platform.Reflection.ILGeneratorExtensions.Multiply(ILGenerator)
+  name: Multiply(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Multiply_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.Multiply(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.Multiply(ILGenerator)
+  nameWithType: ILGeneratorExtensions.Multiply(ILGenerator)
+- uid: Platform.Reflection.ILGeneratorExtensions.Multiply*
+  name: Multiply
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Multiply_
+  commentId: Overload:Platform.Reflection.ILGeneratorExtensions.Multiply
+  isSpec: "True"
+  fullName: Platform.Reflection.ILGeneratorExtensions.Multiply
+  nameWithType: ILGeneratorExtensions.Multiply
 - uid: Platform.Reflection.ILGeneratorExtensions.Negate(ILGenerator)
   name: Negate(ILGenerator)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_Negate_ILGenerator_
