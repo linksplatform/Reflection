@@ -818,5 +818,37 @@ namespace Platform.Reflection
                 throw new InvalidOperationException("StoreIndirect cannot be used with " + type + ", StoreObject may be more appropriate");
             }
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Multiply(this ILGenerator generator)
+        {
+            generator.Emit(OpCodes.Mul);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void CheckedMultiply<T>(this ILGenerator generator)
+        {
+            if (NumericType<T>.IsSigned)
+            {
+                generator.Emit(OpCodes.Mul_Ovf);
+            }
+            else
+            {
+                generator.Emit(OpCodes.Mul_Ovf_Un);
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Divide<T>(this ILGenerator generator)
+        {
+            if (NumericType<T>.IsSigned)
+            {
+                generator.Emit(OpCodes.Div);
+            }
+            else
+            {
+                generator.Emit(OpCodes.Div_Un);
+            }
+        }
     }
 }
