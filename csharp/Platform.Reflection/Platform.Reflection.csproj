@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.4.0</VersionPrefix>
+    <VersionPrefix>0.4.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -24,10 +24,8 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Lowest supported version of .NET Framework is now 4.7.2.
-System.Reflection.Emit.Lightweight dependency updated from 4.6.0 to 4.7.0.
-System.Reflection.Emit dependency updated from 4.6.0 to 4.7.0.
-Platform.Collections dependency updated from 0.1.0 to 0.2.0.</PackageReleaseNotes>
+    <PackageReleaseNotes>Platform.Collections dependency updated from 0.2.0 to 0.2.1.
+Multiply, CheckedMultiply and Divide methods added into ILGeneratorExtensions.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
