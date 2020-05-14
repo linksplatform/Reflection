@@ -7,14 +7,14 @@
 
 LinksPlatform's Platform.Reflection Class Library.
 
-Namespace: [Platform.Reflection](https://linksplatform.github.io/Reflection/api/Platform.Reflection.html)
+Namespace: [Platform.Reflection](https://linksplatform.github.io/Reflection/csharp/api/Platform.Reflection.html)
 
 Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/Reflection](https://github.com/Konard/LinksPlatform/tree/822c3c283cab152489d49e6a1727ca76f8595ce2/Platform/Platform.Helpers/Reflection)
 
 NuGet package: [Platform.Reflection](https://www.nuget.org/packages/Platform.Reflection)
 
 ## [Documentation](https://linksplatform.github.io/Reflection)
-[PDF file](https://linksplatform.github.io/Reflection/Platform.Reflection.pdf) with code for e-readers.
+[PDF file](https://linksplatform.github.io/Reflection/csharp/Platform.Reflection.pdf) with code for e-readers.
 
 ## Depend on
 *   [System.Reflection.Emit](https://www.nuget.org/packages/System.Reflection.Emit)
