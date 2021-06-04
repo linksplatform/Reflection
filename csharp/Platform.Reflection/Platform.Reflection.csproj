@@ -4,9 +4,9 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.4.1</VersionPrefix>
+    <VersionPrefix>0.5.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard2.0;netstandard2.1;net5</TargetFrameworks>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;AssemblyExtensions;DelegateHelpers;DynamicExtensions;EnsureExtensions;FieldInfoExtensions;ILGeneratorExtensions;MethodInfoExtensions;NotSupportedExceptionDelegateFactory;NumericType;PropertyInfoExtensions;TypeBuilderExtensions;TypeExtensions;Types</PackageTags>
@@ -24,8 +24,8 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Platform.Collections dependency updated from 0.2.0 to 0.2.1.
-Multiply, CheckedMultiply and Divide methods added into ILGeneratorExtensions.</PackageReleaseNotes>
+    <PackageReleaseNotes>NET 5 support is added.
+Platform.Collections dependency updated from 0.2.1 to 0.3.0.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
