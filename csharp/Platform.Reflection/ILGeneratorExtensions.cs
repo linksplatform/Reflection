@@ -522,7 +522,10 @@ namespace Platform.Reflection
         public static void ShiftLeft(this ILGenerator generator) => generator.Emit(OpCodes.Shl);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void ShiftRight(this ILGenerator generator) => generator.Emit(OpCodes.Shr);
+        public static void ShiftRight<T>(this ILGenerator generator)
+        {
+            generator.Emit(NumericType<T>.IsSigned ? OpCodes.Shr : OpCodes.Shr_Un);
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadArgument(this ILGenerator generator, int argumentIndex)
