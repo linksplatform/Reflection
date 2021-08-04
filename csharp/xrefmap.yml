@@ -1007,12 +1007,6 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.ILGeneratorExtensions.ShiftLeft
   nameWithType: ILGeneratorExtensions.ShiftLeft
-- uid: Platform.Reflection.ILGeneratorExtensions.ShiftRight(ILGenerator)
-  name: ShiftRight(ILGenerator)
-  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_ShiftRight_ILGenerator_
-  commentId: M:Platform.Reflection.ILGeneratorExtensions.ShiftRight(ILGenerator)
-  fullName: Platform.Reflection.ILGeneratorExtensions.ShiftRight(ILGenerator)
-  nameWithType: ILGeneratorExtensions.ShiftRight(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.ShiftRight*
   name: ShiftRight
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_ShiftRight_
@@ -1020,6 +1014,15 @@ references:
   isSpec: "True"
   fullName: Platform.Reflection.ILGeneratorExtensions.ShiftRight
   nameWithType: ILGeneratorExtensions.ShiftRight
+- uid: Platform.Reflection.ILGeneratorExtensions.ShiftRight``1(ILGenerator)
+  name: ShiftRight<T>(ILGenerator)
+  href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_ShiftRight__1_ILGenerator_
+  commentId: M:Platform.Reflection.ILGeneratorExtensions.ShiftRight``1(ILGenerator)
+  name.vb: ShiftRight(Of T)(ILGenerator)
+  fullName: Platform.Reflection.ILGeneratorExtensions.ShiftRight<T>(ILGenerator)
+  fullName.vb: Platform.Reflection.ILGeneratorExtensions.ShiftRight(Of T)(ILGenerator)
+  nameWithType: ILGeneratorExtensions.ShiftRight<T>(ILGenerator)
+  nameWithType.vb: ILGeneratorExtensions.ShiftRight(Of T)(ILGenerator)
 - uid: Platform.Reflection.ILGeneratorExtensions.StoreArgument(ILGenerator,System.Int32)
   name: StoreArgument(ILGenerator, Int32)
   href: api/Platform.Reflection.ILGeneratorExtensions.html#Platform_Reflection_ILGeneratorExtensions_StoreArgument_ILGenerator_System_Int32_
