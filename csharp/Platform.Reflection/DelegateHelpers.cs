@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -9,8 +9,36 @@ using Platform.Exceptions;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the delegate helpers.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class DelegateHelpers
     {
+        /// <summary>
+        /// <para>
+        /// Compiles the or default using the specified emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="typeMemberMethod">
+        /// <para>The type member method.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileOrDefault<TDelegate>(Action<ILGenerator> emitCode, bool typeMemberMethod)
             where TDelegate : Delegate
@@ -27,9 +55,49 @@ namespace Platform.Reflection
             return @delegate;
         }
 
+        /// <summary>
+        /// <para>
+        /// Compiles the or default using the specified emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileOrDefault<TDelegate>(Action<ILGenerator> emitCode) where TDelegate : Delegate => CompileOrDefault<TDelegate>(emitCode, false);
 
+        /// <summary>
+        /// <para>
+        /// Compiles the emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="typeMemberMethod">
+        /// <para>The type member method.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate Compile<TDelegate>(Action<ILGenerator> emitCode, bool typeMemberMethod)
             where TDelegate : Delegate
@@ -42,9 +110,45 @@ namespace Platform.Reflection
             return @delegate;
         }
 
+        /// <summary>
+        /// <para>
+        /// Compiles the emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate Compile<TDelegate>(Action<ILGenerator> emitCode) where TDelegate : Delegate => Compile<TDelegate>(emitCode, false);
 
+        /// <summary>
+        /// <para>
+        /// Compiles the dynamic method using the specified emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileDynamicMethod<TDelegate>(Action<ILGenerator> emitCode)
         {
@@ -55,6 +159,24 @@ namespace Platform.Reflection
             return (TDelegate)(object)dynamicMethod.CreateDelegate(delegateType);
         }
 
+        /// <summary>
+        /// <para>
+        /// Compiles the type member method using the specified emit code.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TDelegate">
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="emitCode">
+        /// <para>The emit code.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The delegate</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static TDelegate CompileTypeMemberMethod<TDelegate>(Action<ILGenerator> emitCode)
         {
@@ -68,6 +190,16 @@ namespace Platform.Reflection
             return (TDelegate)(object)typeInfo.GetMethod(methodName).CreateDelegate(typeof(TDelegate));
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the new name.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>The string</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string GetNewName() => Guid.NewGuid().ToString("N");
     }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -8,14 +8,74 @@ using System.Runtime.CompilerServices;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the il generator extensions.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class ILGeneratorExtensions
     {
+        /// <summary>
+        /// <para>
+        /// Throws the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Throw<T>(this ILGenerator generator) => generator.ThrowException(typeof(T));
 
+        /// <summary>
+        /// <para>
+        /// Uncheckeds the convert using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <typeparam name="TTarget">
+        /// <para>The target.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator) => UncheckedConvert<TSource, TTarget>(generator, extendSign: false);
 
+        /// <summary>
+        /// <para>
+        /// Uncheckeds the convert using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <typeparam name="TTarget">
+        /// <para>The target.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="extendSign">
+        /// <para>The extend sign.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UncheckedConvert<TSource, TTarget>(this ILGenerator generator, bool extendSign)
         {
@@ -65,6 +125,20 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Converts the to boolean using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToBoolean<TSource>(this ILGenerator generator)
         {
@@ -83,6 +157,28 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Converts the to integer using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="targetType">
+        /// <para>The target type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="extendSign">
+        /// <para>The extend sign.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToInteger<TSource>(this ILGenerator generator, Type targetType, bool extendSign)
         {
@@ -127,6 +223,28 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Checkeds the convert using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <typeparam name="TTarget">
+        /// <para>The target.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="NotSupportedException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CheckedConvert<TSource, TTarget>(this ILGenerator generator)
         {
@@ -252,21 +370,105 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, bool value) => generator.LoadConstant(value ? 1 : 0);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, float value) => generator.Emit(OpCodes.Ldc_R4, value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, double value) => generator.Emit(OpCodes.Ldc_R8, value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, ulong value) => generator.Emit(OpCodes.Ldc_I8, unchecked((long)value));
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, long value) => generator.Emit(OpCodes.Ldc_I8, value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, uint value)
         {
@@ -315,6 +517,20 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, int value)
         {
@@ -363,21 +579,109 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, short value) => generator.LoadConstant((int)value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, ushort value) => generator.LoadConstant((int)value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, sbyte value) => generator.LoadConstant((int)value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, byte value) => generator.LoadConstant((int)value);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant one using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TConstant">
+        /// <para>The constant.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstantOne<TConstant>(this ILGenerator generator) => LoadConstantOne(generator, typeof(TConstant));
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant one using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="constantType">
+        /// <para>The constant type.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="NotSupportedException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstantOne(this ILGenerator generator, Type constantType)
         {
@@ -427,9 +731,49 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TConstant">
+        /// <para>The constant.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="constantValue">
+        /// <para>The constant value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant<TConstant>(this ILGenerator generator, TConstant constantValue) => LoadConstant(generator, typeof(TConstant), constantValue);
 
+        /// <summary>
+        /// <para>
+        /// Loads the constant using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="constantType">
+        /// <para>The constant type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="constantValue">
+        /// <para>The constant value.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="NotSupportedException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadConstant(this ILGenerator generator, Type constantType, object constantValue)
         {
@@ -480,12 +824,54 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Increments the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TValue">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Increment<TValue>(this ILGenerator generator) => generator.Increment(typeof(TValue));
 
+        /// <summary>
+        /// <para>
+        /// Decrements the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TValue">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Decrement<TValue>(this ILGenerator generator) => generator.Decrement(typeof(TValue));
 
+        /// <summary>
+        /// <para>
+        /// Increments the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="valueType">
+        /// <para>The value type.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Increment(this ILGenerator generator, Type valueType)
         {
@@ -493,9 +879,33 @@ namespace Platform.Reflection
             generator.Add();
         }
 
+        /// <summary>
+        /// <para>
+        /// Adds the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Add(this ILGenerator generator) => generator.Emit(OpCodes.Add);
 
+        /// <summary>
+        /// <para>
+        /// Decrements the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="valueType">
+        /// <para>The value type.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Decrement(this ILGenerator generator, Type valueType)
         {
@@ -503,30 +913,118 @@ namespace Platform.Reflection
             generator.Subtract();
         }
 
+        /// <summary>
+        /// <para>
+        /// Subtracts the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Subtract(this ILGenerator generator) => generator.Emit(OpCodes.Sub);
 
+        /// <summary>
+        /// <para>
+        /// Negates the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Negate(this ILGenerator generator) => generator.Emit(OpCodes.Neg);
 
+        /// <summary>
+        /// <para>
+        /// Ands the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void And(this ILGenerator generator) => generator.Emit(OpCodes.And);
 
+        /// <summary>
+        /// <para>
+        /// Ors the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Or(this ILGenerator generator) => generator.Emit(OpCodes.Or);
 
+        /// <summary>
+        /// <para>
+        /// Nots the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Not(this ILGenerator generator) => generator.Emit(OpCodes.Not);
 
+        /// <summary>
+        /// <para>
+        /// Shifts the left using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ShiftLeft(this ILGenerator generator) => generator.Emit(OpCodes.Shl);
 
+        /// <summary>
+        /// <para>
+        /// Shifts the right using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void ShiftRight<T>(this ILGenerator generator)
         {
             generator.Emit(NumericType<T>.IsSigned ? OpCodes.Shr : OpCodes.Shr_Un);
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the argument using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="argumentIndex">
+        /// <para>The argument index.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadArgument(this ILGenerator generator, int argumentIndex)
         {
@@ -550,6 +1048,20 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Loads the arguments using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="argumentIndices">
+        /// <para>The argument indices.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadArguments(this ILGenerator generator, params int[] argumentIndices)
         {
@@ -559,15 +1071,63 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Stores the argument using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="argumentIndex">
+        /// <para>The argument index.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreArgument(this ILGenerator generator, int argumentIndex) => generator.Emit(OpCodes.Starg, argumentIndex);
 
+        /// <summary>
+        /// <para>
+        /// Compares the greater than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareGreaterThan(this ILGenerator generator) => generator.Emit(OpCodes.Cgt);
 
+        /// <summary>
+        /// <para>
+        /// Unsigneds the compare greater than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedCompareGreaterThan(this ILGenerator generator) => generator.Emit(OpCodes.Cgt_Un);
 
+        /// <summary>
+        /// <para>
+        /// Compares the greater than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isSigned">
+        /// <para>The is signed.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareGreaterThan(this ILGenerator generator, bool isSigned)
         {
@@ -581,12 +1141,46 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Compares the less than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareLessThan(this ILGenerator generator) => generator.Emit(OpCodes.Clt);
 
+        /// <summary>
+        /// <para>
+        /// Unsigneds the compare less than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedCompareLessThan(this ILGenerator generator) => generator.Emit(OpCodes.Clt_Un);
 
+        /// <summary>
+        /// <para>
+        /// Compares the less than using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isSigned">
+        /// <para>The is signed.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CompareLessThan(this ILGenerator generator, bool isSigned)
         {
@@ -600,12 +1194,58 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Branches the if greater or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfGreaterOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Bge, label);
 
+        /// <summary>
+        /// <para>
+        /// Unsigneds the branch if greater or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedBranchIfGreaterOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Bge_Un, label);
 
+        /// <summary>
+        /// <para>
+        /// Branches the if greater or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isSigned">
+        /// <para>The is signed.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfGreaterOrEqual(this ILGenerator generator, bool isSigned, Label label)
         {
@@ -619,12 +1259,58 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Branches the if less or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfLessOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Ble, label);
 
+        /// <summary>
+        /// <para>
+        /// Unsigneds the branch if less or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnsignedBranchIfLessOrEqual(this ILGenerator generator, Label label) => generator.Emit(OpCodes.Ble_Un, label);
 
+        /// <summary>
+        /// <para>
+        /// Branches the if less or equal using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isSigned">
+        /// <para>The is signed.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="label">
+        /// <para>The label.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void BranchIfLessOrEqual(this ILGenerator generator, bool isSigned, Label label)
         {
@@ -638,39 +1324,215 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Boxes the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TBox">
+        /// <para>The box.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Box<TBox>(this ILGenerator generator) => generator.Box(typeof(TBox));
 
+        /// <summary>
+        /// <para>
+        /// Boxes the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="boxedType">
+        /// <para>The boxed type.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Box(this ILGenerator generator, Type boxedType) => generator.Emit(OpCodes.Box, boxedType);
 
+        /// <summary>
+        /// <para>
+        /// Calls the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="method">
+        /// <para>The method.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Call(this ILGenerator generator, MethodInfo method) => generator.Emit(OpCodes.Call, method);
 
+        /// <summary>
+        /// <para>
+        /// Returns the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Return(this ILGenerator generator) => generator.Emit(OpCodes.Ret);
 
+        /// <summary>
+        /// <para>
+        /// Unboxes the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TUnbox">
+        /// <para>The unbox.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Unbox<TUnbox>(this ILGenerator generator) => generator.Unbox(typeof(TUnbox));
 
+        /// <summary>
+        /// <para>
+        /// Unboxes the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="typeToUnbox">
+        /// <para>The type to unbox.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Unbox(this ILGenerator generator, Type typeToUnbox) => generator.Emit(OpCodes.Unbox, typeToUnbox);
 
+        /// <summary>
+        /// <para>
+        /// Unboxes the value using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TUnbox">
+        /// <para>The unbox.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnboxValue<TUnbox>(this ILGenerator generator) => generator.UnboxValue(typeof(TUnbox));
 
+        /// <summary>
+        /// <para>
+        /// Unboxes the value using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="typeToUnbox">
+        /// <para>The type to unbox.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void UnboxValue(this ILGenerator generator, Type typeToUnbox) => generator.Emit(OpCodes.Unbox_Any, typeToUnbox);
 
+        /// <summary>
+        /// <para>
+        /// Declares the local using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The local builder</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static LocalBuilder DeclareLocal<T>(this ILGenerator generator) => generator.DeclareLocal(typeof(T));
 
+        /// <summary>
+        /// <para>
+        /// Loads the local using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="local">
+        /// <para>The local.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadLocal(this ILGenerator generator, LocalBuilder local) => generator.Emit(OpCodes.Ldloc, local);
 
+        /// <summary>
+        /// <para>
+        /// Stores the local using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="local">
+        /// <para>The local.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreLocal(this ILGenerator generator, LocalBuilder local) => generator.Emit(OpCodes.Stloc, local);
 
+        /// <summary>
+        /// <para>
+        /// News the object using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="type">
+        /// <para>The type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="parameterTypes">
+        /// <para>The parameter types.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="InvalidOperationException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void NewObject(this ILGenerator generator, Type type, params Type[] parameterTypes)
         {
@@ -687,12 +1549,78 @@ namespace Platform.Reflection
             generator.NewObject(constructor);
         }
 
+        /// <summary>
+        /// <para>
+        /// News the object using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="constructor">
+        /// <para>The constructor.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void NewObject(this ILGenerator generator, ConstructorInfo constructor) => generator.Emit(OpCodes.Newobj, constructor);
 
+        /// <summary>
+        /// <para>
+        /// Loads the indirect using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isVolatile">
+        /// <para>The is volatile.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="unaligned">
+        /// <para>The unaligned.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadIndirect<T>(this ILGenerator generator, bool isVolatile = false, byte? unaligned = null) => generator.LoadIndirect(typeof(T), isVolatile, unaligned);
 
+        /// <summary>
+        /// <para>
+        /// Loads the indirect using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="type">
+        /// <para>The type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isVolatile">
+        /// <para>The is volatile.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="unaligned">
+        /// <para>The unaligned.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="InvalidOperationException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <para>unaligned must be null, 1, 2, or 4</para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LoadIndirect(this ILGenerator generator, Type type, bool isVolatile = false, byte? unaligned = null)
         {
@@ -766,9 +1694,61 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Stores the indirect using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isVolatile">
+        /// <para>The is volatile.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="unaligned">
+        /// <para>The unaligned.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreIndirect<T>(this ILGenerator generator, bool isVolatile = false, byte? unaligned = null) => generator.StoreIndirect(typeof(T), isVolatile, unaligned);
 
+        /// <summary>
+        /// <para>
+        /// Stores the indirect using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="type">
+        /// <para>The type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isVolatile">
+        /// <para>The is volatile.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="unaligned">
+        /// <para>The unaligned.</para>
+        /// <para></para>
+        /// </param>
+        /// <exception cref="InvalidOperationException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// <para>unaligned must be null, 1, 2, or 4</para>
+        /// <para></para>
+        /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void StoreIndirect(this ILGenerator generator, Type type, bool isVolatile = false, byte? unaligned = null)
         {
@@ -822,12 +1802,36 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Multiplies the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Multiply(this ILGenerator generator)
         {
             generator.Emit(OpCodes.Mul);
         }
 
+        /// <summary>
+        /// <para>
+        /// Checkeds the multiply using the specified generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void CheckedMultiply<T>(this ILGenerator generator)
         {
@@ -841,6 +1845,20 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Divides the generator.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="generator">
+        /// <para>The generator.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Divide<T>(this ILGenerator generator)
         {

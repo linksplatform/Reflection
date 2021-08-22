@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Platform.Exceptions;
@@ -10,22 +10,112 @@ using Platform.Exceptions;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the numeric type.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class NumericType<T>
     {
+        /// <summary>
+        /// <para>
+        /// The type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly Type Type;
+        /// <summary>
+        /// <para>
+        /// The underlying type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly Type UnderlyingType;
+        /// <summary>
+        /// <para>
+        /// The signed version.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly Type SignedVersion;
+        /// <summary>
+        /// <para>
+        /// The unsigned version.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly Type UnsignedVersion;
+        /// <summary>
+        /// <para>
+        /// The is float point.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly bool IsFloatPoint;
+        /// <summary>
+        /// <para>
+        /// The is numeric.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly bool IsNumeric;
+        /// <summary>
+        /// <para>
+        /// The is signed.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly bool IsSigned;
+        /// <summary>
+        /// <para>
+        /// The can be numeric.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly bool CanBeNumeric;
+        /// <summary>
+        /// <para>
+        /// The is nullable.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly bool IsNullable;
+        /// <summary>
+        /// <para>
+        /// The bytes size.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly int BytesSize;
+        /// <summary>
+        /// <para>
+        /// The bits size.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly int BitsSize;
+        /// <summary>
+        /// <para>
+        /// The min value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly T MinValue;
+        /// <summary>
+        /// <para>
+        /// The max value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static readonly T MaxValue;
 
+        /// <summary>
+        /// <para>
+        /// Initializes a new <see cref="NumericType"/> instance.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static NumericType()
         {
@@ -62,6 +152,24 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the min and max values using the specified type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="type">
+        /// <para>The type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="minValue">
+        /// <para>The min value.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="maxValue">
+        /// <para>The max value.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetMinAndMaxValues(Type type, out T minValue, out T maxValue)
         {
@@ -77,6 +185,28 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the signed and unsigned versions using the specified type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="type">
+        /// <para>The type.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="isSigned">
+        /// <para>The is signed.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="signedVersion">
+        /// <para>The signed version.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="unsignedVersion">
+        /// <para>The unsigned version.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetSignedAndUnsignedVersions(Type type, bool isSigned, out Type signedVersion, out Type unsignedVersion)
         {

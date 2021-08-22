@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -9,8 +9,20 @@ using Platform.Collections.Lists;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the assembly extensions.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class AssemblyExtensions
     {
+        /// <summary>
+        /// <para>
+        /// The type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static readonly ConcurrentDictionary<Assembly, Type[]> _loadableTypesCache = new ConcurrentDictionary<Assembly, Type[]>();
 
         /// <remarks>
@@ -30,6 +42,20 @@ namespace Platform.Reflection
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Gets the cached loadable types using the specified assembly.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="assembly">
+        /// <para>The assembly.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The type array</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Type[] GetCachedLoadableTypes(this Assembly assembly) => _loadableTypesCache.GetOrAdd(assembly, GetLoadableTypes);
     }

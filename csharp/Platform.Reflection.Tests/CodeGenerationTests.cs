@@ -1,10 +1,22 @@
-﻿using System;
+using System;
 using Xunit;
 
 namespace Platform.Reflection.Tests
 {
+    /// <summary>
+    /// <para>
+    /// Represents the code generation tests.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public class CodeGenerationTests
     {
+        /// <summary>
+        /// <para>
+        /// Tests that empty action compilation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void EmptyActionCompilationTest()
         {
@@ -15,6 +27,16 @@ namespace Platform.Reflection.Tests
             compiledAction();
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that failed action compilation test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// <para></para>
+        /// <para></para>
+        /// </exception>
         [Fact]
         public void FailedActionCompilationTest()
         {
@@ -25,6 +47,12 @@ namespace Platform.Reflection.Tests
             Assert.Throws<NotSupportedException>(compiledAction);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that constant loading test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void ConstantLoadingTest()
         {
@@ -34,6 +62,20 @@ namespace Platform.Reflection.Tests
             CheckConstantLoading<ulong>(8);
         }
 
+        /// <summary>
+        /// <para>
+        /// Checks the constant loading using the specified value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         private void CheckConstantLoading<T>(T value)
         {
             var compiledFunction = DelegateHelpers.Compile<Func<T>>(generator =>
@@ -44,6 +86,12 @@ namespace Platform.Reflection.Tests
             Assert.Equal(value, compiledFunction());
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that unsigned integers conversion with sign extension test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void UnsignedIntegersConversionWithSignExtensionTest()
         {
@@ -86,6 +134,12 @@ namespace Platform.Reflection.Tests
             Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that signed integers conversion of minus one with sign extension test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void SignedIntegersConversionOfMinusOneWithSignExtensionTest()
         {
@@ -138,6 +192,12 @@ namespace Platform.Reflection.Tests
             Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that signed integers conversion of two with sign extension test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public void SignedIntegersConversionOfTwoWithSignExtensionTest()
         {
@@ -174,6 +234,28 @@ namespace Platform.Reflection.Tests
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Compiles the unchecked converter using the specified extend sign.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <typeparam name="TTarget">
+        /// <para>The target.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="extendSign">
+        /// <para>The extend sign.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>A converter of t source and t target</para>
+        /// <para></para>
+        /// </returns>
         private static Converter<TSource, TTarget> CompileUncheckedConverter<TSource, TTarget>(bool extendSign)
         {
             return DelegateHelpers.Compile<Converter<TSource, TTarget>>(generator =>

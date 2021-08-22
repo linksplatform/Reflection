@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using Xunit;
 using Platform.Collections;
@@ -6,8 +6,20 @@ using Platform.Collections.Lists;
 
 namespace Platform.Reflection.Tests
 {
+    /// <summary>
+    /// <para>
+    /// Represents the get il bytes method tests.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public static class GetILBytesMethodTests
     {
+        /// <summary>
+        /// <para>
+        /// Tests that il bytes for delegate are available test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public static void ILBytesForDelegateAreAvailableTest()
         {
@@ -16,6 +28,12 @@ namespace Platform.Reflection.Tests
             Assert.False(bytes.IsNullOrEmpty());
         }
 
+        /// <summary>
+        /// <para>
+        /// Tests that il bytes for different delegates are the same test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public static void ILBytesForDifferentDelegatesAreTheSameTest()
         {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
@@ -9,11 +9,39 @@ using Platform.Collections.Lists;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the types.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     public abstract class Types
     {
+        /// <summary>
+        /// <para>
+        /// Gets the collection value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static ReadOnlyCollection<Type> Collection { get; } = new ReadOnlyCollection<Type>(System.Array.Empty<Type>());
+        /// <summary>
+        /// <para>
+        /// Gets the array value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         public static Type[] Array => Collection.ToArray();
 
+        /// <summary>
+        /// <para>
+        /// Returns the read only collection.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>A read only collection of type</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected ReadOnlyCollection<Type> ToReadOnlyCollection()
         {
@@ -23,6 +51,20 @@ namespace Platform.Reflection
             return new ReadOnlyCollection<Type>(result);
         }
 
+        /// <summary>
+        /// <para>
+        /// Appends the types using the specified container.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="container">
+        /// <para>The container.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="types">
+        /// <para>The types.</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AppendTypes(List<Type> container, IList<Type> types)
         {

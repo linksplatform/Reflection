@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Platform.Interfaces;
@@ -7,9 +7,30 @@ using Platform.Interfaces;
 
 namespace Platform.Reflection
 {
+    /// <summary>
+    /// <para>
+    /// Represents the not supported exception delegate factory.
+    /// </para>
+    /// <para></para>
+    /// </summary>
+    /// <seealso cref="IFactory{TDelegate}"/>
     public class NotSupportedExceptionDelegateFactory<TDelegate> : IFactory<TDelegate>
         where TDelegate : Delegate
     {
+        /// <summary>
+        /// <para>
+        /// Creates this instance.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <exception cref="InvalidOperationException">
+        /// <para>Unable to compile stub delegate.</para>
+        /// <para></para>
+        /// </exception>
+        /// <returns>
+        /// <para>The delegate.</para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TDelegate Create()
         {
