@@ -62,6 +62,20 @@ namespace Platform.Reflection.Tests
             CheckConstantLoading<ulong>(8);
         }
 
+        /// <summary>
+        /// <para>
+        /// Checks the constant loading using the specified value.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="value">
+        /// <para>The value.</para>
+        /// <para></para>
+        /// </param>
         private void CheckConstantLoading<T>(T value)
         {
             var compiledFunction = DelegateHelpers.Compile<Func<T>>(generator =>
@@ -220,6 +234,28 @@ namespace Platform.Reflection.Tests
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Compiles the unchecked converter using the specified extend sign.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TSource">
+        /// <para>The source.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <typeparam name="TTarget">
+        /// <para>The target.</para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="extendSign">
+        /// <para>The extend sign.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>A converter of t source and t target</para>
+        /// <para></para>
+        /// </returns>
         private static Converter<TSource, TTarget> CompileUncheckedConverter<TSource, TTarget>(bool extendSign)
         {
             return DelegateHelpers.Compile<Converter<TSource, TTarget>>(generator =>

@@ -16,6 +16,12 @@ namespace Platform.Reflection.Benchmarks
     [MemoryDiagnoser]
     public class CodeGenerationBenchmarks
     {
+        /// <summary>
+        /// <para>
+        /// Represents the methods container.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private class MethodsContainer
         {
             /// <summary>
@@ -77,6 +83,16 @@ namespace Platform.Reflection.Benchmarks
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Functions.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>The int</para>
+        /// <para></para>
+        /// </returns>
         private static int Function() => 140314;
 
         /// <summary>
@@ -157,7 +173,9 @@ namespace Platform.Reflection.Benchmarks
         [Benchmark]
         public int DynamicMethodDelegateWrapper() => MethodsContainer.DynamicMethodDelegateWrapper();
 
-        private function with aggressive inlining.
+        /// <summary>
+        /// <para>
+        /// Statics the private function with aggressive inlining.
         /// </para>
         /// <para></para>
         /// </summary>
@@ -168,7 +186,9 @@ namespace Platform.Reflection.Benchmarks
         [Benchmark]
         public int StaticPrivateFunctionWithAggressiveInlining() => InlinedFunction();
 
-        private function with no inlining.
+        /// <summary>
+        /// <para>
+        /// Statics the private function with no inlining.
         /// </para>
         /// <para></para>
         /// </summary>
@@ -179,7 +199,9 @@ namespace Platform.Reflection.Benchmarks
         [Benchmark]
         public int StaticPrivateFunctionWithNoInlining() => NotInlinedFunction();
 
-        private function.
+        /// <summary>
+        /// <para>
+        /// Statics the private function.
         /// </para>
         /// <para></para>
         /// </summary>
