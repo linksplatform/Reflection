@@ -124,22 +124,7 @@ namespace Platform.Reflection
                 generator.ConvertToBoolean<TSource>();
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Converts the to boolean using the specified generator.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <typeparam name="TSource">
-        /// <para>The source.</para>
-        /// <para></para>
-        /// </typeparam>
-        /// <param name="generator">
-        /// <para>The generator.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToBoolean<TSource>(this ILGenerator generator)
         {
             generator.LoadConstant<TSource>(default);
@@ -156,30 +141,7 @@ namespace Platform.Reflection
                 generator.Emit(OpCodes.Cgt_Un);
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Converts the to integer using the specified generator.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <typeparam name="TSource">
-        /// <para>The source.</para>
-        /// <para></para>
-        /// </typeparam>
-        /// <param name="generator">
-        /// <para>The generator.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="targetType">
-        /// <para>The target type.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="extendSign">
-        /// <para>The extend sign.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void ConvertToInteger<TSource>(this ILGenerator generator, Type targetType, bool extendSign)
         {
             if (targetType == typeof(sbyte))

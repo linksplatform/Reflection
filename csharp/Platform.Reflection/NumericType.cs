@@ -151,26 +151,7 @@ namespace Platform.Reflection
                 exception.Ignore();
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Gets the min and max values using the specified type.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="type">
-        /// <para>The type.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="minValue">
-        /// <para>The min value.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="maxValue">
-        /// <para>The max value.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetMinAndMaxValues(Type type, out T minValue, out T maxValue)
         {
             if (type == typeof(bool))
@@ -184,30 +165,7 @@ namespace Platform.Reflection
                 maxValue = type.GetStaticFieldValue<T>(nameof(int.MaxValue));
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Gets the signed and unsigned versions using the specified type.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="type">
-        /// <para>The type.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="isSigned">
-        /// <para>The is signed.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="signedVersion">
-        /// <para>The signed version.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="unsignedVersion">
-        /// <para>The unsigned version.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void GetSignedAndUnsignedVersions(Type type, bool isSigned, out Type signedVersion, out Type unsignedVersion)
         {
             if (isSigned)

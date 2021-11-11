@@ -189,18 +189,7 @@ namespace Platform.Reflection
             var typeInfo = type.CreateTypeInfo();
             return (TDelegate)(object)typeInfo.GetMethod(methodName).CreateDelegate(typeof(TDelegate));
         }
-
-        /// <summary>
-        /// <para>
-        /// Gets the new name.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <returns>
-        /// <para>The string</para>
-        /// <para></para>
-        /// </returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static string GetNewName() => Guid.NewGuid().ToString("N");
     }
 }

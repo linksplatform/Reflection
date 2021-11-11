@@ -50,22 +50,7 @@ namespace Platform.Reflection
             AppendTypes(result, types);
             return new ReadOnlyCollection<Type>(result);
         }
-
-        /// <summary>
-        /// <para>
-        /// Appends the types using the specified container.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="container">
-        /// <para>The container.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="types">
-        /// <para>The types.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AppendTypes(List<Type> container, IList<Type> types)
         {
             for (var i = 0; i < types.Count; i++)
