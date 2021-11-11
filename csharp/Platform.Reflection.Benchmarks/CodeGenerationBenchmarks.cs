@@ -16,6 +16,12 @@ namespace Platform.Reflection.Benchmarks
     [MemoryDiagnoser]
     public class CodeGenerationBenchmarks
     {
+        /// <summary>
+        /// <para>
+        /// Represents the methods container.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private class MethodsContainer
         {
             /// <summary>
@@ -58,13 +64,35 @@ namespace Platform.Reflection.Benchmarks
             /// </returns>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             public static int DynamicMethodDelegateWrapper() => DynamicMethodDelegate();
-[MethodImpl(MethodImplOptions.AggressiveInlining)]
+
+            /// <summary>
+            /// <para>
+            /// Emits the code using the specified generator.
+            /// </para>
+            /// <para></para>
+            /// </summary>
+            /// <param name="generator">
+            /// <para>The generator.</para>
+            /// <para></para>
+            /// </param>
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
             private static void EmitCode(System.Reflection.Emit.ILGenerator generator)
             {
                 generator.LoadConstant(140314);
                 generator.Return();
             }
         }
+
+        /// <summary>
+        /// <para>
+        /// Functions.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>The int</para>
+        /// <para></para>
+        /// </returns>
         private static int Function() => 140314;
 
         /// <summary>
@@ -79,7 +107,18 @@ namespace Platform.Reflection.Benchmarks
         /// </returns>
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static int NotInlinedFunction() => 140314;
-[MethodImpl(MethodImplOptions.AggressiveInlining)]
+
+        /// <summary>
+        /// <para>
+        /// Inlineds the function.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>The int</para>
+        /// <para></para>
+        /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static int InlinedFunction() => 140314;
 
         /// <summary>

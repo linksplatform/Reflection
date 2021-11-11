@@ -17,6 +17,12 @@ namespace Platform.Reflection
     /// </summary>
     public static class AssemblyExtensions
     {
+        /// <summary>
+        /// <para>
+        /// The type.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static readonly ConcurrentDictionary<Assembly, Type[]> _loadableTypesCache = new ConcurrentDictionary<Assembly, Type[]>();
 
         /// <remarks>

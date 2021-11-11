@@ -30,6 +30,12 @@ namespace Platform.Reflection
         /// <para></para>
         /// </summary>
         public new static Type[] Array => Collection.ToArray();
+        /// <summary>
+        /// <para>
+        /// Initializes a new <see cref="Types"/> instance.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private Types() { }
     }
 }
