@@ -3,20 +3,8 @@ using Xunit;
 
 namespace Platform.Reflection.Tests
 {
-    /// <summary>
-    /// <para>
-    /// Represents the code generation tests.
-    /// </para>
-    /// <para></para>
-    /// </summary>
     public class CodeGenerationTests
     {
-        /// <summary>
-        /// <para>
-        /// Tests that empty action compilation test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void EmptyActionCompilationTest()
         {
@@ -27,16 +15,6 @@ namespace Platform.Reflection.Tests
             compiledAction();
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that failed action compilation test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <exception cref="NotImplementedException">
-        /// <para></para>
-        /// <para></para>
-        /// </exception>
         [Fact]
         public void FailedActionCompilationTest()
         {
@@ -47,12 +25,6 @@ namespace Platform.Reflection.Tests
             Assert.Throws<NotSupportedException>(compiledAction);
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that constant loading test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void ConstantLoadingTest()
         {
@@ -71,12 +43,6 @@ namespace Platform.Reflection.Tests
             Assert.Equal(value, compiledFunction());
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that unsigned integers conversion with sign extension test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void UnsignedIntegersConversionWithSignExtensionTest()
         {
@@ -119,12 +85,6 @@ namespace Platform.Reflection.Tests
             Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that signed integers conversion of minus one with sign extension test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void SignedIntegersConversionOfMinusOneWithSignExtensionTest()
         {
@@ -177,12 +137,6 @@ namespace Platform.Reflection.Tests
             Assert.Equal(withSignExtension[i], withoutSignExtension[i++]);
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that signed integers conversion of two with sign extension test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void SignedIntegersConversionOfTwoWithSignExtensionTest()
         {
