@@ -25,6 +25,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Right shift support is added for unsigned integer. This is a breaking change.</PackageReleaseNotes>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
