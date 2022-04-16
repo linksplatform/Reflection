@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection", "csharp\Platform.Reflection\Platform.Reflection.csproj", "{F6F78FFD-B763-46CA-B316-5FBF4D4599B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection", "Platform.Reflection\Platform.Reflection.csproj", "{F6F78FFD-B763-46CA-B316-5FBF4D4599B8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Benchmarks", "csharp\Platform.Reflection.Benchmarks\Platform.Reflection.Benchmarks.csproj", "{D1D28181-C142-4F13-835B-7705C5AB63B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Benchmarks", "Platform.Reflection.Benchmarks\Platform.Reflection.Benchmarks.csproj", "{D1D28181-C142-4F13-835B-7705C5AB63B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Tests", "csharp\Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{978883D7-D100-45DA-8343-4D42EF3F5961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Reflection.Tests", "Platform.Reflection.Tests\Platform.Reflection.Tests.csproj", "{978883D7-D100-45DA-8343-4D42EF3F5961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
