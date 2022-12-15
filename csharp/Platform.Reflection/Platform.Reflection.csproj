@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Reflection Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
-    <VersionPrefix>0.6.1</VersionPrefix>
+    <VersionPrefix>0.7.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>net7</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
@@ -12,7 +12,7 @@
     <PackageTags>LinksPlatform;Reflection;AssemblyExtensions;DelegateHelpers;DynamicExtensions;EnsureExtensions;FieldInfoExtensions;ILGeneratorExtensions;MethodInfoExtensions;NotSupportedExceptionDelegateFactory;NumericType;PropertyInfoExtensions;TypeBuilderExtensions;TypeExtensions;Types</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://linksplatform.github.io/Reflection</PackageProjectUrl>
-    <PackageLicenseExpression>Unlicensed</PackageLicenseExpression>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/linksplatform/Reflection</RepositoryUrl>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -23,27 +23,18 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Platform.Collections dependency is updated from 0.3.0 to 0.3.2.
-Microsoft.SourceLink.GitHub dependency is updated from 1.0.0 1.1.1.
-Dotnet 6 support is added.</PackageReleaseNotes>
+    <PackageReleaseNotes>Target frameworks are changed to net7.
+License is changed to Unlicense.
+Platform.Collections dependency is updated from 0.3.2 to 0.4.0.</PackageReleaseNotes>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  
-  <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />      
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
-  <ItemGroup Condition="$(TargetFramework.StartsWith('netstandard'))">
-    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
-    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
-  </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Platform.Collections" Version="0.3.2" />
+    <PackageReference Include="Platform.Collections" Version="0.4.0" />
   </ItemGroup>
 
 </Project>
