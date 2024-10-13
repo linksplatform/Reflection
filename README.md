@@ -1,4 +1,4 @@
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.Reflection)](https://www.nuget.org/packages/Platform.Reflection)
+[![NuGet Version and Downloads count](https://img.shields.io/nuget/v/Platform.Reflection?label=nuget&style=flat)](https://www.nuget.org/packages/Platform.Reflection)
 [![Actions Status](https://github.com/linksplatform/Reflection/workflows/CD/badge.svg)](https://github.com/linksplatform/Reflection/actions?workflow=CD)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fa9814131f09434982e60b278e5e88e5)](https://app.codacy.com/gh/linksplatform/Reflection?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Reflection&utm_campaign=Badge_Grade_Settings)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/reflection/badge/master)](https://www.codefactor.io/repository/github/linksplatform/reflection/overview/master)
