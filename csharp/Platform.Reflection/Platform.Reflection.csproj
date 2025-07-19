@@ -6,7 +6,7 @@
     <AssemblyTitle>Platform.Reflection</AssemblyTitle>
     <VersionPrefix>0.7.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFramework>net7</TargetFramework>
+    <TargetFramework>net8</TargetFramework>
     <AssemblyName>Platform.Reflection</AssemblyName>
     <PackageId>Platform.Reflection</PackageId>
     <PackageTags>LinksPlatform;Reflection;AssemblyExtensions;DelegateHelpers;DynamicExtensions;EnsureExtensions;FieldInfoExtensions;ILGeneratorExtensions;MethodInfoExtensions;NotSupportedExceptionDelegateFactory;NumericType;PropertyInfoExtensions;TypeBuilderExtensions;TypeExtensions;Types</PackageTags>
@@ -23,7 +23,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Target frameworks are changed to net7.
+    <PackageReleaseNotes>Target frameworks are changed to net8.
 License is changed to Unlicense.
 Platform.Collections dependency is updated from 0.3.2 to 0.4.0.</PackageReleaseNotes>
     <Nullable>enable</Nullable>
