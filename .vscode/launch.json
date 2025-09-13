@@ -10,7 +10,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/csharp/Platform.Reflection.Benchmarks/bin/Debug/netcoreapp3.0/Platform.Reflection.Benchmarks.dll",
+      "program": "${workspaceFolder}/csharp/Platform.Reflection.Benchmarks/bin/Debug/net8/Platform.Reflection.Benchmarks.dll",
       "args": [],
       "cwd": "${workspaceFolder}/csharp/Platform.Reflection.Benchmarks",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
