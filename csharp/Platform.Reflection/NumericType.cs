@@ -6,7 +6,6 @@ using Platform.Exceptions;
 // ReSharper disable AssignmentInConditionalExpression
 // ReSharper disable BuiltInTypeReferenceStyle
 // ReSharper disable StaticFieldInGenericType
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.Reflection
 {
@@ -112,7 +111,7 @@ namespace Platform.Reflection
 
         /// <summary>
         /// <para>
-        /// Initializes a new <see cref="NumericType"/> instance.
+        /// Initializes a new <see cref="NumericType{T}"/> instance.
         /// </para>
         /// <para></para>
         /// </summary>

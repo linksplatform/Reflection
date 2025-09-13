@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 using Platform.Exceptions;
 using Platform.Collections.Lists;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.Reflection
 {
@@ -19,6 +18,20 @@ namespace Platform.Reflection
     {
         private static readonly ConcurrentDictionary<Assembly, Type[]> _loadableTypesCache = new ConcurrentDictionary<Assembly, Type[]>();
 
+        /// <summary>
+        /// <para>
+        /// Gets the loadable types using the specified assembly.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="assembly">
+        /// <para>The assembly.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The type array</para>
+        /// <para></para>
+        /// </returns>
         /// <remarks>
         /// Source: http://haacked.com/archive/2012/07/23/get-all-types-in-an-assembly.aspx/
         /// </remarks>
