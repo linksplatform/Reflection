@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.Reflection
 {
@@ -19,7 +18,7 @@ namespace Platform.Reflection
         /// </para>
         /// <para></para>
         /// </summary>
-        /// <param name="@object">
+        /// <param name="object">
         /// <para>The object.</para>
         /// <para></para>
         /// </param>

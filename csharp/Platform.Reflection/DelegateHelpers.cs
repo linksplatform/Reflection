@@ -5,7 +5,6 @@ using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using Platform.Exceptions;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.Reflection
 {
